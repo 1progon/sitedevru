@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: inherit;
+    overflow-y: scroll !important;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+
+    main {
+        flex: 1;
+    }
+}

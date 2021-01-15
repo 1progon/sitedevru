@@ -1,0 +1,13 @@
+@use "../color" as *;
+
+.page-single {
+    .description {
+        background-color: $theme-color;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+        color: white;
+    }
+}
+
+
