@@ -43,7 +43,8 @@
                         <div class="navigation-area">
                             <div class="row">
                                 <div
-                                    class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                                    class="col-lg-6 col-md-6 col-12 nav-left d-flex flex-row justify-content-start
+                                    align-items-center">
                                     <div class="thumb">
                                         <a href="#">
                                             <img class="img-fluid" src="assets/img/post/preview.png" alt="">
@@ -65,7 +66,8 @@
                                     @endif
                                 </div>
                                 <div
-                                    class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                                    class="col-lg-6 col-md-6 col-12 nav-right d-flex flex-row justify-content-end
+                                    align-items-center">
                                     @if( $nextPost)
                                         <div class="details">
                                             <p>Next Post</p>
@@ -104,8 +106,8 @@
                     <div class="comments-area">
                         <h4>05 Comments</h4>
                         <div class="comment-list">
-                            <div class="single-comment justify-content-between d-flex">
-                                <div class="user justify-content-between d-flex">
+                            <div class="single-comment d-flex justify-content-between">
+                                <div class="user d-flex justify-content-between">
                                     <div class="thumb">
                                         <img src="assets/img/comment/comment_1.png" alt="">
                                     </div>

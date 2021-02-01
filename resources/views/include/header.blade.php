@@ -7,7 +7,8 @@
                     <!-- Logo -->
                     <a href="/">
                         <div class="logo">
-                            <img src="{{ asset('assets/img/logo/logo.png') }}" alt="" width="123" height="38">
+                            <img src="{{ asset('assets/img/logo/logo.png') }}" alt="логотип компании по изготовлению
+                            сайтов" width="123" height="38">
                         </div>
                     </a>
 
@@ -16,8 +17,8 @@
                     </div>
 
                     <div class="">
-                        <div class="header-right-btn f-right d-none d-lg-block">
-                            <a href="{{ route('pages.contact') }}" class="btn header-btn">Contact Us</a>
+                        <div class="header-right-btn d-none d-lg-block">
+                            <a href="{{ route('pages.contact') }}" class="btn header-btn">Контакты</a>
                         </div>
                     </div>
                     <!-- Mobile Menu -->

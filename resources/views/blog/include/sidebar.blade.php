@@ -4,20 +4,20 @@
             <div class="form-group">
                 <div class="input-group mb-3">
                     <label for="input-search"></label>
-                    <input id="input-search" type="text" class="form-control" placeholder='Search Keyword'>
+                    <input id="input-search" type="text" class="form-control" placeholder='Что искать?'>
                     <div class="input-group-append">
                         <button class="" type="button"><i class="ti-search"></i></button>
                     </div>
                 </div>
             </div>
-            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                    type="submit">Search
+            <button class="button rounded-0 primary-bg w-100 btn_1 boxed-btn"
+                    type="submit">Поиск
             </button>
         </form>
     </aside>
 
     <aside class="single_sidebar_widget post_category_widget">
-        <h4 class="widget_title">Categories</h4>
+        <h4 class="widget_title">Категории</h4>
         <ul class="list cat-list">
 
             @forelse( $cats as $cat )
@@ -33,7 +33,7 @@
     </aside>
 
     <aside class="single_sidebar_widget popular_post_widget">
-        <h3 class="widget_title">Recent Post</h3>
+        <h3 class="widget_title">Последние записи</h3>
         @forelse( $recent as $recentPost)
             <div class="media post_item">
                 <img src="{{ $recentPost->img }}" alt="post">
@@ -50,7 +50,7 @@
 
     </aside>
     <aside class="single_sidebar_widget tag_cloud_widget">
-        <h4 class="widget_title">Tag Clouds</h4>
+        <h4 class="widget_title">Плитка тегов</h4>
         <ul class="list">
             <li>
                 <a href="#">project</a>
@@ -81,7 +81,7 @@
 
 
     <aside class="single_sidebar_widget instagram_feeds">
-        <h4 class="widget_title">Instagram Feeds</h4>
+        <h4 class="widget_title">Наш ВКонтакте</h4>
         <ul class="instagram_row flex-wrap">
             <li>
                 <a href="#">
@@ -118,15 +118,15 @@
 
 
     <aside class="single_sidebar_widget newsletter_widget">
-        <h4 class="widget_title">Newsletter</h4>
+        <h4 class="widget_title">Подписка на обновления</h4>
 
         <form action="#">
             <div class="form-group">
-                <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                       onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+                <input type="email" class="form-control"
+                       placeholder='Введите Ваш Email' required>
             </div>
-            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                    type="submit">Subscribe
+            <button class="button rounded-0 primary-bg w-100 btn_1 boxed-btn"
+                    type="submit">Подписаться
             </button>
         </form>
     </aside>

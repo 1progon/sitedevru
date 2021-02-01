@@ -1,15 +1,17 @@
 @extends('layouts.main-layout')
 
-@section('meta_title', 'Our services')
-@section('meta_keywords', 'site services, website services, site creation services')
-@section('meta_description', 'Page with our services')
+@section('meta_title', 'Различные услуги по изготовлению сайтов')
+@section('meta_keywords', 'услуги по изготовлению сайтов, делаем сайты, сайты на заказ, сайты под заказ, где заказать
+ сайт, создание сайтов компании, где создать сайт, сколько стоит изготовление сайта')
+@section('meta_description', 'Различные услуги по изготовлению сайтов, доработок и другие услуги. Компания занимается
+ созданием сайтов с нуля, доработкой и созданием мобильных приложений')
 
 @section('main')
     <div class="container what-we-do">
-        <div class="row d-flex justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="section-tittle text-center">
-                    <h2>Our services</h2>
+                    <h2>Наши услуги</h2>
                 </div>
             </div>
         </div>
@@ -27,7 +29,8 @@
                             <p>{{ $service->description }}</p>
                         </div>
                         <div class="do-btn">
-                            <a href="javascript:void(0)"><i class="ti-arrow-right"></i> get started</a>
+                            <a href="{{ route('services.show', $service->slug) }}"><i class="ti-arrow-right"></i> Более
+                                подробно</a>
                         </div>
                     </div>
                 </div>

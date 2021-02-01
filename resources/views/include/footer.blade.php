@@ -1,7 +1,7 @@
 <footer>
 
     <!-- Footer Start-->
-    <div class="footer-main" data-background="assets/img/shape/footer_bg.png">
+    <div class="footer-main">
         <div class="footer-area footer-padding">
             <div class="container">
                 <div class="d-flex flex-wrap justify-content-between">
@@ -17,15 +17,17 @@
                                 </div>
                                 <div class="footer-title">
                                     <div class="footer-pera">
-                                        <p class="info1">221B Baker Street, P.O Box 353 Park <br> Road, USA - 215431</p>
-                                        <p class="info2">info@yourdomain.com</p>
+                                        <p class="info1">Россия, город Пермь</p>
+                                        <p class="info1">+ 7 (342) 293-01-23</p>
+                                        <p class="info1">+ 7 (982) 461-34-24</p>
+                                        {{--TODO  hardcoded email default address--}}
+                                        <p class="info2">info@1i6.ru</p>
                                     </div>
                                 </div>
                                 <div class="footer-social">
                                     <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
                                     <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                                    <a href="javascript:void(0)"><i class="fas fa-globe"></i></a>
-                                    <a href="javascript:void(0)"><i class="fab fa-behance"></i></a>
+                                    <a href="javascript:void(0)"><i class="fab fa-vk"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -33,13 +35,13 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-title">
-                                <h4>Quick Links</h4>
+                                <h4>Ссылки по сайту</h4>
                                 <ul>
-                                    <li><a href="{{ route('pages.show', 'about') }}">About</a></li>
-                                    <li><a href="{{ route('pages.show', 'features') }}">Features</a></li>
-                                    <li><a href="{{ route('pages.show', 'pricing') }}">Pricing</a></li>
-                                    <li><a href="{{ route('pages.show', 'contact') }}">Contact</a></li>
-                                    <li><a href="{{ route('blog') }}">Blog</a></li>
+                                    <li><a href="{{ route('pages.show', 'about') }}">О нас</a></li>
+                                    <li><a href="{{ route('pages.show', 'features') }}">Особенности</a></li>
+                                    <li><a href="{{ route('pages.show', 'pricing') }}">Цены</a></li>
+                                    <li><a href="{{ route('pages.show', 'contact') }}">Контакты</a></li>
+                                    <li><a href="{{ route('blog') }}">Блог</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -47,13 +49,14 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-title">
-                                <h4>Support</h4>
+                                <h4>Документы</h4>
                                 <ul>
-                                    <li><a href="{{ route('pages.show', 'privacy') }}">Privacy Policy</a></li>
-                                    <li><a href="{{ route('pages.show', 'terms') }}">Terms & Conditions</a></li>
-                                    <li><a href="{{ route('pages.show', 'sitemap') }}"> Sitemap</a></li>
-                                    <li><a href="{{ route('pages.show', 'faq') }}">FAQs</a></li>
-                                    <li><a href="{{ route('pages.show', 'report') }}">Report a bug</a></li>
+                                    <li><a href="{{ route('pages.show', 'privacy') }}">Политика конфиденциальности</a>
+                                    </li>
+                                    <li><a href="{{ route('pages.show', 'terms') }}">Условия использования</a></li>
+                                    <li><a href="{{ route('pages.show', 'sitemap') }}">Карта по сайту</a></li>
+                                    <li><a href="{{ route('pages.show', 'faq') }}">Вопросы и ответы</a></li>
+                                    <li><a href="{{ route('pages.show', 'report') }}">Сообщить об ошибке</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -61,13 +64,13 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-title">
-                                <h4>Core Features</h4>
+                                <h4>Некоторые услуги</h4>
                                 <ul>
-                                    <li><a href="javascript:void(0)">Email Marketing</a></li>
-                                    <li><a href="javascript:void(0)"> Offline SEO</a></li>
-                                    <li><a href="javascript:void(0)">Social Media Marketing</a></li>
-                                    <li><a href="javascript:void(0)">Lead Generation</a></li>
-                                    <li><a href="javascript:void(0)"> 24/7 Support</a></li>
+                                    <li><a href="javascript:void(0)">Дизайн сайта</a></li>
+                                    <li><a href="javascript:void(0)">Я.Директ и Google Adwords</a></li>
+                                    <li><a href="javascript:void(0)">Продвижение в соц. сетях</a></li>
+                                    <li><a href="javascript:void(0)">Сбор заявок</a></li>
+                                    <li><a href="javascript:void(0)">Поддержка сайтов</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -79,12 +82,12 @@
         <div class="footer-bottom-area footer-bg">
             <div class="container">
                 <div class="footer-border">
-                    <div class="row d-flex align-items-center">
+                    <div class="row align-items-center">
                         <div class="col-xl-12">
                             <div class="footer-copy-right text-center">
                                 <p>
-                                    Copyright &copy; 2011 - <?php echo date('Y'); ?>
-                                    All rights reserved
+                                    Модульные технологии &copy; 2011 - <?php echo date('Y'); ?>
+                                    Все права защищены. LLC Everesto и Modular Tech.
                                 </p>
                             </div>
                         </div>

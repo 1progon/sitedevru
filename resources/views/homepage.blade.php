@@ -1,12 +1,24 @@
 @extends('layouts.main-layout')
 
-@section('meta_title', 'Homepage')
+@section('meta_title', 'Создание и продвижение сайтов на заказ')
 
-@section('meta_keywords', 'create website company, cheap wordpress build, how much to build wordpress site, canada
-build wordpress website, usa build wordpress website')
+@section('meta_keywords', 'создание сайтов, продвижение сайтов, изготовление сайтов, сайт с нуля, сайт визитка, сайт
+интернет магазин, сайт портал')
 
-@section('meta_description', 'Wordpress developers, CMS Developers, Mobile developers. Cheap to build website, fast,
-high quality. Best reviews about developers')
+@section('meta_description', 'Мы компания, которая занимается созданием сайтов, продвижением сайтов, оптимизацией и
+тестированием готовых систем')
+
+@section('head')
+    {{--For testimonials--}}
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+@endsection
+
+@section('scripts_after')
+    {{--For testimonials--}}
+    <script defer src="{{ asset('assets/js/slick.min.js') }}"></script>
+@endsection
+
+
 
 @section('main')
     <section class="slider-area">
@@ -17,19 +29,20 @@ high quality. Best reviews about developers')
                     <div class="d-flex align-items-center">
                         <div class="left-part">
                             <div class="hero__caption">
-                                <h1>We are Developers.<br>Need a Website?</h1>
-                                <p>Hello! We are World Devs from Europe, Asia, Russia and other countries. We can
-                                    build a Website, Mobile App or Desktop App for you.
-                                    With CMS (content management system), Frameworks or Programming
-                                    languages from scratch. We are fast and productive. Good site - good price</p>
-                                <!-- Hero-btn -->
+                                <h1>Вам нужен Сайт?</h1>
+                                <h2>Мы создадим его для Вас</h2>
+                                <p>Добрый день уважаемый посетитель!<br/>Мы занимаемся разработкой сайтов с нуля,
+                                    доработками уже готовых проектов, оптимизацией, а также продвижением и
+                                    тестированием готовых систем.</p>
+                                {{--Hero-btn --}}
                                 <div class="hero__btn">
-                                    <a href="{{ route('pages.show', 'contact') }}" class="btn hero-btn">Contact Us</a>
+                                    <a href="{{ route('pages.show', 'contact') }}"
+                                       class="btn hero-btn btn-primary">Связаться с нами</a>
                                 </div>
                             </div>
                         </div>
                         <div class="right-part">
-                            <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+                            <div class="hero__img d-lg-block d-none" data-animation="fadeInRight" data-delay="1s">
                                 <img src="{{ asset('assets/img/hero/hero_right.png') }}" alt="">
                             </div>
                         </div>
@@ -40,13 +53,14 @@ high quality. Best reviews about developers')
         </div>
     </section>
 
+    @include("include.homepage.special")
+
     <section class="what-we-do we-padding">
         <div class="container">
-            <!-- Section-tittle -->
-            <div class="row d-flex justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-tittle text-center">
-                        <h2>What website<br/>we can build for you</h2>
+                        <h2>Что мы можем Вам предложить?</h2>
                     </div>
                 </div>
             </div>
@@ -62,8 +76,8 @@ high quality. Best reviews about developers')
                                 <p>{{ $do->description }}</p>
                             </div>
                             <div class="do-btn">
-                                <a href="javascript:void(0)">
-                                    <i class="ti-arrow-right"></i> get started</a>
+                                <a href="{{ route('services.show', $do) }}">
+                                    <i class="ti-arrow-right"></i> Более подробно</a>
                             </div>
                         </div>
                     </div>
@@ -71,7 +85,7 @@ high quality. Best reviews about developers')
                 @endforelse
             </div>
             <div class="row justify-content-center mt-5">
-                <a href="{{ route('pages.show','services') }}" class="btn btn-primary">All services</a>
+                <a href="{{ route('services.index') }}" class="btn btn-primary">Все услуги</a>
             </div>
         </div>
     </section>
@@ -87,22 +101,26 @@ high quality. Best reviews about developers')
                 </div>
                 <div class="right-part">
                     <div class="we-create-cap">
-                        <h3>We can build Mobile App, Website or Desktop App</h3>
-                        <h4>Technologies and stacks</h4>
-                        <p><strong>Mobile App</strong> - Android native, iOS native or modern Flutter Framework with
-                            Dart language for both platforms.
-
+                        <h3>Мы создаём не только сайты</h3>
+                        <h4>Технологии и стек</h4>
+                        <br/>
+                        <p><strong>Веб приложения и сайты</strong> - на CMS: Wordpress, ModX и CMS для
+                            электронной торговли.
                             <br/>
                             <br/>
-
-                            <strong>Website App</strong> - CMS Wordpress, ModX CMS, eCommerce CMS
-                            and other. Website with framework from scratch - PHP Framework Laravel or Symfony.
-
+                            А также веб сайты и приложения без использования CMS на языке PHP с современным топовым
+                            фреймворком Laravel и фронтендом на Vue JS
+                            <br/>
+                            или бекенд на ASP.NET Core с фронтендом на Vue JS, Angular или Classic MVC.
                             <br/>
                             <br/>
-                            <strong>Desktop App</strong> - Electron or ASP.NET WPF, UWF and WinForms.
+                            <strong>Мобильные приложения</strong> - Android или iOS, а также приложения на языке Dart
+                            с фреймворком Flutter для обоих платформ.
+                            <br/>
+                            <br/>
+                            {{--<strong>Настольные приложения</strong> - Electron or ASP.NET WPF, UWF and WinForms.--}}
                         </p>
-                        <a href="{{ route('pages.show', 'contact') }}" class="btn">Contact Us</a>
+                        <a href="{{ route('pages.show', 'contact') }}" class="btn btn-primary">Наши контакты и связь</a>
                     </div>
                 </div>
             </div>
@@ -111,15 +129,16 @@ high quality. Best reviews about developers')
 
     <section class="generating-area">
         <div class="container">
-            <!-- Section-tittle -->
-            <div class="row d-flex justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-tittle text-center">
-                        <h2>Pros to work with us</h2>
+                        <h2>Плюсы работы с нами</h2>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
+
+                {{--TODO Move pros array to db from home controller--}}
                 @forelse( $ourPros as $pros)
                     <div class="col-lg-6 col-md-6">
                         <div class="single-generating d-flex mb-30">
@@ -142,11 +161,10 @@ high quality. Best reviews about developers')
 
     <section class="choose-best choose-padding">
         <div class="container">
-            <!-- Section-tittle -->
-            <div class="row d-flex justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="section-tittle text-center">
-                        <h2>Choose the Pricing Plan</h2>
+                        <h2>Наши цены</h2>
                     </div>
                 </div>
             </div>
@@ -160,7 +178,9 @@ high quality. Best reviews about developers')
                             <div class="do-caption">
                                 <h4>{{ $price->title }}</h4>
                                 <h4>
-                                    <span class="currency">$</span> <span class="price">{{ $price->price }}</span>
+                                    <span class="price">{{ number_format($price->price, 0, ',', ' ') }}</span> <span
+                                        class="currency">руб
+                                        .</span>
                                 </h4>
                                 <ul>
                                     @forelse( $price->included as $include)
@@ -178,63 +198,28 @@ high quality. Best reviews about developers')
             </div>
 
             <div class="row justify-content-center mt-5">
-                <a href="{{ route ('pages.show','pricing') }}" class="btn btn-primary">All prices</a>
+                <a href="{{ route ('pages.show','pricing') }}" class="btn btn-primary">Цены на другие услуги</a>
             </div>
         </div>
     </section>
 
 
-    <section class="visit-area fix visite-padding">
-        <div class="container">
-            <!-- Section-tittle -->
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-6 pr-0">
-                    <div class="section-tittle text-center">
-                        <h2>Visit Some Of Our Awesome Works</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid px-1">
-            <div class="row justify-content-around">
-                @forelse( $portfolio as $work)
-                    <div class="col-6 col-sm-4 col-lg-3">
-                        <a href="{{ $work->url }}">
-                            <div class="single-visited mb-30">
-                                <div class="visited-img">
-                                    {{--<img src="{{ asset($work['img']) }}" alt="">--}}
-                                    <img src="{{ $work->img }}" alt="">
-                                </div>
-                                <div class="visited-cap">
-                                    <h3>{{ $work->title }}</h3>
-                                    <p>{{ $work->description }}</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                @empty
-                @endforelse
-            </div>
-        </div>
-    </section>
+    @include('include.homepage.portfolio')
 
     <section class="testimonial-area">
         <div class="container">
             <div class="testimonial-main">
-                <!-- Section-tittle -->
-                <div class="row d-flex justify-content-center">
+                <div class="row justify-content-center">
                     <div class="col-lg-5  col-md-8 pr-0">
                         <div class="section-tittle text-center">
-                            <h2>Testimonials</h2>
+                            <h2>Отзывы о нас</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center">
+                <div class="row justify-content-center">
                     <div class="col-lg-10 col-md-9">
                         <div class="h1-testimonial-active">
-                            <!-- Single Testimonial -->
-
-
+                            {{--Single Testimonial --}}
                             @forelse( $testimonials as $testimonial)
                                 <div class="single-testimonial text-center">
                                     <div class="testimonial-caption">
@@ -246,19 +231,19 @@ high quality. Best reviews about developers')
                                         <div
                                             class="testimonial-founder d-flex align-items-center justify-content-center">
                                             <div class="founder-img">
-                                                {{--                                                <img src="{{ asset($testimonial->img ) }}" alt="">--}}
+                                                {{--<img src="{{ asset($testimonial->img ) }}" alt="">--}}
                                                 <img src="{{ $testimonial->img }}" alt="" width="40">
                                             </div>
                                             <div class="founder-text">
                                                 <span>{{ $testimonial->user->first_name }}</span>
                                                 <span>{{ $testimonial->user->last_name }}</span>
-                                                {{--                                                <p>{{ $testimonial['position'] }}</p>--}}
+                                                {{--<p>{{ $testimonial['position'] }}</p>--}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             @empty
-                                No testimonials
+                                Пока отзывов никто не оставил
                             @endforelse
 
 
@@ -271,11 +256,10 @@ high quality. Best reviews about developers')
 
     <section class="tips-tricks-area tips-padding">
         <div class="container">
-            <!-- Section-tittle -->
-            <div class="row d-flex justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8 pr-0">
                     <div class="section-tittle text-center">
-                        <h2>Tips and Tricks From Our Experts</h2>
+                        <h2>Советы и рекомендации, блоги</h2>
                     </div>
                 </div>
             </div>
@@ -287,7 +271,7 @@ high quality. Best reviews about developers')
                             <div class="tips-img">
 
                                 {{--TODO Hardcoded image link--}}
-                                <img src="{{ asset('assets/img/tips/tips_1.jpg') }}" alt="">
+                                <img src="" alt="">
                             </div>
                             <div class="tips-caption">
                                 <h4><a href="{{ route('blogs.show', $blog) }}">{{ $blog->title }}</a></h4>
@@ -305,17 +289,18 @@ high quality. Best reviews about developers')
     <section class="have-project">
         <div class="container">
             <div class="haveProject">
-                <div class="row d-flex align-items-center">
+                <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-9 col-md-12">
                         <div class="wantToWork-caption">
-                            <h2>Have project in mind?</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut.</p>
+                            <h2>Решили воплотить в жизнь Ваши интернет идеи?</h2>
+                            <p>Свяжитесь с нами, обсудим, сделаем, поможем запустить и начать получать первых
+                                клиентов из интернета</p>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-3 col-md-12">
                         <div class="wantToWork-btn f-right">
-                            <a href="{{ route('pages.show', 'contact') }}" class="btn btn-ans">Contact Us</a>
+                            <a href="{{ route('pages.show', 'contact') }}"
+                               class="btn btn-ans btn-primary">Перейти в раздел контакты</a>
                         </div>
                     </div>
                 </div>
@@ -324,3 +309,5 @@ high quality. Best reviews about developers')
         </div>
     </section>
 @endsection
+
+

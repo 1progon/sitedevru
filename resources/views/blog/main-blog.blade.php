@@ -6,8 +6,8 @@
         <div class="row d-flex justify-content-center">
             <div class="col-lg-8">
                 <div class="section-tittle text-center mb-80">
-                    <span>Blog</span>
-                    <h2>Our Blog Area</h2>
+                    <span>Блог</span>
+                    <h2>Наш небольшой бложек</h2>
                 </div>
             </div>
         </div>
@@ -52,13 +52,15 @@
                                 </div>
                             </article>
                         @empty
-                            <p class="text-center">Posts not found</p>
+                            <p class="text-center">Пока в блоге ничего нет</p>
                         @endforelse
 
 
                         {{ $posts->links() }}
 
 
+
+                        {{--TODO Add pagination blog--}}
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item">

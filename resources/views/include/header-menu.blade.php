@@ -2,10 +2,12 @@
 <div class="main-menu d-none d-lg-block">
     <nav>
         <ul id="navigation">
-            <li><a href="{{ route('pages.show', 'about') }}">About Us</a></li>
-            <li><a href="{{ route('pages.show', 'services') }}">Services</a></li>
-            <li><a href="{{ route('pages.show', 'pricing') }}">Prices</a></li>
-            <li><a href="{{ route('blog') }}">Blog</a>
+            <li><a href="{{ route('pages.show', 'about') }}">О нас</a></li>
+            <li><a href="{{ route('services.index') }}">Услуги</a></li>
+            <li><a href="{{ route('pages.show', 'pricing') }}">Цены</a></li>
+            <li><a href="{{ route('templates.index') }}">Шаблоны</a></li>
+
+            <li><a href="{{ route('blog') }}">Блог</a>
                 {{--                <ul class="submenu">--}}
                 {{--                    <li><a href="">Blog</a></li>--}}
                 {{--                    <li><a href="">Blog Details</a></li>--}}
@@ -24,12 +26,12 @@
                     @csrf
                 </form>
                 <li>
-                    <button class="btn btn-link" form="logout-form" type="submit">Logout</button>
+                    <button class="btn btn-link" form="logout-form" type="submit">Выйти</button>
                 </li>
-                <li><a href="{{ route('dashboard') }}">Account</a></li>
+                <li><a href="{{ route('dashboard') }}">Аккаунт</a></li>
             @else
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ route('register') }}">Register</a></li>
+                <li><a href="{{ route('login') }}">Вход</a></li>
+                <li><a href="{{ route('register') }}">Регистрация</a></li>
             @endauth
         </ul>
     </nav>

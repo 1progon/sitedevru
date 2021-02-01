@@ -3,11 +3,7 @@
 
 @include('include.head')
 
-
-
 <body>
-
-@include('include.preloader')
 
 @include('include.header')
 
@@ -17,8 +13,12 @@
 
 @include('include.footer')
 
+@yield('scripts_before')
 @include('include.scripts')
+@yield('scripts_after')
 
-@yield('scripts')
+
+<script defer src="{{ asset('assets/js/main.js') }}"></script>
+
 </body>
 </html>
