@@ -19,37 +19,29 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [HomepageController::class, 'index']);
+Route::post('/send-message', [\App\Http\Controllers\Other\SendMessage::class, 'postMessage'])
+    ->name('message.send');
 
 
+//Main pages in views
 Route::name('pages.')->group(
     function () {
         Route::prefix('pages')->group(
             function () {
                 Route::get('contact', 'Pages\PagesController@contact')->name('contact');
-                Route::get('services', 'Pages\PagesController@services')->name('services');
                 Route::get('pricing', 'Pages\PagesController@pricing')->name('pricing');
-
-
-                //Route::view('features', 'page.features')->name('features');
-                //Route::view('privacy', 'page.privacy')->name('privacy');
-                //Route::view('terms', 'page.terms')->name('terms');
-                //Route::view('sitemap', 'page.sitemap')->name('sitemap');
-                //Route::view('faq', 'page.faq')->name('faq');
-                //Route::view('report-bug', 'page.report-bug')->name('report-bug');
             }
         );
     }
 );
 
+
+//All other pages, not from views
 Route::resource('pages', 'Pages\PagesController');
 
-
-Route::resource('blogs', 'Blog\BlogPostsController')
-    ->names(
-        [
-            'index' => 'blog'
-        ]
-    );
+Route::resource('templates', 'Templates\TemplatesController');
+Route::resource('services', 'Services\ServicesController');
+Route::resource('blogs', 'Blog\BlogPostsController')->names(['index' => 'blog']);
 
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
