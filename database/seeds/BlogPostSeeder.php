@@ -17,24 +17,24 @@ class BlogPostSeeder extends Seeder
             ->insert(
                 [
                     [
-                        'title' => 'First test post',
-                        'slug' => Str::slug('First title post'),
-                        'description' => 'First post desc',
-                        'article' => 'First Article post text',
+                        'title' => 'Первый пост в блоге',
+                        'slug' => Str::slug('Первый пост в блоге'),
+                        'description' => 'Первый пост в блоге короткое описание',
+                        'article' => 'Первый пост в блоге материалы и текст',
                         'blog_categories_id' => 1
                     ],
                     [
-                        'title' => 'Second test post',
-                        'slug' => Str::slug('Second title post'),
-                        'description' => 'Second post desc',
-                        'article' => 'Second Article post text',
+                        'title' => 'Второй пост в блоге',
+                        'slug' => Str::slug('второй пост в блоге текст'),
+                        'description' => 'Второй текст короткое описание',
+                        'article' => 'Статья второй текст пример',
                         'blog_categories_id' => 1
                     ],
                     [
-                        'title' => 'Third test post',
-                        'slug' => Str::slug('Third title post'),
-                        'description' => 'Third post desc',
-                        'article' => 'Third Article post text',
+                        'title' => 'Третий пост',
+                        'slug' => Str::slug('заголовок для третьего поста'),
+                        'description' => 'Третий пост описание',
+                        'article' => 'Статья для третьего поста',
                         'blog_categories_id' => 1
                     ],
 

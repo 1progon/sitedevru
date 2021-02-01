@@ -18,10 +18,10 @@ class PricesSeeder extends Seeder
             [
                 'created_at' => date('Y-m-d H:m:s'),
                 'updated_at' => date('Y-m-d H:m:s'),
-                'title' => 'Company Business card',
-                'slug' => Str::slug('Company Business card'),
+                'title' => 'Сайт визитка',
+                'slug' => Str::slug('Простой сайт визитка'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
-                'price' => 190,
+                'price' => 28000,
                 'on_homepage' => true
                 //'included' => [
                 //    'WordPress CMS Website', 'Simple company website', 'Business card site', 'Admin panel', 'SEO Friendly',
@@ -31,10 +31,10 @@ class PricesSeeder extends Seeder
             [
                 'created_at' => date('Y-m-d H:m:s'),
                 'updated_at' => date('Y-m-d H:m:s'),
-                'title' => 'eCommerce Website',
-                'slug' => Str::slug('eCommerce Website'),
+                'title' => 'Интернет-магазин',
+                'slug' => Str::slug('сайт интернет магазина'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
-                'price' => 390,
+                'price' => 78000,
                 'on_homepage' => true
                 //'included' => [
                 //    'WordPress WooCommerce Shop CMS',
@@ -49,10 +49,10 @@ class PricesSeeder extends Seeder
             [
                 'created_at' => date('Y-m-d H:m:s'),
                 'updated_at' => date('Y-m-d H:m:s'),
-                'title' => 'Business Portal',
-                'slug' => Str::slug('Business Portal'),
+                'title' => 'Сложный сайт-портал',
+                'slug' => Str::slug('Сайт бизнес портал'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
-                'price' => 790,
+                'price' => 150000,
                 'on_homepage' => true
                 //'included' => [
                 //    'Blog',
@@ -66,14 +66,14 @@ class PricesSeeder extends Seeder
         $included = [
             [
                 'price_id' => 1,
-                'title' => 'WordPress CMS Website',
-                'slug' => Str::slug('WordPress CMS Website'),
+                'title' => 'Сайт на системе управления CMS',
+                'slug' => Str::slug('сайт на системе управления'),
             ],
 
             [
                 'price_id' => 1,
-                'title' => 'Simple company website',
-                'slug' => Str::slug('Simple company website'),
+                'title' => 'Простой сайт компании',
+                'slug' => Str::slug('простой сайт компании'),
             ],
         ];
 

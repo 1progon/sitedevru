@@ -15,38 +15,38 @@ class PortfolioSeeder extends Seeder
     {
         $portfolio = [
             [
-                'title' => 'Work 1',
-                'slug' => Str::slug('Work 1'),
+                'title' => 'Наша работа 1',
+                'slug' => Str::slug('Наша работа 1'),
                 'img' => 'assets/img/visit/visit_1.jpg',
                 'url' => 'javascript:void(0)'
             ],
             [
-                'title' => 'Work 2',
-                'slug' => Str::slug('Work 2'),
+                'title' => 'Наша работа 2',
+                'slug' => Str::slug('Наша работа 2'),
                 'img' => 'assets/img/visit/visit_1.jpg',
                 'url' => 'javascript:void(0)'
             ],
             [
-                'title' => 'Work 3',
-                'slug' => Str::slug('Work 3'),
+                'title' => 'Наша работа 3',
+                'slug' => Str::slug('Наша работа 3'),
                 'img' => 'assets/img/visit/visit_1.jpg',
                 'url' => 'javascript:void(0)'
             ],
             [
-                'title' => 'Work 4',
-                'slug' => Str::slug('Work 4'),
+                'title' => 'Наша работа 4',
+                'slug' => Str::slug('Наша работа 4'),
                 'img' => 'assets/img/visit/visit_1.jpg',
                 'url' => 'javascript:void(0)'
             ],
             [
-                'title' => 'Work 5',
-                'slug' => Str::slug('Work 5'),
+                'title' => 'Наша работа 5',
+                'slug' => Str::slug('Наша работа 5'),
                 'img' => 'assets/img/visit/visit_1.jpg',
                 'url' => 'javascript:void(0)'
             ],
             [
-                'title' => 'Work 6',
-                'slug' => Str::slug('Work 6'),
+                'title' => 'Наша работа 6',
+                'slug' => Str::slug('Наша работа 6'),
                 'img' => 'assets/img/visit/visit_1.jpg',
                 'url' => 'javascript:void(0)'
             ],
