@@ -101,18 +101,7 @@ class PagesController extends Controller
 
         return view('page.pricing', compact('prices'));
     }
-
-
-    /**
-     * @Annotation Services Page
-     * @return Application|Factory|View
-     */
-    public function services()
-    {
-        $services = Service::paginate();
-
-        return view('page.services', compact('services'));
-    }
+    
 
     /**
      * @return Application|Factory|View
