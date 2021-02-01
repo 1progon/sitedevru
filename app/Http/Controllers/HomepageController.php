@@ -33,29 +33,71 @@ class HomepageController extends Controller
 
         $ourPros = [
             [
-                'title' => 'Fast to develop',
-                'description' => 'We are fast. We can build CMS WordPress website up to 3-5 days. Just choose a template. If you need complex website with framework, we can build it up to 20-30 days.',
+                'title' => 'Достаточно быстрая работа',
+                'description' => 'Мы быстрые настолько, насколько возможно и необходимо для качественной сдачи проекта. Чтобы оценить время выполнения Вашей работы, позвоните нам или напишите через раздел контакты.',
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
 
             ],
 
             [
-                'title' => 'Good price',
-                'description' => 'Only transparent prices. Get a quote, pay and wait. No additional fee. Don\'t hesitate to ask about time to develop',
+                'title' => 'Хорошая цена',
+                'description' => 'Все цены прозрачны для Вас. Мы ничего не прячем. Никаких скрытых и дополнительных платежей без согласования. Вы легко можете уточнить все подробности у нас.',
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
 
             ],
 
             [
-                'title' => 'Pay before or pay after',
-                'description' => 'Register or login. Fill the info and required fields, get a quote, milestones and pay after.',
+                'title' => 'Можем подсказать',
+                'description' => 'У Вас есть вопросы? Не знаете с чего начать, не понимаете некоторых вещей в интернете, хотите понять как работают сайты? Не стесняйтесь, спрашивайте, расскажем, покажем, научим и денег не возьмем.',
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
 
             ],
 
             [
-                'title' => 'Discount for next time',
-                'description' => 'One project is done. Need one else? Need to edit project, update or extend? - Get a special discount from us up to 50%.',
+                'title' => 'Платите До или После',
+                'description' => 'Заключите договор, обсудите условия и договоритесь о цене, оплатите заказ полностью, внесите предоплату или договоритесь об оплате после выполнения. Мы также предоставляем рассрочку, платите частями помесячно или по индивидуальной договоренности.',
+                'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
+
+            ],
+
+            [
+                'title' => 'Скидки на следующий заказ',
+                'description' => 'Работа закончена, проект сдан. Хотите улучшения, изменения, доработки или ещё один проект заказать. Получите скидки на новый заказ',
+                'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
+
+            ],
+
+            [
+                'title' => 'Полный пакет документов',
+                'description' => 'Мы предоставляем полный пакет документов. Договор и бухгалтерские документы.',
+                'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
+
+            ],
+
+            [
+                'title' => 'Варианты оплаты',
+                'description' => 'Мы принимаем различные варианты оплаты. Безналичные платежи по счету, оплата картой, оплата онлайн картой, электронные платежные системы и другие варианты.',
+                'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
+
+            ],
+
+            [
+                'title' => 'Доставка, выезд и Skype',
+                'description' => 'Мы можем приехать к Вам в компанию, чтобы заключить договор, обсудить какие-либо вопросы, уточнить детали, показать процесс работы. Или мы можем обсудить все с Вами по телефону, скайп, чат или Ваш любимый мессенджер.',
+                'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
+
+            ],
+
+            [
+                'title' => 'Часть работ бесплатно',
+                'description' => 'Мы без проблем можем сделать некоторые работы бесплатно, и даже если до этого Вы у нас ничего не покупали. Иногда это Вам необходимо, а нам приятно помочь и у нас нашлось свободное время.',
+                'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
+
+            ],
+
+            [
+                'title' => 'Права на проект',
+                'description' => 'После выполнения проекта и полной его оплаты, все права на изделие, переходят к Вам. Ваше творение будет только Ваше. За исключением некоторых специальных предложений, тогда об этом будет указано.',
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1046/1046460.svg',
 
             ],
