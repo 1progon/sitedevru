@@ -66,12 +66,8 @@
 
     .we-create-cap {
         h3 {
-            color: $heading_color;
             font-size: 50px;
             font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 29px;
-            padding-right: 25px;
             @media #{$lg}{
                 font-size: 29px;
             }
@@ -80,12 +76,10 @@
             }
             @media #{$sm}{
                 font-size: 36px;
-                line-height: 1.3;
                 padding-right: 0;
             }
             @media #{$xs}{
                 font-size: 25px;
-                line-height: 1.3;
                 padding-right: 0;
             }
         }

@@ -3,6 +3,7 @@
 @use "color" as *;
 
 .generating-area {
+
     .single-generating {
         border: 1px solid #f2f2f2;
         padding: 36px 54px 25px 56px;
@@ -16,7 +17,8 @@
         @media #{$xs}{
             padding: 20px 8px 20px;
         }
-        @include transition(.4s);
+
+        transition: box-shadow .3s;
     }
 
     .generating-icon {
@@ -39,15 +41,6 @@
     .generating-cap {
         padding-left: 28px;
 
-        h4 {
-            color: $heading_color;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 29px;
-            @media #{$xs}{
-            }
-        }
 
         p {
             @media #{$md}{

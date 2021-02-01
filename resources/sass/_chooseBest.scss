@@ -7,6 +7,12 @@
     //shape // left shape
     position: relative;
 
+    & h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
     &::before {
         background-image: url('../img/shape/choose_your.png');
         position: absolute;
@@ -69,22 +75,14 @@
         border-radius: 6px;
         background: #fff;
 
-        .do-icon {
-            span {
-                font-size: 73px;
-                margin-bottom: 10px;
-                display: inline-block;
-                color: $theme_color;
-            }
+        .do-icon span {
+            font-size: 73px;
+            margin-bottom: 10px;
+            display: inline-block;
+            color: $theme_color;
         }
 
         .do-caption {
-            h4 {
-                font-size: 35px;
-                font-weight: 700;
-                margin-bottom: 42px;
-                color: $heading-color;
-            }
 
             ul {
                 li {

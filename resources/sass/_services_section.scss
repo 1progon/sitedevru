@@ -29,13 +29,11 @@
 
         padding: 56px 40px 69px;
 
-        .do-icon {
-            span {
-                font-size: 73px;
-                margin-bottom: 20px;
-                display: inline-block;
-                color: $theme_color;
-            }
+        .do-icon span {
+            font-size: 73px;
+            margin-bottom: 20px;
+            display: inline-block;
+            color: $theme_color;
         }
 
         .do-caption {

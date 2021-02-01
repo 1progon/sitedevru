@@ -29,11 +29,11 @@
     }
 
     & h2 {
-        color: $heading_color;
-        font-size: 50px;
+
+        font-size: 3rem;
         font-weight: 700;
-        margin-bottom: 66px;
-        line-height: 1.3;
+        margin-bottom: 2rem;
+
         @media #{$md}{
             font-size: 45px;
             line-height: 1.3;
@@ -106,7 +106,7 @@
     }
 
     .single-do {
-        @include transition(.3s);
+        transition: box-shadow .3s;
         padding: 56px 40px 69px;
         @media #{$lg}{
             padding: 41px 17px 63px;
@@ -125,6 +125,8 @@
         border-radius: 6px;
 
         .do-icon {
+            min-height: 50px;
+
             span {
                 font-size: 73px;
                 margin-bottom: 20px;
@@ -134,18 +136,9 @@
         }
 
         .do-caption {
-            h4 {
-                font-size: 24px;
-                font-weight: 600;
-                margin-bottom: 23px;
-                @media #{$lg}{
-                    font-size: 21px;
-                }
-            }
 
             p {
                 margin-bottom: 40px;
-                // padding: 0 40px;
                 @media #{$xs}{
                 }
             }
@@ -157,10 +150,10 @@
                 text-transform: uppercase;
                 font-size: 13px;
                 font-weight: 500;
-                @include transition(.3s);
+                transition: color .3s;
 
                 i {
-                    background: #c5ccd8;
+                    background-color: #c5ccd8;
                     width: 24px;
                     height: 24px;
                     display: inline-block;
@@ -168,7 +161,7 @@
                     color: #fff;
                     border-radius: 50%;
                     margin-right: 7px;
-                    @include transition(.3s);
+                    transition: color, background-color .3s;
                 }
             }
         }
