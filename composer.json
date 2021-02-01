@@ -1,7 +1,7 @@
 {
-    "name": "getsitedev/getsitedev",
+    "name": "sitedevru/sitedevru",
     "type": "project",
-    "description": "Get Site Dev project with PHP Laravel Framework",
+    "description": "Ru site dev project",
     "keywords": [
         "site dev",
         "build site",
@@ -11,6 +11,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.4.0|^8.0",
+        "doctrine/dbal": "2.12",
         "fideloper/proxy": "^4.4",
         "laravel/framework": "^6.20",
         "laravel/tinker": "^2.5"
