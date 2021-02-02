@@ -16,9 +16,8 @@ class BlogCategoriesSeeder extends Seeder
         DB::table('blog_categories')
             ->insert(
                 [
-                    'title' => 'Главная категория',
-                    'slug' => Str::slug('Главная категория'),
-                    'id' => 1
+                    'title' => 'Главная',
+                    'slug' => Str::slug('главная'),
                 ]
             );
     }
