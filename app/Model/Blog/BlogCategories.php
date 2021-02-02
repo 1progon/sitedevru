@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class BlogCategories extends Model
 {
+    protected $table = 'blog_categories';
+
     public function getRouteKeyName()
     {
         return 'slug';

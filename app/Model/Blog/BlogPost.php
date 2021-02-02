@@ -15,7 +15,7 @@ class BlogPost extends Model
 
     public function category()
     {
-        return$this->belongsTo(BlogCategories::class);
+        return$this->belongsTo(BlogCategories::class, 'blog_categories_id', 'id');
     }
 
 }
