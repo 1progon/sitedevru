@@ -26,13 +26,12 @@
                     <div class="navigation-top">
                         <div class="d-sm-flex justify-content-between text-center">
                             <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and
-                                4
-                                people like this</p>
+                                4 people like this</p>
                             <div class="col-sm-4 text-center my-2 my-sm-0">
                                 <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
                             </div>
 
-                            {{--                            TODO hardcoded likes--}}
+                            {{--TODO hardcoded likes--}}
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -58,7 +57,7 @@
 
                                     @if( $prevPost)
                                         <div class="details">
-                                            <p>Previous Post</p>
+                                            <p>Предыдущая запись</p>
                                             <a href="{{ route('blogs.show', $prevPost) }}">
                                                 <h4>{{ $prevPost->title }}</h4>
                                             </a>
@@ -70,7 +69,7 @@
                                     align-items-center">
                                     @if( $nextPost)
                                         <div class="details">
-                                            <p>Next Post</p>
+                                            <p>Следующая запись</p>
                                             <a href="{{ route('blogs.show', $nextPost) }}">
                                                 <h4>{{ $nextPost->title }}</h4>
                                             </a>
