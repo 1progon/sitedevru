@@ -19,7 +19,7 @@ class PricesSeeder extends Seeder
                 'created_at' => date('Y-m-d H:m:s'),
                 'updated_at' => date('Y-m-d H:m:s'),
                 'title' => 'Сайт визитка',
-                'slug' => Str::slug('Простой сайт визитка'),
+                'slug' => Str::slug('Простой сайт визитка цена'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
                 'price' => 28000,
                 'on_homepage' => true
@@ -32,7 +32,7 @@ class PricesSeeder extends Seeder
                 'created_at' => date('Y-m-d H:m:s'),
                 'updated_at' => date('Y-m-d H:m:s'),
                 'title' => 'Интернет-магазин',
-                'slug' => Str::slug('сайт интернет магазина'),
+                'slug' => Str::slug('сайт интернет магазина цена'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
                 'price' => 78000,
                 'on_homepage' => true
@@ -50,15 +50,20 @@ class PricesSeeder extends Seeder
                 'created_at' => date('Y-m-d H:m:s'),
                 'updated_at' => date('Y-m-d H:m:s'),
                 'title' => 'Сложный сайт-портал',
-                'slug' => Str::slug('Сайт бизнес портал'),
+                'slug' => Str::slug('Сайт бизнес портал цена'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
                 'price' => 150000,
                 'on_homepage' => true
-                //'included' => [
-                //    'Blog',
-                //    'Admin panel',
-                //    '....'
-                //]
+
+            ],[
+                'created_at' => date('Y-m-d H:m:s'),
+                'updated_at' => date('Y-m-d H:m:s'),
+                'title' => 'Сайт-лендинг',
+                'slug' => Str::slug('лендинг сайт цена'),
+                'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
+                'price' => 60000,
+                'on_homepage' => false
+
             ],
 
         ];
