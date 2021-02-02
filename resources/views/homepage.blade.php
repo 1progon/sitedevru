@@ -269,9 +269,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-tips mb-50">
                             <div class="tips-img">
-
-                                {{--TODO Hardcoded image link--}}
-                                <img src="" alt="">
+                                <img src="{{ $blog->img }}" alt="{{ $blog->title }}">
                             </div>
                             <div class="tips-caption">
                                 <h4><a href="{{ route('blogs.show', $blog) }}">{{ $blog->title }}</a></h4>
