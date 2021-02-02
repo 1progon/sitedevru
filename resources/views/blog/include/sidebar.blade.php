@@ -58,24 +58,6 @@
             <li>
                 <a href="#">love</a>
             </li>
-            <li>
-                <a href="#">technology</a>
-            </li>
-            <li>
-                <a href="#">travel</a>
-            </li>
-            <li>
-                <a href="#">restaurant</a>
-            </li>
-            <li>
-                <a href="#">life style</a>
-            </li>
-            <li>
-                <a href="#">design</a>
-            </li>
-            <li>
-                <a href="#">illustration</a>
-            </li>
         </ul>
     </aside>
 
@@ -93,26 +75,7 @@
                     <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
-                </a>
-            </li>
+
         </ul>
     </aside>
 
@@ -120,14 +83,13 @@
     <aside class="single_sidebar_widget newsletter_widget">
         <h4 class="widget_title">Подписка на обновления</h4>
 
-        <form action="#">
+        {{--TODO Add route--}}
+        <form action="#" method="post">
+            @csrf
             <div class="form-group">
-                <input type="email" class="form-control"
-                       placeholder='Введите Ваш Email' required>
+                <input type="email" class="form-control" placeholder='Введите Ваш Email' required>
             </div>
-            <button class="button rounded-0 primary-bg w-100 btn_1 boxed-btn"
-                    type="submit">Подписаться
-            </button>
+            <button class="button rounded-0 primary-bg w-100 btn_1 boxed-btn" type="submit">Подписаться</button>
         </form>
     </aside>
 </div>
