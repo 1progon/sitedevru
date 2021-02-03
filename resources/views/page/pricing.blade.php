@@ -1,8 +1,9 @@
 @extends('layouts.main-layout')
 
-@section('meta_title', 'Our prices')
-@section('meta_keywords', 'website create pricing, website build price, how much to build website')
-@section('meta_description', 'Page with our prices')
+@section('meta_title', 'Цены на услуги по изготовлению сайтов')
+@section('meta_keywords', 'сколько стоит сделать сайт, цены на изготовление сайтов, по чем сделать сайт, цена сколько
+ стоит сайт, стоимость изготовления сайта')
+@section('meta_description', 'Цены на различные услуги по изготовлению сайтов, мобильных приложений и другие IT услуги')
 
 @section('main')
     <div class="container what-we-do">

@@ -1,6 +1,6 @@
 @extends('layouts.main-layout')
 
-@section('meta_title', 'Шаблоны сайтов')
+@section('meta_title', 'Шаблоны сайтов для изготовления')
 @section('meta_keywords', 'шаблоны сайтов, сайты можно изготовить, варианты
 шаблонов для сайта, сайты под заказ по шаблону')
 @section('meta_description', 'Варианты шаблонов, по которым может быть

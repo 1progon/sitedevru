@@ -1,9 +1,11 @@
 @extends('layouts.main-layout')
 
 {{--TODO Add meta--}}
-@section('meta_title', 'About company')
-@section('meta_keywords', '')
-@section('meta_description', '')
+@section('meta_title', 'Страница контакты')
+@section('meta_keywords', 'страница контакты, контакты компании по изготовлению сайтов, контакты где можно заказать
+сайт')
+@section('meta_description', 'Контакты нашей компании, где Вы можете заказать себе сайт или мобильное приложение. А
+также, форма для связи')
 
 @section('main')
     <div class="container">
