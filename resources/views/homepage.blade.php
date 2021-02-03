@@ -5,8 +5,8 @@
 @section('meta_keywords', 'создание сайтов, продвижение сайтов, изготовление сайтов, сайт с нуля, сайт визитка, сайт
 интернет магазин, сайт портал')
 
-@section('meta_description', 'Мы компания, которая занимается созданием сайтов, продвижением сайтов, оптимизацией и
-тестированием готовых систем')
+@section('meta_description', 'Изготовление, создание сайтов, продвижением сайтов, оптимизация и
+тестирование готовых систем')
 
 @section('head')
     {{--For testimonials--}}
@@ -267,15 +267,17 @@
 
                 @forelse( $blogs as $blog )
                     <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="single-tips mb-50">
-                            <div class="tips-img">
-                                <img src="{{ $blog->img }}" alt="{{ $blog->title }}">
+                        <a href="{{ route('blogs.show', $blog) }}">
+                            <div class="single-tips mb-50">
+                                <div class="tips-img">
+                                    <img src="{{ $blog->img }}" alt="{{ $blog->title }}">
+                                </div>
+                                <div class="tips-caption">
+                                    <h4>{{ $blog->title }}</h4>
+                                    <p>{{ $blog->created_at }}</p>
+                                </div>
                             </div>
-                            <div class="tips-caption">
-                                <h4><a href="{{ route('blogs.show', $blog) }}">{{ $blog->title }}</a></h4>
-                                <p>{{ $blog->created_at }}</p>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 @empty
                 @endforelse
