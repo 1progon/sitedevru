@@ -3429,14 +3429,13 @@ header .header-area .header-top .header-info-right .header-social a:hover i {
 .tips-tricks-area .single-tips .tips-img {
   overflow: hidden;
   border-radius: 10px;
+  max-height: 380px;
 }
 
 .tips-tricks-area .single-tips .tips-img img {
-  width: 100%;
   border-radius: 10px;
   margin-bottom: 40px;
   transition: all 0.4s ease-out 0s;
-  transform: rotate(1deg) scale(1);
 }
 
 .tips-tricks-area .single-tips .tips-caption h4 {

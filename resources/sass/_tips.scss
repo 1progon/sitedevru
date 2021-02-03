@@ -29,13 +29,12 @@
         .tips-img {
             overflow: hidden;
             border-radius: 10px;
+            max-height: 380px;
 
             img {
-                width: 100%;
                 border-radius: 10px;
                 margin-bottom: 40px;
                 @include transition(.4s);
-                transform: rotate(1deg) scale(1);
             }
         }
 
