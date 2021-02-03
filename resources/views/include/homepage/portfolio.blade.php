@@ -16,11 +16,11 @@
                         <div class="single-visited mb-30">
                             <div class="visited-img">
                                 {{--<img src="{{ asset($work['img']) }}" alt="">--}}
-                                <img src="{{ $work->img }}" alt="">
+                                <img src="{{ $work->img }}" alt="{{ $work->title }}">
                             </div>
                             <div class="visited-cap">
                                 <h5>{{ $work->title }}</h5>
-                                <p class="" style="font-size: 12px">{{ $work->description }}</p>
+                                <p class="" style="font-size: 13px">{{ $work->description }}</p>
                             </div>
                         </div>
                     </a>
