@@ -1,5 +1,11 @@
 @extends('layouts.main-layout')
 
+@section('meta_title', "Блог компании по изготовлению сайтов на заказ")
+@section('meta_keywords', "блог создание сайтов, как сделать сайт, как создать сайт, изготовление сайтов, как
+создавать сайты")
+@section('meta_description', "Блог компании, которая занимается изготовлением сайтов на заказ, а также продвижением
+сайтов и созданием мобильных приложений")
+
 @section('main')
     <div class="container">
         <!-- Section-tittle -->
@@ -28,10 +34,8 @@
                             <article class="blog_item">
                                 <div class="blog_item_img">
 
-                                    {{--TODO Change hardcoded image link--}}
                                     <img class="card-img rounded-0"
-                                         src="assets/img/blog/single_blog_1.png"
-                                         alt="image title {{ $title }}">
+                                         src="{{ $post->img }}" alt="image title {{ $title }}">
 
                                     <a href="{{ $route }}" class="blog_item_date">
                                         <h3>{{ date('d', $timestamp) }}</h3>

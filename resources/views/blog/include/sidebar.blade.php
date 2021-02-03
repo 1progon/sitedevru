@@ -22,7 +22,8 @@
 
             @forelse( $cats as $cat )
                 <li>
-                    <a href="javascript:void(0)" class="d-flex">
+                    {{--TODO Change url for post--}}
+                    <a href="#" class="d-flex">
                         <p class="mr-1">{{ $cat->title }}</p>
                         <p class="font-weight-bold">({{ $cat->posts->count() }})</p>
                     </a>
@@ -36,7 +37,6 @@
         <h3 class="widget_title">Последние записи</h3>
         @forelse( $recent as $recentPost)
             <div class="media post_item">
-                <img src="{{ $recentPost->img }}" alt="post">
                 <div class="media-body">
                     <a href="{{ route('blogs.show', $recentPost) }}">
                         <h3>{{ $recentPost->title }}</h3>
@@ -45,6 +45,7 @@
                 </div>
             </div>
         @empty
+            <div>Нет записей</div>
         @endforelse
 
 
@@ -52,12 +53,19 @@
     <aside class="single_sidebar_widget tag_cloud_widget">
         <h4 class="widget_title">Плитка тегов</h4>
         <ul class="list">
-            <li>
-                <a href="#">project</a>
-            </li>
-            <li>
-                <a href="#">love</a>
-            </li>
+            {{--TODO Get tags from db--}}
+            @php
+                $tagTiles =  ['project', 'example' , 'test' , 'one else' , 'next']
+            @endphp
+
+            @forelse($tagTiles as $tile)
+                <li>
+                    {{--TODO Add link to tag--}}
+                    <a href="#">{{ $tile }}</a>
+                </li>
+            @empty
+            @endforelse
+
         </ul>
     </aside>
 
