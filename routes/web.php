@@ -41,6 +41,9 @@ Route::resource('pages', 'Pages\PagesController');
 
 Route::resource('templates', 'Templates\TemplatesController');
 Route::resource('services', 'Services\ServicesController');
+
+
+Route::resource('blogcats', 'Blog\BlogCategoriesController')->names(['index' => 'blogcats']);
 Route::resource('blogs', 'Blog\BlogPostsController')->names(['index' => 'blog']);
 
 
