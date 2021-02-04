@@ -3978,7 +3978,7 @@ header .header-area .header-top .header-info-right .header-social a:hover i {
 .blog_area a {
   color: "Roboto", sans-serif !important;
   text-decoration: none;
-  transition: 0.4s;
+  transition: hover 0.4s;
 }
 
 .blog_area a:hover,

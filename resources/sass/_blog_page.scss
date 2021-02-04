@@ -17,7 +17,7 @@
     a {
         color: $font_1 !important;
         text-decoration: none;
-        transition: .4s;
+        transition: hover .4s;
 
         &:hover, :hover {
             background: -webkit-linear-gradient(131deg, $theme-color 0%, $theme-color 99%);
