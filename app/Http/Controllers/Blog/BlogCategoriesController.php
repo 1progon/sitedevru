@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Blog;
 
-use App\BlogCategories;
+use App\Http\Controllers\Controller;
+use App\Model\Blog\BlogCategories;
+use App\Model\Blog\BlogPost;
 use Illuminate\Http\Request;
+
 
 class BlogCategoriesController extends Controller
 {
@@ -30,7 +33,7 @@ class BlogCategoriesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -39,23 +42,27 @@ class BlogCategoriesController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\BlogCategories  $blogCategories
-     * @return \Illuminate\Http\Response
+     * @param BlogCategories $blogcat
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show(BlogCategories $blogCategories)
+    public function show(BlogCategories $blogcat)
     {
-        //
+
+        $posts = $blogcat->posts()->paginate();
+
+        //For sidebar template
+        $cats = BlogCategories::all();
+        $recent = BlogPost::latest()->take(5)->get();
+
+        return view('blog.cat-show', compact('blogcat', 'posts', 'cats', 'recent'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\BlogCategories  $blogCategories
      * @return \Illuminate\Http\Response
      */
-    public function edit(BlogCategories $blogCategories)
+    public function edit(BlogCategories $blogcat)
     {
         //
     }
@@ -63,22 +70,19 @@ class BlogCategoriesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\BlogCategories  $blogCategories
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BlogCategories $blogCategories)
+    public function update(Request $request, BlogCategories $blogcat)
     {
         //
     }
 
+
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\BlogCategories  $blogCategories
-     * @return \Illuminate\Http\Response
+     * @param BlogCategories $blogcat
      */
-    public function destroy(BlogCategories $blogCategories)
+    public function destroy(BlogCategories $blogcat)
     {
         //
     }
