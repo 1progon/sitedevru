@@ -23,7 +23,7 @@
             @forelse( $cats as $cat )
                 <li>
                     {{--TODO Change url for post--}}
-                    <a href="#" class="d-flex">
+                    <a href="{{ route('blogcats.show', $cat) }}" class="d-flex">
                         <p class="mr-1">{{ $cat->title }}</p>
                         <p class="font-weight-bold">({{ $cat->posts->count() }})</p>
                     </a>
