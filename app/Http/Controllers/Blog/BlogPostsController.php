@@ -21,6 +21,8 @@ class BlogPostsController extends Controller
     public function index()
     {
         $posts = BlogPost::paginate();
+
+        //For sidebar template
         $recent = BlogPost::latest()->take(5)->get();
         $cats = BlogCategories::all();
 
@@ -62,13 +64,26 @@ class BlogPostsController extends Controller
         $prevPost = BlogPost::find($blog->id - 1);
         $nextPost = BlogPost::find($blog->id + 1);
 
-        $cats = BlogCategories::all();
 
+        //TODO remove test data
+        $comments = (object)
+        [
+            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
+            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
+            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
+            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
+            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
+            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
+        ];
+
+
+        //For sidebar template
+        $cats = BlogCategories::all();
         $recent = BlogPost::latest()->take(5)->get();
 
         return view(
             'blog.blog-single',
-            compact('blog', 'cats', 'recent', 'prevPost', 'nextPost')
+            compact('blog', 'cats', 'recent', 'prevPost', 'nextPost', 'comments')
         );
     }
 
