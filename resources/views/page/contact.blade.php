@@ -170,7 +170,9 @@
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>info@1i6.ru</h3>
+
+                                {{--TODO Hardcoded email--}}
+                                <h3>info@siteprm.ru</h3>
                                 <p>Отправляйте Ваши сообщения в любое время</p>
                             </div>
                         </div>
