@@ -20,7 +20,6 @@ header {
 
         & .main-header {
 
-            padding: 1rem 0;
             z-index: 10;
             min-height: 60px;
 
@@ -44,6 +43,16 @@ header {
             }
             @media #{$xs}{
                 padding: 11px 0;
+            }
+
+            & .logo {
+                display: flex;
+                align-items: center;
+                & img {
+                    margin-right: 10px;
+                    transform: rotate(140deg);
+
+                }
             }
 
             .main-menu {
@@ -118,11 +127,7 @@ header {
                 }
             }
 
-            .logo {
-                & img {
 
-                }
-            }
         }
 
         .header-top .header-info-right .header-social a i {

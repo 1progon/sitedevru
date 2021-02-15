@@ -2346,7 +2346,6 @@ header .header-area .slicknav_btn {
 }
 
 header .header-area .main-header {
-  padding: 1rem 0;
   z-index: 10;
   min-height: 60px;
 }
@@ -2373,6 +2372,16 @@ header .header-area .main-header ul > li:hover > ul.submenu {
   header .header-area .main-header {
     padding: 11px 0;
   }
+}
+
+header .header-area .main-header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .header-area .main-header .logo img {
+  margin-right: 10px;
+  transform: rotate(140deg);
 }
 
 header .header-area .main-header .main-menu ul {
@@ -3812,6 +3821,10 @@ header .header-area .header-top .header-info-right .header-social a:hover i {
 
 .footer-main .footer-area .footer-logo {
   margin-bottom: 30px;
+}
+
+.footer-main .footer-area .footer-logo img {
+  transform: rotate(140deg);
 }
 
 .footer-main .footer-area .footer-pera .info1 {
@@ -6634,6 +6647,20 @@ del {
 
 .switch-wrap {
   margin-bottom: 10px;
+}
+
+table .btn {
+  min-width: unset;
+  padding: 5px;
+  background-color: unset;
+}
+
+table .btn.btn-warning {
+  background-color: orange;
+}
+
+table .btn.btn-danger {
+  background-color: red;
 }
 
 .page-single .description {
