@@ -11,7 +11,9 @@
                                 <!-- logo -->
                                 <div class="footer-logo">
                                     <a href="/">
-                                        <img src="{{ asset('assets/img/logo/logo2_footer.png') }}"
+                                        <img src="{{ asset('assets/img/logo/logo.svg') }}"
+                                             width="56"
+                                             height="84"
                                              alt="">
                                     </a>
                                 </div>
@@ -21,7 +23,7 @@
                                         <p class="info1">+ 7 (342) 293-01-23</p>
                                         <p class="info1">+ 7 (982) 461-34-24</p>
                                         {{--TODO  hardcoded email default address--}}
-                                        <p class="info2">info@1i6.ru</p>
+                                        <p class="info2">info@siteprm.ru</p>
                                     </div>
                                 </div>
                                 <div class="footer-social">
@@ -99,3 +101,5 @@
     <!-- Footer End-->
 
 </footer>
+
+

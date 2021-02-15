@@ -7,8 +7,9 @@
                     <!-- Logo -->
                     <a href="/">
                         <div class="logo">
-                            <img src="{{ asset('assets/img/logo/logo.png') }}" alt="логотип компании по изготовлению
-                            сайтов" width="123" height="38">
+                            <img src="{{ asset('assets/img/logo/logo.svg') }}" alt="логотип компании по изготовлению
+                            сайтов" width="40" height="60">
+                            <h3>Сайты Пермь</h3>
                         </div>
                     </a>
 
