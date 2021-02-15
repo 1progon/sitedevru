@@ -9,6 +9,8 @@
     <meta name="keywords" content="@yield('meta_keywords', 'создание сайтов, изготовление сайтов, заказать сайт,
     сделать сайт, создать сайт недорого, создать сайт визитка, создать сайт магазин')">
     <meta name="description" content="@yield('meta_description', '')">
+    <meta name="yandex-verification" content="7dab1397044bf980" />
+
 
 
     <!-- CSS here -->
