@@ -35,16 +35,46 @@ Route::name('pages.')->group(
     }
 );
 
+Route::middleware('auth')
+    ->prefix('admin')
+    ->group(
+        function () {
+            Route::get('dashboard', [DashboardController::class, 'index'])
+                ->name('dashboard');
+
+            Route::resource('pages', 'Pages\PagesController')
+                ->except(['index', 'show', 'pricing', 'contact']);
+
+            Route::get('/admin/pages', 'Pages\PagesController@adminIndex')
+            ->name('pages.admin.index');
+
+            Route::resource('templates', 'Templates\TemplatesController')
+                ->except(['index', 'show']);
+
+            Route::get('/admin/templates', 'Templates\TemplatesController@adminIndex')
+                ->name('templates.admin.index');
+
+            Route::resource('services', 'Services\ServicesController')
+                ->except(['index', 'show']);
+
+            Route::resource('prices', 'Services\ServicesController')
+                ->except(['index', 'show']);
+        }
+    );
+
 
 //All other pages, not from views
-Route::resource('pages', 'Pages\PagesController');
+Route::resource('pages', 'Pages\PagesController')
+    ->only(['index', 'show']);
 
-Route::resource('templates', 'Templates\TemplatesController');
-Route::resource('services', 'Services\ServicesController');
+Route::resource('templates', 'Templates\TemplatesController')
+    ->only(['index', 'show']);
+Route::resource('services', 'Services\ServicesController')
+    ->only(['index', 'show']);
 
 
 Route::resource('blogcats', 'Blog\BlogCategoriesController')->names(['index' => 'blogcats']);
 Route::resource('blogs', 'Blog\BlogPostsController')->names(['index' => 'blog']);
 
 
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
