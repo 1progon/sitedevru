@@ -33,7 +33,7 @@
                                 <div class="blog_item_img">
 
                                     <img class="card-img rounded-0"
-                                         src="{{ $post->img }}" alt="image title {{ $title }}">
+                                         src="{{ asset($post->img) }}" alt="{{ $post->title }}">
 
                                     <a href="{{ $route }}" class="blog_item_date">
                                         <h3>{{ date('d', $timestamp) }}</h3>
