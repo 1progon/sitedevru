@@ -20,7 +20,7 @@ class UsersSeeder extends Seeder
                 'name' => 'admin',
                 'first_name' => 'Василий',
                 'last_name' => 'Петров',
-                'email' => 'asbo@mail.ru',
+                'email' => 'a@a.a',
                 'password' => Hash::make('qw123456'),
                 'email_verified_at' => date('Y-m-d H:m:s'),
                 'active' => true,
