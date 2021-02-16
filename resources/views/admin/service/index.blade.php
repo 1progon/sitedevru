@@ -22,7 +22,7 @@
         @endif
 
 
-        <table class="table">
+        <table class="table table-striped">
             <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
@@ -58,6 +58,8 @@
             </tbody>
         </table>
 
-        {{ $services->links() }}
+        <div class="m-3">
+            {{ $services->links() }}
+        </div>
     </div>
 @endsection
