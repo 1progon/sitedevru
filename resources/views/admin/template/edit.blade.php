@@ -10,14 +10,14 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <form action="{{ route('pages.update', $page ) }}" method="post">
+            <form action="{{ route('templates.update', $template ) }}" method="post">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
-                    <label for="title">Заголовок</label>
-                    <input type="text" name="title" id="title" class="form-control"
+                    <label for="name">Заголовок</label>
+                    <input type="text" name="name" id="title" class="form-control"
                            placeholder="Заголовок"
-                           value="{{ $page->title }}"
+                           value="{{ $template->name }}"
                            aria-describedby="helpId">
                 </div>
 
@@ -25,23 +25,56 @@
                     <label for="slug">Slug</label>
                     <input type="text" name="slug" id="slug" class="form-control"
                            placeholder="slug"
-                           value="{{ $page->slug }}"
+                           value="{{ $template->slug }}"
                            aria-describedby="helpId">
                 </div>
 
                 <div class="form-group">
-                    <label for="meta_description">meta_description</label>
-                    <input type="text" name="meta_description" id="meta_description" class="form-control"
-                           placeholder="meta_description"
-                           value="{{ $page->meta_description }}"
+                    <label for="img">Img</label>
+                    <input type="text" name="img" id="img" class="form-control"
+                           placeholder="img"
                            aria-describedby="helpId">
                 </div>
+
                 <div class="form-group">
-                    <label for="meta_keywords">meta_keywords</label>
-                    <input type="text" name="meta_keywords" id="meta_keywords" class="form-control"
-                           placeholder="meta_keywords"
-                           value="{{ $page->meta_keywords }}"
+                    <label for="img2">Img2</label>
+                    <input type="text" name="img2" id="img2" class="form-control"
+                           placeholder="img2"
                            aria-describedby="helpId">
+                </div>
+
+
+                {{--                TODO Add fields to template table--}}
+                {{--                <div class="form-group">--}}
+                {{--                    <label for="meta_description">meta_description</label>--}}
+                {{--                    <input type="text" name="meta_description" id="meta_description" class="form-control"--}}
+                {{--                           placeholder="meta_description"--}}
+                {{--                           value="{{ $template->meta_description }}"--}}
+                {{--                           aria-describedby="helpId">--}}
+                {{--                </div>--}}
+                {{--                <div class="form-group">--}}
+                {{--                    <label for="meta_keywords">meta_keywords</label>--}}
+                {{--                    <input type="text" name="meta_keywords" id="meta_keywords" class="form-control"--}}
+                {{--                           placeholder="meta_keywords"--}}
+                {{--                           value="{{ $template->meta_keywords }}"--}}
+                {{--                           aria-describedby="helpId">--}}
+                {{--                </div>--}}
+
+                <div class="form-group">
+                    <label for="ewfefe">На главную</label>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="on-homepage1" name="on_homepage"
+                               value="1"
+                               class="custom-control-input">
+                        <label class="custom-control-label" for="on-homepage1">Да</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="on-homepage2" name="on_homepage"
+                               value="0"
+                               checked
+                               class="custom-control-input">
+                        <label class="custom-control-label" for="on-homepage2">Нет</label>
+                    </div>
                 </div>
 
 
@@ -49,7 +82,7 @@
                     <label for="">Описание</label>
                     <textarea class="form-control"
                               name="description"
-                              id="description" rows="4">{{ $page->description }}</textarea>
+                              id="description" rows="4">{{ $template->description }}</textarea>
                 </div>
 
                 <div class="form-group">
@@ -57,7 +90,7 @@
                     <textarea class="form-control"
                               name="article"
                               id="article"
-                              rows="10">{{ $page->article }}</textarea>
+                              rows="10">{{ $template->article }}</textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Обновить</button>
