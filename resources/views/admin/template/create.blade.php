@@ -26,6 +26,20 @@
                            aria-describedby="helpId">
                 </div>
 
+                <div class="form-group">
+                    <label for="img">Img</label>
+                    <input type="text" name="img" id="img" class="form-control"
+                           placeholder="img"
+                           aria-describedby="helpId">
+                </div>
+
+                <div class="form-group">
+                    <label for="img2">Img2</label>
+                    <input type="text" name="img2" id="img2" class="form-control"
+                           placeholder="img2"
+                           aria-describedby="helpId">
+                </div>
+
 
                 {{--                TODO Add to DB migrate fields for meta titles--}}
                 {{--                <div class="form-group">--}}
