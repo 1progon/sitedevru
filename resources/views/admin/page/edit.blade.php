@@ -59,7 +59,7 @@
                               rows="10">{{ $page->article }}</textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Добавить</button>
+                <button type="submit" class="btn btn-primary">Обновить</button>
 
 
             </form>
