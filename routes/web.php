@@ -45,13 +45,13 @@ Route::middleware('auth')
             Route::resource('pages', 'Pages\PagesController')
                 ->except(['index', 'show', 'pricing', 'contact']);
 
-            Route::get('/admin/pages', 'Pages\PagesController@adminIndex')
-            ->name('pages.admin.index');
+            Route::get('pages', 'Pages\PagesController@adminIndex')
+                ->name('pages.admin.index');
 
             Route::resource('templates', 'Templates\TemplatesController')
                 ->except(['index', 'show']);
 
-            Route::get('/admin/templates', 'Templates\TemplatesController@adminIndex')
+            Route::get('templates', 'Templates\TemplatesController@adminIndex')
                 ->name('templates.admin.index');
 
             Route::resource('services', 'Services\ServicesController')
