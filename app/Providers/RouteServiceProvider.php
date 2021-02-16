@@ -21,7 +21,9 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/admin/dashboard';
+
+    //TODO Update path with account or admin on login
+    public const HOME = '/account/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, etc.
