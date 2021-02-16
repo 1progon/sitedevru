@@ -11,6 +11,7 @@
 |
 */
 
+use App\Model\User\User;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Auth;
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [HomepageController::class, 'index']);
+Route::get('/', [HomepageController::class, 'index'])->name('homepage');
 Route::post('/send-message', [\App\Http\Controllers\Other\SendMessage::class, 'postMessage'])
     ->name('message.send');
 
@@ -35,12 +36,25 @@ Route::name('pages.')->group(
     }
 );
 
-Route::middleware('auth')
+
+//User account panel
+Route::middleware(['auth', 'role:' . User::ROLE_USER])
+    ->prefix('account')
+    ->group(
+        function () {
+            Route::get('dashboard', [DashboardController::class, 'index'])
+                ->name('dashboard.user');
+        }
+    );
+
+
+//Admin account panel
+Route::middleware(['auth', 'role:' . User::ROLE_ADMIN])
     ->prefix('admin')
     ->group(
         function () {
             Route::get('dashboard', [DashboardController::class, 'index'])
-                ->name('dashboard');
+                ->name('dashboard.admin');
 
             Route::resource('pages', 'Pages\PagesController')
                 ->except(['index', 'show', 'pricing', 'contact']);
