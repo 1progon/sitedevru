@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Services;
 use App\Http\Controllers\Controller;
 use App\Model\Service\Service;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class ServicesController extends Controller
 {
@@ -20,6 +21,13 @@ class ServicesController extends Controller
         return view('service.index', compact('services'));
     }
 
+    public function adminIndex()
+    {
+        $services = Service::paginate();
+
+        return view('admin.service.index', compact('services'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -27,18 +35,19 @@ class ServicesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.service.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        //TODO Logic
+        return redirect()->route('services.admin.index');
     }
 
     /**
@@ -56,34 +65,38 @@ class ServicesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param Service $service
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Service $service)
     {
-        //
+        return view('admin.service.edit', compact('service'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param Service $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Service $service)
     {
-        //
+        //TODO Logic
+        return redirect()->route('services.admin.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param Service $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Service $service)
     {
-        //
+        //TODO Add remove images
+        $service->delete();
+
+        return redirect()->route('services.admin.index');
     }
 }
