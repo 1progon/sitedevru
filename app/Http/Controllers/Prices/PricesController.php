@@ -18,6 +18,12 @@ class PricesController extends Controller
         //
     }
 
+    public function adminIndex()
+    {
+        $prices = Price::paginate();
+        return view('admin.price.index', compact('prices'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +31,7 @@ class PricesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.price.create');
     }
 
     /**
@@ -36,7 +42,9 @@ class PricesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //TODO Logic
+
+        return redirect()->route('prices.admin.index');
     }
 
     /**
@@ -48,6 +56,8 @@ class PricesController extends Controller
     public function show(Price $price)
     {
         //
+
+
     }
 
     /**
@@ -58,7 +68,7 @@ class PricesController extends Controller
      */
     public function edit(Price $price)
     {
-        //
+        return view('admin.price.edit', compact('price'));
     }
 
     /**
@@ -70,7 +80,9 @@ class PricesController extends Controller
      */
     public function update(Request $request, Price $price)
     {
-        //
+        //TODO Logic
+
+        return redirect()->route('prices.admin.index');
     }
 
     /**
@@ -81,6 +93,10 @@ class PricesController extends Controller
      */
     public function destroy(Price $price)
     {
-        //
+        $removed = $price->delete();
+
+        //TODO Remove logic and remove images
+
+        return redirect()->route('prices.admin.index');
     }
 }
