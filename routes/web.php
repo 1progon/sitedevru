@@ -57,8 +57,14 @@ Route::middleware('auth')
             Route::resource('services', 'Services\ServicesController')
                 ->except(['index', 'show']);
 
-            Route::resource('prices', 'Services\ServicesController')
+            Route::get('services', 'Services\ServicesController@adminIndex')
+                ->name('services.admin.index');
+
+            Route::resource('prices', 'Prices\PricesController')
                 ->except(['index', 'show']);
+
+            Route::get('prices', 'Prices\PricesController@adminIndex')
+                ->name('prices.admin.index');
         }
     );
 
@@ -70,6 +76,8 @@ Route::resource('pages', 'Pages\PagesController')
 Route::resource('templates', 'Templates\TemplatesController')
     ->only(['index', 'show']);
 Route::resource('services', 'Services\ServicesController')
+    ->only(['index', 'show']);
+Route::resource('prices', 'Prices\PricesControllerr')
     ->only(['index', 'show']);
 
 
