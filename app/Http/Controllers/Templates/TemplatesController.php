@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Templates;
 use App\Http\Controllers\Controller;
 use App\Model\Template\Template;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\DocBlock\Description;
 
 class TemplatesController extends Controller
 {
@@ -17,7 +18,14 @@ class TemplatesController extends Controller
     {
         $templates = Template::paginate();
 
-        return view('templates.index',compact('templates'));
+        return view('templates.index', compact('templates'));
+    }
+
+    public function adminIndex()
+    {
+        $templates = Template::paginate();
+
+        return view('admin.template.index', compact('templates'));
     }
 
     /**
@@ -27,24 +35,28 @@ class TemplatesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.template.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $template = new Template();
+        $template->fill($request->all());
+        $template->save();
+
+        return redirect()->route('templates.admin.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  Template  $template
+     * @param Template $template
      * @return \Illuminate\Http\Response
      */
     public function show(Template $template)
@@ -55,36 +67,34 @@ class TemplatesController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Template $template
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function edit($id)
+    public function edit(Template $template)
     {
-        //
+        return view('admin.template.edit', compact('template'));
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Template $template
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Template $template)
     {
-        //
+        $template->fill($request->all());
+        $template->save();
+
+        return redirect()->route('templates.admin.index');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Template $template
      */
-    public function destroy($id)
+    public function destroy(Template $template)
     {
-        //
+        //TODO Add remove images etc..
+        $template->delete();
+
+        return redirect()->route('templates.admin.index');
     }
 }
