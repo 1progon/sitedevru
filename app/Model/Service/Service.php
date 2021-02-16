@@ -11,10 +11,13 @@ class Service extends Model
         'title',
         'slug',
         'on_homepage',
+        'meta_description',
+        'meta_keywords',
         'description',
         'img',
         'img2',
     ];
+
     public function getRouteKeyName()
     {
         return 'slug';
