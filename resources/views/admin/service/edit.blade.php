@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header">Редактировать страницу</div>
+        <div class="card-header">Редактировать сервис</div>
 
         <div class="card-body">
             @if ( session('status'))
@@ -44,6 +44,39 @@
                            aria-describedby="helpId">
                 </div>
 
+                <div class="form-group">
+                    <label for="ewfefe">На главную</label>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="on-homepage1" name="on_homepage"
+                               value="1"
+                               class="custom-control-input">
+                        <label class="custom-control-label" for="on-homepage1">Да</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="on-homepage2" name="on_homepage"
+                               value="0"
+                               checked
+                               class="custom-control-input">
+                        <label class="custom-control-label" for="on-homepage2">Нет</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="img">Img</label>
+                    <input type="text" name="img" id="img" class="form-control"
+                           placeholder="img"
+                           value="{{ $service->img }}"
+                           aria-describedby="helpId">
+                </div>
+
+                <div class="form-group">
+                    <label for="img2">Img2</label>
+                    <input type="text" name="img2" id="img2" class="form-control"
+                           placeholder="img2"
+                           value="{{ $service->img2 }}"
+                           aria-describedby="helpId">
+                </div>ew
+
 
                 <div class="form-group">
                     <label for="description">Описание</label>
@@ -51,13 +84,7 @@
                               id="description" rows="4">{{ $service->description }}</textarea>
                 </div>
 
-                <div class="form-group">
-                    <label for="article">Статья</label>
-                    <textarea class="form-control"
-                              name="article"
-                              id="article"
-                              rows="10">{{ $service->article }}</textarea>
-                </div>
+
 
                 <button type="submit" class="btn btn-primary">Обновить</button>
 
