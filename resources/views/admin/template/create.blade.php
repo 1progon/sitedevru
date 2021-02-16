@@ -13,8 +13,8 @@
             <form action="{{ route('templates.store') }}" method="post">
                 @csrf
                 <div class="form-group">
-                    <label for="name">Заголовок</label>
-                    <input type="text" name="name" id="name" class="form-control"
+                    <label for="title">Заголовок</label>
+                    <input type="text" name="title" id="title" class="form-control"
                            placeholder="Заголовок"
                            aria-describedby="helpId">
                 </div>
@@ -41,19 +41,18 @@
                 </div>
 
 
-                {{--                TODO Add to DB migrate fields for meta titles--}}
-                {{--                <div class="form-group">--}}
-                {{--                    <label for="meta_description">meta_description</label>--}}
-                {{--                    <input type="text" name="meta_description" id="meta_description" class="form-control"--}}
-                {{--                           placeholder="meta_description"--}}
-                {{--                           aria-describedby="helpId">--}}
-                {{--                </div>--}}
-                {{--                <div class="form-group">--}}
-                {{--                    <label for="meta_keywords">meta_keywords</label>--}}
-                {{--                    <input type="text" name="meta_keywords" id="meta_keywords" class="form-control"--}}
-                {{--                           placeholder="meta_keywords"--}}
-                {{--                           aria-describedby="helpId">--}}
-                {{--                </div>--}}
+                <div class="form-group">
+                    <label for="meta_description">meta_description</label>
+                    <input type="text" name="meta_description" id="meta_description" class="form-control"
+                           placeholder="meta_description"
+                           aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                    <label for="meta_keywords">meta_keywords</label>
+                    <input type="text" name="meta_keywords" id="meta_keywords" class="form-control"
+                           placeholder="meta_keywords"
+                           aria-describedby="helpId">
+                </div>
 
                 <div class="form-group">
                     <label for="ewfefe">На главную</label>

@@ -14,10 +14,10 @@
                 @csrf
                 @method('PUT')
                 <div class="form-group">
-                    <label for="name">Заголовок</label>
-                    <input type="text" name="name" id="title" class="form-control"
+                    <label for="title">Заголовок</label>
+                    <input type="text" name="title" id="title" class="form-control"
                            placeholder="Заголовок"
-                           value="{{ $template->name }}"
+                           value="{{ $template->title }}"
                            aria-describedby="helpId">
                 </div>
 
@@ -44,21 +44,20 @@
                 </div>
 
 
-                {{--                TODO Add fields to template table--}}
-                {{--                <div class="form-group">--}}
-                {{--                    <label for="meta_description">meta_description</label>--}}
-                {{--                    <input type="text" name="meta_description" id="meta_description" class="form-control"--}}
-                {{--                           placeholder="meta_description"--}}
-                {{--                           value="{{ $template->meta_description }}"--}}
-                {{--                           aria-describedby="helpId">--}}
-                {{--                </div>--}}
-                {{--                <div class="form-group">--}}
-                {{--                    <label for="meta_keywords">meta_keywords</label>--}}
-                {{--                    <input type="text" name="meta_keywords" id="meta_keywords" class="form-control"--}}
-                {{--                           placeholder="meta_keywords"--}}
-                {{--                           value="{{ $template->meta_keywords }}"--}}
-                {{--                           aria-describedby="helpId">--}}
-                {{--                </div>--}}
+                <div class="form-group">
+                    <label for="meta_description">meta_description</label>
+                    <input type="text" name="meta_description" id="meta_description" class="form-control"
+                           placeholder="meta_description"
+                           value="{{ $template->meta_description }}"
+                           aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                    <label for="meta_keywords">meta_keywords</label>
+                    <input type="text" name="meta_keywords" id="meta_keywords" class="form-control"
+                           placeholder="meta_keywords"
+                           value="{{ $template->meta_keywords }}"
+                           aria-describedby="helpId">
+                </div>
 
                 <div class="form-group">
                     <label for="ewfefe">На главную</label>
