@@ -46,7 +46,10 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        //TODO Logic
+        $service = new Service();
+        $service->fill($request->all());
+        $service->save();
+
         return redirect()->route('services.admin.index');
     }
 
@@ -82,7 +85,10 @@ class ServicesController extends Controller
      */
     public function update(Request $request, Service $service)
     {
-        //TODO Logic
+        $service->fill($request->all());
+        $service->save();
+
+
         return redirect()->route('services.admin.index');
     }
 
