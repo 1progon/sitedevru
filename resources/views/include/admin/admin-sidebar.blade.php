@@ -32,6 +32,10 @@
                 <div class="list-group-item list-group-item-info font-weight-bold">Услуга</div>
                 <a href="{{ route('services.create') }}"
                    class="list-group-item list-group-item-action">Добавить услугу</a>
+
+
+                <a href="{{ route('services.admin.index') }}"
+                   class="list-group-item list-group-item-action">Все услуги</a>
             </div>
 
 
@@ -39,6 +43,9 @@
                 <div class="list-group-item list-group-item-info font-weight-bold">Цена</div>
                 <a href="{{ route('prices.create') }}"
                    class="list-group-item list-group-item-action">Добавить цену</a>
+
+                <a href="{{ route('prices.admin.index') }}"
+                   class="list-group-item list-group-item-action">Все цены</a>
             </div>
 
 
