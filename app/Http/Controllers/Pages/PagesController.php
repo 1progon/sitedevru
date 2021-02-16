@@ -11,6 +11,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
+use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class PagesController extends Controller
 {
@@ -21,7 +22,12 @@ class PagesController extends Controller
      */
     public function index()
     {
-        //
+    }
+
+    public function adminIndex()
+    {
+        $pages = Page::paginate();
+        return view('admin.page.index', compact('pages'));
     }
 
     /**
@@ -31,7 +37,7 @@ class PagesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.page.create');
     }
 
     /**
@@ -42,7 +48,11 @@ class PagesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $page = new Page();
+        $page->fill($request->all());
+        $page->save();
+
+        return redirect()->route('pages.admin.index');
     }
 
     /**
@@ -64,7 +74,7 @@ class PagesController extends Controller
      */
     public function edit(Page $page)
     {
-        //
+        return view('admin.page.edit', compact('page'));
     }
 
     /**
@@ -76,7 +86,10 @@ class PagesController extends Controller
      */
     public function update(Request $request, Page $page)
     {
-        //
+        $page->fill($request->all());
+        $page->save();
+
+        return redirect()->route('pages.admin.index', $page);
     }
 
     /**
@@ -87,7 +100,10 @@ class PagesController extends Controller
      */
     public function destroy(Page $page)
     {
-        //
+        //TODO Need delete images and other content
+        $removed = $page->delete();
+
+        return redirect()->route('pages.admin.index');
     }
 
 
@@ -101,7 +117,7 @@ class PagesController extends Controller
 
         return view('page.pricing', compact('prices'));
     }
-    
+
 
     /**
      * @return Application|Factory|View
