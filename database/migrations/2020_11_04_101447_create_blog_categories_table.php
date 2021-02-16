@@ -18,6 +18,10 @@ class CreateBlogCategoriesTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('slug')->unique();
+
+            $table->text('meta_description')->nullable();
+            $table->text('meta_keywords')->nullable();
+
             $table->text('description')->nullable();
         });
     }

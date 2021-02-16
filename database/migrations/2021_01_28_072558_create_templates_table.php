@@ -13,20 +13,28 @@ class CreateTemplatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('templates', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create(
+            'templates',
+            function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->timestamps();
 
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->text('article')->nullable();
-            $table->string('slug')->unique();
+                $table->string('title');
+                $table->string('slug')->unique();
 
-            $table->boolean('on_homepage')->default(0);
+                $table->text('description');
+                $table->text('article')->nullable();
 
-            $table->string('img')->nullable();
-            $table->string('img2')->nullable();
-        });
+
+                $table->text('meta_description')->nullable();
+                $table->text('meta_keywords')->nullable();
+
+                $table->boolean('on_homepage')->default(0);
+
+                $table->string('img')->nullable();
+                $table->string('img2')->nullable();
+            }
+        );
     }
 
     /**

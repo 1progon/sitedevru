@@ -13,21 +13,29 @@ class CreatePricesTable extends Migration
      */
     public function up()
     {
-        Schema::create('prices', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create(
+            'prices',
+            function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->timestamps();
+
+                $table->string('title');
+                $table->string('slug')->unique();
 
 
-            $table->string('slug')->unique();
-            $table->string('title');
-            $table->text('description')->nullable();
-            $table->boolean('on_homepage')->default(0);
-
-            $table->decimal('price', 8, 2)->nullable();
-            $table->string('img')->nullable();
+                $table->text('meta_description')->nullable();
+                $table->text('meta_keywords')->nullable();
 
 
-        });
+                $table->text('description')->nullable();
+
+
+                $table->boolean('on_homepage')->default(0);
+
+                $table->unsignedInteger('price')->nullable();
+                $table->string('img')->nullable();
+            }
+        );
     }
 
     /**

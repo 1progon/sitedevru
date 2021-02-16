@@ -23,6 +23,9 @@ class CreateTestimonialsTable extends Migration
                 $table->string('title');
                 $table->string('slug')->unique();
 
+                $table->text('meta_description')->nullable();
+                $table->text('meta_keywords')->nullable();
+
                 $table->string('img')
                     ->default('https://www.flaticon.com/svg/static/icons/svg/599/599305.svg');
 

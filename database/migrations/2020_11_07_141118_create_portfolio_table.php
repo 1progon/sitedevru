@@ -13,21 +13,29 @@ class CreatePortfolioTable extends Migration
      */
     public function up()
     {
-        Schema::create('portfolio', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create(
+            'portfolio',
+            function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->timestamps();
 
-            $table->string('title');
-            $table->string('slug')->unique();
+                $table->string('title');
+                $table->string('slug')->unique();
 
-            $table->text('description')->nullable();
-            $table->text('article')->nullable();
-            $table->string('img')->nullable();
-            $table->string('img2')->nullable();
-            $table->string('img3')->nullable();
+                $table->text('meta_description')->nullable();
+                $table->text('meta_keywords')->nullable();
 
-            $table->string('url')->nullable();
-        });
+                $table->text('description')->nullable();
+                $table->text('article')->nullable();
+
+                $table->string('img')->nullable();
+                $table->string('img2')->nullable();
+                $table->string('img3')->nullable();
+
+
+                $table->string('url')->nullable();
+            }
+        );
     }
 
     /**

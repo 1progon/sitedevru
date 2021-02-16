@@ -13,19 +13,23 @@ class CreatePagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('pages', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create(
+            'pages',
+            function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->timestamps();
 
-            $table->string('slug')->unique();
+                $table->string('title');
+                $table->string('slug')->unique();
 
-            $table->text('meta_description')->nullable();
-            $table->text('meta_keywords')->nullable();
+                $table->text('meta_description')->nullable();
+                $table->text('meta_keywords')->nullable();
 
-            $table->string('title');
-            $table->text('description')->nullable();
-            $table->text('article')->nullable();
-        });
+
+                $table->text('description')->nullable();
+                $table->text('article')->nullable();
+            }
+        );
     }
 
     /**

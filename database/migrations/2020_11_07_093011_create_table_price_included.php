@@ -20,6 +20,10 @@ class CreateTablePriceIncluded extends Migration
 
             $table->string('title');
             $table->string('slug')->unique();
+
+            $table->text('meta_description')->nullable();
+            $table->text('meta_keywords')->nullable();
+
             $table->text('description')->nullable();
             $table->string('img')->nullable();
 

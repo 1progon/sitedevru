@@ -22,10 +22,12 @@ class CreateBlogPostsTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
 
-            $table->text('meta_keywords')->nullable();
             $table->text('meta_description')->nullable();
+            $table->text('meta_keywords')->nullable();
 
             $table->text('article')->nullable();
+
+            $table->string('img')->nullable();
 
             $table->foreign('blog_categories_id')
                 ->references('id')
