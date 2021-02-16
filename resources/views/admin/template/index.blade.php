@@ -22,7 +22,7 @@
         @endif
 
 
-        <table class="table">
+        <table class="table table-striped">
             <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
@@ -39,7 +39,7 @@
             @forelse( $templates as $template )
                 <tr>
                     <th scope="row">{{ $template->id }}</th>
-                    <td>{{ $template->name }}</td>
+                    <td>{{ $template->title }}</td>
                     <td>{{ $template->on_homepage }}</td>
 
                     <td><img src="{{ asset($template->img) }}" width="100" height="100"
@@ -72,6 +72,8 @@
             </tbody>
         </table>
 
-        {{ $templates->links() }}
+        <div class="m-3">
+            {{ $templates->links() }}
+        </div>
     </div>
 @endsection
