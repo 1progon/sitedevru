@@ -9,10 +9,12 @@ class Template extends Model
     public $table = 'templates';
 
     protected $fillable = [
-        'name',
+        'title',
+        'slug',
         'description',
         'article',
-        'slug',
+        'meta_description',
+        'meta_keywords',
         'on_homepage',
         'img',
         'img2',
