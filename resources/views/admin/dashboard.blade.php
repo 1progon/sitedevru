@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header">Аккаунт</div>
+        <div class="card-header">Аккаунт администратора</div>
 
         <div class="card-body">
             @if ( session('status'))
