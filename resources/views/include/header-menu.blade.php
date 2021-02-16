@@ -21,14 +21,22 @@
 
 
 
-            @auth
-                <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none">
+            @auth()
+                <form id="logout-form" action="{{ route('logout') }}"
+                      method="post" style="display: none">
                     @csrf
                 </form>
-                <li>
-                    <button class="btn btn-link" form="logout-form" type="submit">Выйти</button>
-                </li>
-                <li><a href="{{ route('dashboard') }}">Аккаунт</a></li>
+
+                <button class="btn-danger" form="logout-form" type="submit">Выйти</button>
+
+                @if( auth()->user()->role === \App\Model\User\User::ROLE_USER )
+                    <li><a href="{{ route('dashboard.user') }}">Аккаунт</a></li>
+                @elseif( auth()->user()->role === \App\Model\User\User::ROLE_ADMIN )
+                    <li><a href="{{ route('dashboard.admin') }}">Админ</a></li>
+                @endif
+
+
+
             @else
                 <li><a href="{{ route('login') }}">Вход</a></li>
                 <li><a href="{{ route('register') }}">Регистрация</a></li>
