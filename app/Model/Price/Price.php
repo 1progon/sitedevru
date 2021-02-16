@@ -8,13 +8,16 @@ class Price extends Model
 {
 
     protected $fillable = [
-        'slug',
         'title',
+        'slug',
+        'meta_description',
+        'meta_keywords',
         'description',
         'on_homepage',
         'price',
         'img',
     ];
+
     public function getRouteKeyName()
     {
         return 'slug';
