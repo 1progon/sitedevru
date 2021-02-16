@@ -42,7 +42,9 @@ class PricesController extends Controller
      */
     public function store(Request $request)
     {
-        //TODO Logic
+        $price = new Price();
+        $price->fill($request->all());
+        $price->save();
 
         return redirect()->route('prices.admin.index');
     }
@@ -80,8 +82,8 @@ class PricesController extends Controller
      */
     public function update(Request $request, Price $price)
     {
-        //TODO Logic
-
+        $price->fill($request->all());
+        $price->save();
         return redirect()->route('prices.admin.index');
     }
 
