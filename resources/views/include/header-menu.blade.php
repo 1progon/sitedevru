@@ -27,13 +27,14 @@
                     @csrf
                 </form>
 
-                <button class="btn-danger" form="logout-form" type="submit">Выйти</button>
-
-                @if( auth()->user()->role === \App\Model\User\User::ROLE_USER )
+                @if( auth()->user()->role === \App\Model\User\User::ROLE['user'] )
                     <li><a href="{{ route('dashboard.user') }}">Аккаунт</a></li>
-                @elseif( auth()->user()->role === \App\Model\User\User::ROLE_ADMIN )
+                @elseif( auth()->user()->role === \App\Model\User\User::ROLE['admin'] )
+                    <li><a href="{{ route('dashboard.user') }}">Аккаунт</a></li>
                     <li><a href="{{ route('dashboard.admin') }}">Админ</a></li>
                 @endif
+
+                <button class="btn-danger" form="logout-form" type="submit">Выйти</button>
 
 
 
