@@ -6654,6 +6654,13 @@ table .btn.btn-danger {
   }
 }
 
+form .required::before {
+  position: relative;
+  content: "*";
+  color: red;
+  margin: 0 3px;
+}
+
 .page-single .description {
   background-color: #ff5c97;
   border-radius: 10px;
