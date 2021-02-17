@@ -1,16 +1,21 @@
 <div class="">
-
-
-    {{--TODO Add 'active' css class on route change--}}
     <div class="card">
         <div class="card-header">
-            Меню
+            Меню админа
         </div>
         <div class="list-group">
 
             @php
                 $route = Route::currentRouteName();
             @endphp
+
+            <div class="list-group list-group-flush">
+                <div class="list-group-item list-group-item-secondary font-weight-bold">Пользователи</div>
+
+                <a href="{{ route('admin.users') }}"
+                   class="list-group-item list-group-item-action @if( $route == 'admin.users') active
+@endif">Все пользователи</a>
+            </div>
 
             <div class="list-group list-group-flush">
                 <div class="list-group-item list-group-item-secondary font-weight-bold">Страница</div>
