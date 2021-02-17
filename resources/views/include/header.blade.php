@@ -3,13 +3,13 @@
     <div class="header-area">
         <div class="main-header header-sticky">
             <div class="container">
-                <div class="row align-items-center justify-content-between">
+                <div class="d-flex flex-wrap align-items-center justify-content-between">
                     <!-- Logo -->
                     <a href="/">
                         <div class="logo">
                             <img src="{{ asset('assets/img/logo/logo.svg') }}" alt="логотип компании по изготовлению
                             сайтов" width="40" height="60">
-                            <h3>Сайты Пермь</h3>
+                            <h3>Сайтодел</h3>
                         </div>
                     </a>
 
@@ -23,9 +23,7 @@
                         </div>
                     </div>
                     <!-- Mobile Menu -->
-                    <div class="col-12 d-lg-none">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
+                        <div class="mobile_menu d-lg-none flex-grow-1 flex-shrink-1"></div>
                 </div>
             </div>
         </div>
