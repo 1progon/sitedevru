@@ -25,7 +25,7 @@ class UsersSeeder extends Seeder
                 'password' => Hash::make('qw123456'),
                 'email_verified_at' => date('Y-m-d H:m:s'),
                 'active' => true,
-                'role' => User::ROLE_ADMIN
+                'role' => User::ROLE['admin']
             ],
         ];
 
