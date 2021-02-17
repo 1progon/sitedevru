@@ -1,6 +1,6 @@
 <section class="special-proposal we-create-area create-padding">
-    <div class="container" style="border: 25px solid #ff5c97; padding: 20px;">
-        <div class="">
+    <div class="container rose-border">
+        <div>
             <div class="we-create-cap text-center">
                 <h3>Специальное предложение</h3>
                 <h4>Простой сайт визитка или интернет-магазин по приемлемой
@@ -67,7 +67,8 @@
                 <br/>
 
                 <a href="{{ route('templates.index') }}" class="btn btn-primary">Смотреть шаблоны</a>
-                <a href="{{ route('pages.show', 'pros-and-cons-template-site') }}" class="btn btn-primary">Плюсы и минусы</a>
+                <a href="{{ route('pages.show', 'pros-and-cons-template-site') }}" class="btn btn-primary">Плюсы и
+                    минусы</a>
             </div>
         </div>
     </div>
