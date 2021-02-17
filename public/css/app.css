@@ -6628,6 +6628,17 @@ del {
   margin-bottom: 10px;
 }
 
+table tr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+table tr th,
+table tr td {
+  word-break: break-word;
+  flex: 1;
+}
+
 table .btn {
   min-width: unset;
   padding: 5px;
