@@ -11,18 +11,11 @@ header {
     top: 0;
 
     .header-area {
-        box-shadow: 0 4px 5px 0px #e3e3e3;
-
-        & .slicknav_btn {
-            top: -36px;
-        }
-
+        box-shadow: 0 4px 5px 0 #e3e3e3;
 
         & .main-header {
-
             z-index: 10;
             min-height: 60px;
-
 
             & ul {
                 & > li:hover {
@@ -36,18 +29,16 @@ header {
 
 
             @media #{$md}{
-                padding: 11px 0;
             }
             @media #{$sm}{
-                padding: 11px 0;
             }
             @media #{$xs}{
-                padding: 11px 0;
             }
 
             & .logo {
                 display: flex;
                 align-items: center;
+
                 & img {
                     margin-right: 10px;
                     transform: rotate(140deg);
@@ -170,7 +161,11 @@ header {
 }
 
 .slicknav_nav {
-    margin-top: 0;
+    margin-top: 40px;
+    box-shadow: 0 4px 5px 0 #e3e3e3;
+    position: absolute;
+    left: 0;
+    width: 100vw;
 }
 
 
@@ -185,9 +180,6 @@ header {
 }
 
 .mobile_menu {
-    position: absolute;
-    right: 0;
-    width: 100%;
     z-index: 99;
 }
 
