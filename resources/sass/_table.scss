@@ -1,4 +1,19 @@
 table {
+
+    & tr {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        & th, & td {
+            word-break: break-word;
+            flex: 1;
+        }
+    }
+
+
+
+
     & .btn {
         min-width: unset;
         padding: 5px;
