@@ -18,7 +18,7 @@ class UsersSeeder extends Seeder
             [
                 'created_at' => date('Y-m-d H:m:s'),
                 'updated_at' => date('Y-m-d H:m:s'),
-                'name' => 'admin',
+                'login' => 'admin',
                 'first_name' => 'Василий',
                 'last_name' => 'Петров',
                 'email' => 'a@a.a',
