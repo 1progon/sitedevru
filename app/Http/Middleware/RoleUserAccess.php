@@ -2,23 +2,24 @@
 
 namespace App\Http\Middleware;
 
-use App\Model\User\User;
+use Auth;
 use Closure;
+use Illuminate\Http\Request;
 
 class RoleUserAccess
 {
     /**
      * Handle an incoming request.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \Closure $next
+     * @param Request $request
+     * @param Closure $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $role)
+    public function handle(Request $request, Closure $next, ...$roles)
     {
-        if (auth()->user()->role === intval($role)) {
+        if (in_array(Auth::user()->role, $roles)) {
             return $next($request);
         }
-        return redirect()->route('homepage');
+        return redirect()->route('no-access');
     }
 }
