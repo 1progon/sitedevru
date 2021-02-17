@@ -1,0 +1,13 @@
+.rose-border {
+    border: 25px solid #ff5c97;
+    padding: 20px;
+
+    @media all and (max-width: 767px) {
+        & {
+            border: none;
+            background-color: #f65c9708;
+        }
+    }
+}
+
+
