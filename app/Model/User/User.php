@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'login',
         'first_name',
         'last_name',
         'patronymic_name',
@@ -27,9 +27,22 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    const ROLE_USER = 0;
-    const ROLE_ADMIN = 1;
-    const ROLE_WORKER = 2;
+
+    const STATUS = [
+        'deactivated' => 0,
+        'active' => 1,
+        'banned' => 2,
+        'removed' => 3,
+        'archived' => 4
+    ];
+
+
+    const ROLE = [
+        'user' => 0,
+        'admin' => 1,
+        'manager' => 2,
+        'editor' => 3
+    ];
 
 
     /**
