@@ -9,10 +9,10 @@
 
 
 <main class="container-fluid d-flex flex-row flex-wrap my-3">
-    <div class="col-12 col-md-3 my-2">
+    <div class="col-12 col-md-2 my-2">
         @include('include.admin.admin-sidebar')
     </div>
-    <div class="col my-2">
+    <div class="col-12 col-md-10 my-2">
         @yield('main')
     </div>
 </main>
