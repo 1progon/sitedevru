@@ -27,7 +27,9 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
-                <th scope="col">Show</th>
+                <th scope="col">Desc</th>
+                <th scope="col">Article</th>
+                <th scope="col">Link</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -39,7 +41,11 @@
                 <tr>
                     <th scope="row">{{ $page->id }}</th>
                     <td>{{ $page->title }}</td>
-                    <td><a target="_blank" href="{{ route('pages.show', $page) }}">Открыть</a></td>
+                    <td>{{ $page->description }}</td>
+                    <td>{{ Str::limit($page->article, 50) }}</td>
+                    <td>
+                        <a target="_blank" href="{{ route('pages.show', $page) }}">🔗</a>
+                    </td>
                     <td><a class="btn btn-warning btn-sm" href="{{ route('pages.edit', $page) }}">Edit</a></td>
                     <td>
                         <form id="delete-page"

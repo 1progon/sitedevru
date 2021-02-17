@@ -27,7 +27,11 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
-                <th scope="col">Show</th>
+                <th scope="col">Homepage</th>
+                <th scope="col">Desc</th>
+                <th scope="col">Price</th>
+                <th scope="col">Img</th>
+                <th scope="col">Link</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -35,11 +39,16 @@
             <tbody>
             @forelse( $prices as $price )
 
-
                 <tr>
                     <th scope="row">{{ $price->id }}</th>
                     <td>{{ $price->title }}</td>
-                    <td><a target="_blank" href="{{ route('prices.show', $price) }}">Открыть</a></td>
+                    <td>{{ $price->on_homepage === 1 ? '✅' : '' }}</td>
+                    <td>{{ $price->description }}</td>
+                    <td>{{ $price->price }}</td>
+                    <td>{{ $price->img }}</td>
+                    <td>
+                        <a target="_blank" href="{{ route('prices.show', $price) }}">🔗</a>
+                    </td>
                     <td><a class="btn btn-warning btn-sm" href="{{ route('prices.edit', $price) }}">Edit</a></td>
                     <td>
                         <form id="delete-page"

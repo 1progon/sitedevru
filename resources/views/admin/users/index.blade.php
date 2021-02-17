@@ -48,7 +48,7 @@
                     <td>{{ $user->patronymic_name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ array_search($user->role, \App\Model\User\User::ROLE) }}</td>
-                    <td>{{ $user->active ? 'Active' : 'Inactive' }}</td>
+                    <td>{{ $user->active ? '🙂' : '😞' }}</td>
 
                 </tr>
 

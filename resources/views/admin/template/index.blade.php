@@ -26,11 +26,13 @@
             <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">On Homepage</th>
+                <th scope="col">Title</th>
+                <th scope="col">Desc</th>
+                <th scope="col">Article</th>
+                <th scope="col">Homepage</th>
                 <th scope="col">Img 1</th>
                 <th scope="col">Img 2</th>
-                <th scope="col">Show</th>
+                <th scope="col">Link</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -40,7 +42,9 @@
                 <tr>
                     <th scope="row">{{ $template->id }}</th>
                     <td>{{ $template->title }}</td>
-                    <td>{{ $template->on_homepage }}</td>
+                    <td>{{ $template->description }}</td>
+                    <td>{{ Str::limit($template->article, 50) }}</td>
+                    <td>{{ $template->on_homepage === 1 ? '✅' : '' }}</td>
 
                     <td><img src="{{ asset($template->img) }}" width="100" height="100"
                              alt=""></td>
@@ -49,7 +53,7 @@
                              alt=""></td>
 
 
-                    <td><a target="_blank" href="{{ route('templates.show', $template) }}">Открыть</a></td>
+                    <td><a target="_blank" href="{{ route('templates.show', $template) }}">🔗</a></td>
                     <td><a class="btn btn-warning btn-sm" href="{{ route('templates.edit', $template) }}">Edit</a></td>
                     <td>
                         <form id="delete-template"

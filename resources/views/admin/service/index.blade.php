@@ -27,7 +27,11 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
-                <th scope="col">Show</th>
+                <th scope="col">Desc</th>
+                <th scope="col">Img</th>
+                <th scope="col">Img2</th>
+                <th scope="col">Homepage</th>
+                <th scope="col">Link</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -39,8 +43,15 @@
                 <tr>
                     <th scope="row">{{ $service->id }}</th>
                     <td>{{ $service->title }}</td>
-                    <td><a target="_blank" href="{{ route('services.show', $service) }}">Открыть</a></td>
-                    <td><a class="btn btn-warning btn-sm" href="{{ route('services.edit', $service) }}">Edit</a></td>
+                    <td>{{ Str::limit($service->description, 50) }}</td>
+                    <td>{{ $service->img }}</td>
+                    <td>{{ $service->img2 }}</td>
+                    <td>{{ $service->on_homepage === 1 ? '✅' : '' }}</td>
+                    <td>
+                        <a target="_blank" href="{{ route('services.show', $service) }}">🔗</a>
+                    </td>
+                    <td><a class="btn btn-warning btn-sm" href="{{ route('services.edit', $service) }}">Edit</a>
+                    </td>
                     <td>
                         <form id="delete-page"
                               action="{{ route('services.destroy', $service) }}"
