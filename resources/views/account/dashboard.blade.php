@@ -1,4 +1,4 @@
-@extends('layouts.admin-layout')
+@extends('layouts.account-layout')
 
 @section('main')
     <div class="card">
@@ -10,7 +10,14 @@
                     {{ session('status') }}
                 </div>
             @endif
-            Вы вошли в систему!
+
+            @if ( session('error'))
+                <div class="alert alert-danger" role="alert">
+                    {{ session('error') }}
+                </div>
+            @endif
+
+            Вы в системе!
         </div>
     </div>
 @endsection
