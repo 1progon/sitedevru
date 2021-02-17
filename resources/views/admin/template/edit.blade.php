@@ -60,17 +60,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="ewfefe">На главную</label>
+                    <label for="on-homepage">На главную</label>
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" id="on-homepage1" name="on_homepage"
                                value="1"
+                               @if( $service->on_homepage == 1) checked @endif
                                class="custom-control-input">
                         <label class="custom-control-label" for="on-homepage1">Да</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" id="on-homepage2" name="on_homepage"
                                value="0"
-                               checked
+                               @if( $service->on_homepage == 0) checked @endif
                                class="custom-control-input">
                         <label class="custom-control-label" for="on-homepage2">Нет</label>
                     </div>
