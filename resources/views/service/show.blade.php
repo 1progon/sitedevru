@@ -15,12 +15,9 @@
             </div>
         </div>
 
-
         <div>
-            <div class="description">{{ $service->description }}</div>
+            <div class="description">{!! $service->description !!}</div>
 
-            {{--TODO Not escaped content. Only for admin or sanitize for Other users--}}
-            <article>{!! $service->article !!}</article>
         </div>
 
     </div>
