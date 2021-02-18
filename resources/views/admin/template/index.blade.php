@@ -46,10 +46,10 @@
                     <td>{{ Str::limit($template->article, 50) }}</td>
                     <td>{{ $template->on_homepage === 1 ? '✅' : '' }}</td>
 
-                    <td><img src="{{ asset($template->img) }}" width="100" height="100"
+                    <td><img src="{{ asset($template->img) }}" width="80" height="80"
                              alt=""></td>
 
-                    <td><img src="{{ asset($template->img2) }}" width="100" height="100"
+                    <td><img src="{{ asset($template->img2) }}" width="80" height="80"
                              alt=""></td>
 
 

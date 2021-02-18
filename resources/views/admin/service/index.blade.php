@@ -44,8 +44,8 @@
                     <th scope="row">{{ $service->id }}</th>
                     <td>{{ $service->title }}</td>
                     <td>{{ Str::limit($service->description, 50) }}</td>
-                    <td>{{ $service->img }}</td>
-                    <td>{{ $service->img2 }}</td>
+                    <td><img src="{{ $service->img }}" alt="" width="80" height="80"></td>
+                    <td><img src="{{ $service->img2 }}" alt="" width="80" height="80"></td>
                     <td>{{ $service->on_homepage === 1 ? '✅' : '' }}</td>
                     <td>
                         <a target="_blank" href="{{ route('services.show', $service) }}">🔗</a>
