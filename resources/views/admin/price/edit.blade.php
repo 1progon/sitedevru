@@ -30,6 +30,11 @@
                            value="{{ $price->slug }}"
                            aria-describedby="helpId">
                 </div>
+                @error('slug')
+                <div class="alert alert-danger">
+                    {{ old('slug') }}, {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-group">
                     <label for="on-homepage">На главную</label>

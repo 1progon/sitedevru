@@ -31,6 +31,11 @@
                            value="{{ $page->slug }}"
                            aria-describedby="helpId">
                 </div>
+                @error('slug')
+                <div class="alert alert-danger">
+                    {{ old('slug') }}, {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-group">
                     <label for="meta_description">meta_description</label>
