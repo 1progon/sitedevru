@@ -9,13 +9,13 @@ use Illuminate\Http\Request;
 class PricesController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        //
+        $prices = Price::paginate();
+
+        return view('price.index', compact('prices'));
     }
 
     public function adminIndex()
@@ -49,17 +49,14 @@ class PricesController extends Controller
         return redirect()->route('prices.admin.index');
     }
 
+
     /**
-     * Display the specified resource.
-     *
-     * @param \App\Model\Price\Price $price
-     * @return \Illuminate\Http\Response
+     * @param Price $price
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show(Price $price)
     {
-        //
-
-
+        return view('price.show', compact('price'));
     }
 
     /**
