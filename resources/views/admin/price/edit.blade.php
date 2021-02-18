@@ -2,7 +2,9 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header">Редактировать цену</div>
+        <div class="card-header">Редактировать цену id:{{ $price->id }},
+            <a target="_blank" href="{{ route('prices.show', $price) }}">открыть</a>
+        </div>
 
         <div class="card-body">
             @if ( session('status'))

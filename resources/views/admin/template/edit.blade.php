@@ -2,7 +2,9 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header">Редактировать шаблон</div>
+        <div class="card-header">Редактировать шаблон id:{{ $template->id }},
+            <a target="_blank" href="{{ route('templates.show', $template) }}">открыть</a>
+        </div>
 
         <div class="card-body">
             @if ( session('status'))

@@ -2,7 +2,9 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header">Редактировать сервис</div>
+        <div class="card-header">Редактировать сервис id:{{ $service->id }},
+            <a target="_blank" href="{{ route('services.show', $service) }}">открыть</a>
+        </div>
 
         <div class="card-body">
             @if ( session('status'))

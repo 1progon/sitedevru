@@ -3,7 +3,8 @@
 @section('main')
     <div class="card">
         <div class="card-header">
-            Редактировать страницу
+            Редактировать страницу id:{{ $page->id }},
+            <a target="_blank" href="{{ route('pages.show', $page) }}">открыть</a>
         </div>
 
         <div class="card-body">
