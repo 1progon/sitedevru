@@ -79,7 +79,7 @@
 
                 <div class="form-group">
                     <label for="article">Статья</label>
-                    <textarea class="form-control" name="article" id="article" rows="10"></textarea>
+                    <textarea class="form-control tinymce" name="article" id="article" rows="10"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Добавить</button>

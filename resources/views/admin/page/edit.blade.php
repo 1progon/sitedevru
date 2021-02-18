@@ -2,7 +2,9 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header">Редактировать страницу</div>
+        <div class="card-header">
+            Редактировать страницу
+        </div>
 
         <div class="card-body">
             @if ( session('status'))
@@ -53,7 +55,7 @@
 
                 <div class="form-group">
                     <label for="article">Статья</label>
-                    <textarea class="form-control"
+                    <textarea class="form-control tinymce"
                               name="article"
                               id="article"
                               rows="10">{{ $page->article }}</textarea>

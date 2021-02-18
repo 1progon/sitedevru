@@ -87,7 +87,7 @@
 
                 <div class="form-group">
                     <label for="article">Статья</label>
-                    <textarea class="form-control"
+                    <textarea class="form-control tinymce"
                               name="article"
                               id="article"
                               rows="10">{{ $template->article }}</textarea>
