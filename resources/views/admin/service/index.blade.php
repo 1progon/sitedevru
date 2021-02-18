@@ -2,7 +2,33 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header">Все услуги</div>
+        <div class="card-header d-flex flex-wrap">
+            <span class="mr-2">Все услуги</span>
+            <form name="search_form" method="get">
+                <label>
+                    <input type="text"
+                           name="s_by_title"
+                           id="s-by-title"
+                           placeholder="id, заголовок, slug"
+                           value="{{ $search }}">
+                </label>
+                <input type="submit" class="btn-success" value="Найти">
+            </form>
+
+            <script>
+                let {search_form: form} = document.forms;
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    if (form.elements.s_by_title.value === '') {
+                        form.elements.s_by_title.disabled = 'disabled';
+                        return location.href = location.href.split('?')[0];
+                    }
+                    form.submit();
+
+                })
+            </script>
+
+        </div>
 
 
         @if( session('status'))
