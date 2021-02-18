@@ -12,12 +12,26 @@
             @endif
             <form action="{{ route('pages.store') }}" method="post">
                 @csrf
+
+                <input type="hidden" name="_table" value="pages" required>
+                <input type="hidden" name="_for_slug" value="title" required>
+
+
                 <div class="form-group">
-                    <label for="title">Заголовок</label>
+                    <label for="title" class="required">Заголовок</label>
                     <input type="text" name="title" id="title" class="form-control"
                            placeholder="Заголовок"
+                           value="{{ old('title') }}"
+                           minlength="3"
+                           required
                            aria-describedby="helpId">
                 </div>
+
+                @error('slug')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-group">
                     <label for="meta_description">meta_description</label>

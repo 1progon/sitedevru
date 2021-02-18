@@ -12,12 +12,23 @@
             @endif
             <form action="{{ route('prices.store') }}" method="post">
                 @csrf
+
+                <input type="hidden" name="_table" value="prices" required>
+                <input type="hidden" name="_for_slug" value="title" required>
+
                 <div class="form-group">
-                    <label for="title">Заголовок</label>
+                    <label for="title" class="required">Заголовок</label>
                     <input type="text" name="title" id="title" class="form-control"
                            placeholder="Заголовок"
+                           required
+                           minlength="3"
                            aria-describedby="helpId">
                 </div>
+                @error('slug')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
 
 
                 <div class="form-group">
