@@ -53,6 +53,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
+                <th scope="col">Slug</th>
                 <th scope="col">Homepage</th>
                 <th scope="col">Desc</th>
                 <th scope="col">Price</th>
@@ -68,6 +69,7 @@
                 <tr>
                     <th scope="row">{{ $price->id }}</th>
                     <td>{{ $price->title }}</td>
+                    <td>{{ $price->slug }}</td>
                     <td>{{ $price->on_homepage === 1 ? '✅' : '' }}</td>
                     <td>{{ $price->description }}</td>
                     <td>{{ $price->price }}</td>

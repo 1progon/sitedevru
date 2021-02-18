@@ -52,6 +52,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
+                <th scope="col">Slug</th>
                 <th scope="col">Desc</th>
                 <th scope="col">Article</th>
                 <th scope="col">Link</th>
@@ -66,6 +67,7 @@
                 <tr>
                     <th scope="row">{{ $page->id }}</th>
                     <td>{{ $page->title }}</td>
+                    <td>{{ $page->slug }}</td>
                     <td>{{ $page->description }}</td>
                     <td>{{ Str::limit($page->article, 50) }}</td>
                     <td>

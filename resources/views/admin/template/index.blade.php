@@ -54,6 +54,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
+                <th scope="col">Slug</th>
                 <th scope="col">Desc</th>
                 <th scope="col">Article</th>
                 <th scope="col">Homepage</th>
@@ -69,6 +70,7 @@
                 <tr>
                     <th scope="row">{{ $template->id }}</th>
                     <td>{{ $template->title }}</td>
+                    <td>{{ $template->slug }}</td>
                     <td>{{ $template->description }}</td>
                     <td>{{ Str::limit($template->article, 50) }}</td>
                     <td>{{ $template->on_homepage === 1 ? '✅' : '' }}</td>

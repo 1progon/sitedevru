@@ -53,6 +53,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
+                <th scope="col">Slug</th>
                 <th scope="col">Desc</th>
                 <th scope="col">Img</th>
                 <th scope="col">Img2</th>
@@ -69,6 +70,7 @@
                 <tr>
                     <th scope="row">{{ $service->id }}</th>
                     <td>{{ $service->title }}</td>
+                    <td>{{ $service->slug }}</td>
                     <td>{{ Str::limit($service->description, 50) }}</td>
                     <td><img src="{{ $service->img }}" alt="" width="80" height="80"></td>
                     <td><img src="{{ $service->img2 }}" alt="" width="80" height="80"></td>
