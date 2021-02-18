@@ -48,10 +48,9 @@ class CreateValidateSlugOnStoreRequest extends FormRequest
 
     public function messages()
     {
-
         // Error message on unique db
         return [
-            'slug.unique' => 'Такой slug или заголовок уже есть. Попробуйте его изменить.'
+            'slug.unique' => 'Такой slug("' . $this->slug . '") или заголовок уже есть. Попробуйте его изменить.'
         ];
     }
 
