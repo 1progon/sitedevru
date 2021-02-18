@@ -43,7 +43,6 @@ class PagesController extends Controller
      */
     public function store(CreateValidateSlugOnStoreRequest $request): RedirectResponse
     {
-
         $page = new Page();
         $page->fill($request->all());
         $page->save();
@@ -73,16 +72,21 @@ class PagesController extends Controller
         return view('admin.page.edit', compact('page'));
     }
 
+
     /**
-     * Update the specified resource in storage.
-     *
      * @param Request $request
      * @param Page $page
-     * @return void
+     * @return RedirectResponse
      */
-    public function update(Request $request, Page $page)
+    public function update(Request $request, Page $page): RedirectResponse
     {
-        $page->fill($request->all());
+        $validated = $request->validate(
+            [
+                'slug' => 'required|min:3|unique:pages,slug'
+            ]
+        );
+
+        $page->fill($validated);
         $page->save();
 
         return redirect()->route('pages.admin.index', $page);

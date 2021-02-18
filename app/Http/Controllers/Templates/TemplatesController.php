@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Templates;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateValidateSlugOnStoreRequest;
 use App\Model\Template\Template;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class TemplatesController extends Controller
@@ -75,13 +76,21 @@ class TemplatesController extends Controller
         return view('admin.template.edit', compact('template'));
     }
 
+
     /**
      * @param Request $request
      * @param Template $template
+     * @return RedirectResponse
      */
-    public function update(Request $request, Template $template)
+    public function update(Request $request, Template $template): RedirectResponse
     {
-        $template->fill($request->all());
+        $validated = $request->validate(
+            [
+                'slug' => 'required|min:3|unique:pages,slug'
+            ]
+        );
+
+        $template->fill($validated);
         $template->save();
 
         return redirect()->route('templates.admin.index');

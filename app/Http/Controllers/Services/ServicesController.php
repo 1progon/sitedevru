@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Services;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateValidateSlugOnStoreRequest;
 use App\Model\Service\Service;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
@@ -76,16 +77,21 @@ class ServicesController extends Controller
         return view('admin.service.edit', compact('service'));
     }
 
+
     /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
+     * @param Request $request
      * @param Service $service
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, Service $service): RedirectResponse
     {
-        $service->fill($request->all());
+        $validated = $request->validate(
+            [
+                'slug' => 'required|min:3|unique:pages,slug'
+            ]
+        );
+
+        $service->fill($validated);
         $service->save();
 
 

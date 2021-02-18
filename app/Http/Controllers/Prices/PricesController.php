@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Prices;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateValidateSlugOnStoreRequest;
 use App\Model\Price\Price;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class PricesController extends Controller
@@ -71,16 +72,21 @@ class PricesController extends Controller
         return view('admin.price.edit', compact('price'));
     }
 
+
     /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Model\Price\Price $price
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Price $price
+     * @return RedirectResponse
      */
-    public function update(Request $request, Price $price)
+    public function update(Request $request, Price $price): RedirectResponse
     {
-        $price->fill($request->all());
+        $validated = $request->validate(
+            [
+                'slug' => 'required|min:3|unique:pages,slug'
+            ]
+        );
+
+        $price->fill($validated);
         $price->save();
         return redirect()->route('prices.admin.index');
     }
