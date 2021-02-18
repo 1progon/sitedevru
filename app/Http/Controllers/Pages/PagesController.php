@@ -107,16 +107,7 @@ class PagesController extends Controller
     }
 
 
-    /**
-     * @Annotation Pricing Page
-     * @return Application|Factory|View
-     */
-    public function pricing()
-    {
-        $prices = Price::paginate();
 
-        return view('page.pricing', compact('prices'));
-    }
 
 
     /**
