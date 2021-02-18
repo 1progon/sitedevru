@@ -14,7 +14,7 @@
                                         <img src="{{ asset('assets/img/logo/logo.svg') }}"
                                              width="56"
                                              height="84"
-                                             alt="">
+                                             alt="логотип компании по созданию сайтов сайтодел">
                                     </a>
                                 </div>
                                 <div class="footer-title">
@@ -41,7 +41,7 @@
                                 <ul>
                                     <li><a href="{{ route('pages.show', 'about') }}">О нас</a></li>
                                     <li><a href="{{ route('pages.show', 'features') }}">Особенности</a></li>
-                                    <li><a href="{{ route('pages.show', 'pricing') }}">Цены</a></li>
+                                    <li><a href="{{ route('prices.index') }}">Цены</a></li>
                                     <li><a href="{{ route('pages.show', 'contact') }}">Контакты</a></li>
                                     <li><a href="{{ route('blog') }}">Блог</a></li>
                                 </ul>
