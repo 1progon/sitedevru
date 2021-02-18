@@ -78,7 +78,7 @@
                            placeholder="img2"
                            value="{{ $service->img2 }}"
                            aria-describedby="helpId">
-                </div>ew
+                </div>
 
 
                 <div class="form-group">

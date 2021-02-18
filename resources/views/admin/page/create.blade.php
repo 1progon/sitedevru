@@ -20,13 +20,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="slug">Slug</label>
-                    <input type="text" name="slug" id="slug" class="form-control"
-                           placeholder="slug"
-                           aria-describedby="helpId">
-                </div>
-
-                <div class="form-group">
                     <label for="meta_description">meta_description</label>
                     <input type="text" name="meta_description" id="meta_description" class="form-control"
                            placeholder="meta_description"

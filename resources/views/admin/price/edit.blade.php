@@ -63,13 +63,12 @@
 
                 <div class="form-group">
                     <label for="price">Цена</label>
-                    <input type="text" name="price"
+                    <input type="number" name="price"
                            id="price"
                            class="form-control"
                            placeholder="price"
                            value="{{ $price->price }}"
                            aria-describedby="helpId">
-                    <small id="helpId" class="text-muted">Help text</small>
                 </div>
 
                 <div class="form-group">

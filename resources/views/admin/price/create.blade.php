@@ -19,12 +19,6 @@
                            aria-describedby="helpId">
                 </div>
 
-                <div class="form-group">
-                    <label for="slug">Slug</label>
-                    <input type="text" name="slug" id="slug" class="form-control"
-                           placeholder="slug"
-                           aria-describedby="helpId">
-                </div>
 
                 <div class="form-group">
                     <label for="ewfefe">На главную</label>
@@ -52,9 +46,9 @@
 
                 <div class="form-group">
                     <label for="price">Цена</label>
-                    <input type="text" name="price" id="price" class="form-control" placeholder="price"
+                    <input type="number" name="price" id="price"
+                           class="form-control" placeholder="price"
                            aria-describedby="helpId">
-                    <small id="helpId" class="text-muted">Help text</small>
                 </div>
 
 
