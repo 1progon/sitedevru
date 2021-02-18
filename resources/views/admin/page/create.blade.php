@@ -57,3 +57,7 @@
         </div>
     </div>
 @endsection
+
+@section('scripts_after')
+    @include('include.tinymce.tinymce-scripts')
+@endsection
