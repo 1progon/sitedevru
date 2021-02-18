@@ -171,25 +171,27 @@
             <div class="row">
                 @forelse( $prices as $price)
                     <div class="col-lg-4 col-md-6">
-                        <div class="single-choose text-center mb-30">
-                            <div class="do-icon mb-4">
-                                <img src="{{ asset($price->img) }}" alt="price {{ $price->price }}" width="50">
-                            </div>
-                            <div class="do-caption">
-                                <h4>{{ $price->title }}</h4>
-                                <h4>
-                                    <span class="price">{{ number_format($price->price, 0, ',', ' ') }}</span> <span
-                                        class="currency">руб
+                        <a href="{{ route('prices.show', $price) }}">
+                            <div class="single-choose text-center mb-30">
+                                <div class="do-icon mb-4">
+                                    <img src="{{ asset($price->img) }}" alt="price {{ $price->price }}" width="50">
+                                </div>
+                                <div class="do-caption">
+                                    <h4>{{ $price->title }}</h4>
+                                    <h4>
+                                        <span class="price">{{ number_format($price->price, 0, ',', ' ') }}</span> <span
+                                            class="currency">руб
                                         .</span>
-                                </h4>
-                                <ul>
-                                    @forelse( $price->included as $include)
-                                        <li>{{ $include->title }}</li>
-                                    @empty
-                                    @endforelse
-                                </ul>
+                                    </h4>
+                                    <ul>
+                                        @forelse( $price->included as $include)
+                                            <li>{{ $include->title }}</li>
+                                        @empty
+                                        @endforelse
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 @empty
                 @endforelse
