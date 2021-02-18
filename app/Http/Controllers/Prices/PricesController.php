@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Prices;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateValidateSlugOnStoreRequest;
+use App\Model\Page\Page;
 use App\Model\Price\Price;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -20,10 +21,20 @@ class PricesController extends Controller
         return view('price.index', compact('prices'));
     }
 
-    public function adminIndex()
+    public function adminIndex(Request $request)
     {
-        $prices = Price::paginate();
-        return view('admin.price.index', compact('prices'));
+        $search = $request->query('s_by_title');
+
+        if ($search) {
+            $prices = Price::where('title', 'like', '%' . $search . '%')
+                ->orWhere('id', 'like', '%' . $search . '%')
+                ->orWhere('slug', 'like', '%' . $search . '%')
+                ->paginate();
+        } else {
+            $prices = Price::paginate();
+        }
+
+        return view('admin.price.index', compact('prices', 'search'));
     }
 
     /**

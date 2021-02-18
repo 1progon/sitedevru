@@ -22,11 +22,21 @@ class TemplatesController extends Controller
         return view('templates.index', compact('templates'));
     }
 
-    public function adminIndex()
+    public function adminIndex(Request $request)
     {
-        $templates = Template::paginate();
+        $search = $request->query('s_by_title');
 
-        return view('admin.template.index', compact('templates'));
+        if ($search) {
+            $templates = Template::where('title', 'like', '%' . $search . '%')
+                ->orWhere('id', 'like', '%' . $search . '%')
+                ->orWhere('slug', 'like', '%' . $search . '%')
+                ->paginate();
+        } else {
+            $templates = Template::paginate();
+        }
+
+
+        return view('admin.template.index', compact('templates', 'search'));
     }
 
     /**

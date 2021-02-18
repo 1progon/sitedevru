@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Services;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateValidateSlugOnStoreRequest;
+use App\Model\Page\Page;
 use App\Model\Service\Service;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -22,11 +23,20 @@ class ServicesController extends Controller
         return view('service.index', compact('services'));
     }
 
-    public function adminIndex()
+    public function adminIndex(Request $request)
     {
-        $services = Service::paginate();
+        $search = $request->query('s_by_title');
 
-        return view('admin.service.index', compact('services'));
+        if ($search) {
+            $services = Service::where('title', 'like', '%' . $search . '%')
+                ->orWhere('id', 'like', '%' . $search . '%')
+                ->orWhere('slug', 'like', '%' . $search . '%')
+                ->paginate();
+        } else {
+            $services = Service::paginate();
+        }
+
+        return view('admin.service.index', compact('services', 'search'));
     }
 
     /**

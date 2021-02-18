@@ -14,19 +14,27 @@ use Illuminate\View\View;
 
 class PagesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
+
     public function index()
     {
+        //
     }
 
-    public function adminIndex()
+    public function adminIndex(Request $request)
     {
-        $pages = Page::paginate();
-        return view('admin.page.index', compact('pages'));
+        $search = $request->query('s_by_title');
+
+        if ($search) {
+            $pages = Page::where('title', 'like', '%' . $search . '%')
+                ->orWhere('id', 'like', '%' . $search . '%')
+                ->orWhere('slug', 'like', '%' . $search . '%')
+                ->paginate();
+        } else {
+            $pages = Page::paginate();
+        }
+
+
+        return view('admin.page.index', compact('pages', 'search'));
     }
 
     /**
