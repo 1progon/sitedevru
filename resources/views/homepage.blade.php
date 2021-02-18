@@ -200,7 +200,7 @@
             </div>
 
             <div class="row justify-content-center mt-5">
-                <a href="{{ route ('pages.show','pricing') }}" class="btn btn-primary">Цены на другие услуги</a>
+                <a href="{{ route ('prices.index') }}" class="btn btn-primary">Цены на другие услуги</a>
             </div>
         </div>
     </section>
