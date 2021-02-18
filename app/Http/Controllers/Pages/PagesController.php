@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateValidateSlugOnStoreRequest;
 use App\Model\Page\Page;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -10,7 +11,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
-use Str;
 
 class PagesController extends Controller
 {
@@ -38,15 +38,13 @@ class PagesController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param CreateValidateSlugOnStoreRequest $request
      * @return RedirectResponse
      */
-    public function store(Request $request): RedirectResponse
+    public function store(CreateValidateSlugOnStoreRequest $request): RedirectResponse
     {
+
         $page = new Page();
-
-        $page->slug = Str::slug($request->title);
-
         $page->fill($request->all());
         $page->save();
 

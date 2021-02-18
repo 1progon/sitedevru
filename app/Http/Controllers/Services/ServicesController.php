@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Services;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateValidateSlugOnStoreRequest;
 use App\Model\Service\Service;
 use Illuminate\Http\Request;
-use Str;
 
 class ServicesController extends Controller
 {
@@ -44,12 +44,9 @@ class ServicesController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateValidateSlugOnStoreRequest $request)
     {
         $service = new Service();
-
-        $service->slug = Str::slug($request->title);
-
         $service->fill($request->all());
         $service->save();
 

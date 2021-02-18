@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Templates;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateValidateSlugOnStoreRequest;
 use App\Model\Template\Template;
 use Illuminate\Http\Request;
-use Str;
 
 class TemplatesController extends Controller
 {
@@ -44,12 +44,9 @@ class TemplatesController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateValidateSlugOnStoreRequest $request)
     {
         $template = new Template();
-
-        $template->slug = Str::slug($request->title);
-
         $template->fill($request->all());
         $template->save();
 

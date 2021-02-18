@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Prices;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateValidateSlugOnStoreRequest;
 use App\Model\Price\Price;
 use Illuminate\Http\Request;
-use Str;
 
 class PricesController extends Controller
 {
@@ -41,12 +41,9 @@ class PricesController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateValidateSlugOnStoreRequest $request)
     {
         $price = new Price();
-
-        $price->slug = Str::slug($request->title);
-
         $price->fill($request->all());
         $price->save();
 
