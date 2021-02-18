@@ -16,24 +16,22 @@
             </div>
         </div>
 
+        {{--TODO Hardcoded Max width thumbs--}}
         <div>
             <h2>Иконки сайта. Клик, чтобы развернуть</h2>
             <a target="_blank" rel="nofollow noopener" href="{{ $template->img }}">
-                {{--TODO Hardcoded Max width thumbs--}}
                 <img style="max-width: 200px" src="{{ $template->img }}" alt="первое изображение шаблона">
             </a>
 
             <a target="_blank" rel="nofollow noopener" href="{{ $template->img2 }}">
-                {{--TODO Hardcoded Max width thumbs--}}
                 <img style="max-width: 200px" src="{{ $template->img2 }}" alt="второе изображение шаблона">
             </a>
 
         </div>
 
         <div>
-            <div class="description">{{ $template->description }}</div>
+            <div class="description">{!!  $template->description !!}</div>
 
-            {{--TODO Not escaped content. Only for admin or sanitize for Other users--}}
             <article>{!! $template->article !!}</article>
         </div>
 

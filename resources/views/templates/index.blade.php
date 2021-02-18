@@ -21,11 +21,11 @@
                     <div class="single-do text-center mb-30">
                         <div class="do-icon mb-3">
                             <img src="{{ $template->img }}"
-                                 alt="icon service {{ $template->name }}"
+                                 alt="icon service {{ $template->title }}"
                                  width="200">
                         </div>
                         <div class="do-caption">
-                            <h4>{{ $template->name }}</h4>
+                            <h4>{{ $template->title }}</h4>
                             <p>{{ $template->description }}</p>
                         </div>
                         <div class="do-btn">
