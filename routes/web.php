@@ -40,8 +40,6 @@ Route::name('pages.')->group(
             function () {
                 Route::get('contact', 'Pages\PagesController@contact')
                     ->name('contact');
-                Route::get('pricing', 'Pages\PagesController@pricing')
-                    ->name('pricing');
             }
         );
     }
@@ -123,7 +121,7 @@ Route::resource('templates', 'Templates\TemplatesController')
     ->only(['index', 'show']);
 Route::resource('services', 'Services\ServicesController')
     ->only(['index', 'show']);
-Route::resource('prices', 'Prices\PricesControllerr')
+Route::resource('prices', 'Prices\PricesController')
     ->only(['index', 'show']);
 
 
