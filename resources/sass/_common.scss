@@ -39,6 +39,11 @@ p {
     line-height: 30px;
 }
 
+.description p {
+    color: white;
+}
+
+
 // background-image
 .bg-img-1 {
 }
@@ -78,12 +83,26 @@ a:focus,
 }
 
 a {
-    color: rgb(99, 92, 92);
+    color: #4043bc;
+    transition: color .2s;
+
+}
+
+a.popup {
+    position: relative;
+    top: 0;
+    transition: color, top, .2s;
 }
 
 a:hover {
-    color: #fff;
+    color: $theme-color;
 }
+
+a.popup:hover {
+    position: relative;
+    top: -3px;
+}
+
 
 a:focus,
 a:hover,
@@ -308,7 +327,7 @@ hr {
         height: 100%;
         background: #ec4683;;
         z-index: 1;
-        border-radius: 5px;
+        border-radius: .25rem;
         transition: transform 0.5s;
         transform-origin: 0 0;
         transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);

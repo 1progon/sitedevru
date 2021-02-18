@@ -52,6 +52,7 @@ header {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: flex-end;
+                    align-items: center;
                     margin: 0 20px;
 
 
@@ -59,28 +60,26 @@ header {
                         margin: 0 15px;
                     }
 
+                    & .btn {
+                        min-width: unset;
+                        padding: 10px;
+                    }
+
+
                     & li {
                         position: relative;
                         z-index: 1;
 
 
                         & a {
-                            color: #002e5b;
-                            padding: 11px 0;
-                            font-weight: 400;
-                            display: block;
-                            transition: padding, color, .2s;
-
-
                         }
 
-                        &:hover {
-                            & > a {
-                                color: $theme-color;
-                                padding-top: 5px;
-                            }
+                        & a:hover {
                         }
+
                     }
+
+
 
                     & ul.submenu {
                         position: absolute;
@@ -166,6 +165,11 @@ header {
     position: absolute;
     left: 0;
     width: 100vw;
+
+    & .btn {
+        min-width: unset;
+        padding: 5px;
+    }
 }
 
 
