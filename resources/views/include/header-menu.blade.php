@@ -4,7 +4,7 @@
         <ul id="navigation">
             <li><a href="{{ route('pages.show', 'about') }}">О нас</a></li>
             <li><a href="{{ route('services.index') }}">Услуги</a></li>
-            <li><a href="{{ route('pages.show', 'pricing') }}">Цены</a></li>
+            <li><a href="{{ route('prices.index') }}">Цены</a></li>
             <li><a href="{{ route('templates.index') }}">Шаблоны</a></li>
 
             <li><a href="{{ route('blog') }}">Блог</a>
