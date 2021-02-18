@@ -19,9 +19,9 @@
                     визитки, или одна из <strong>CMS
                         eCommerce</strong> для интернет-магазина.
                     <br/>
-                    Что такое WordPress, можете прочитать <a
-                        class="text-primary" href="" target="_blank"
-                        rel="nofollow">по ссылке</a>.
+                    Что такое WordPress, можете прочитать <a class="popup" href="https://ru.wordpress.org/"
+                                                             target="_blank"
+                                                             rel="nofollow">по ссылке</a>.
                     <br/>
                     Сайт полностью принадлежит Вам и Вы можете его забрать,
                     удалить, перенести в любое место, в
