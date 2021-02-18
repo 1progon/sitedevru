@@ -4,14 +4,13 @@ namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
 use App\Model\Page\Page;
-use App\Model\Price\Price;
-use App\Model\Service\Service;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
-use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
+use Str;
 
 class PagesController extends Controller
 {
@@ -31,9 +30,7 @@ class PagesController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
+     * @return Application|Factory|View
      */
     public function create()
     {
@@ -41,14 +38,15 @@ class PagesController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
      * @param Request $request
-     * @return Response
+     * @return RedirectResponse
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $page = new Page();
+
+        $page->slug = Str::slug($request->title);
+
         $page->fill($request->all());
         $page->save();
 
@@ -105,9 +103,6 @@ class PagesController extends Controller
 
         return redirect()->route('pages.admin.index');
     }
-
-
-
 
 
     /**

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Services;
 use App\Http\Controllers\Controller;
 use App\Model\Service\Service;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
+use Str;
 
 class ServicesController extends Controller
 {
@@ -47,6 +47,9 @@ class ServicesController extends Controller
     public function store(Request $request)
     {
         $service = new Service();
+
+        $service->slug = Str::slug($request->title);
+
         $service->fill($request->all());
         $service->save();
 

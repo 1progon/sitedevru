@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Templates;
 use App\Http\Controllers\Controller;
 use App\Model\Template\Template;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\DocBlock\Description;
+use Str;
 
 class TemplatesController extends Controller
 {
@@ -47,6 +47,9 @@ class TemplatesController extends Controller
     public function store(Request $request)
     {
         $template = new Template();
+
+        $template->slug = Str::slug($request->title);
+
         $template->fill($request->all());
         $template->save();
 
