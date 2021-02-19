@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Str;
 
-class CreateValidateSlugOnStoreRequest extends FormRequest
+class CreatePageRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,17 +14,15 @@ class CreateValidateSlugOnStoreRequest extends FormRequest
      */
     public function authorize()
     {
+        //TODO Add authorize logic
         return true;
     }
 
     protected function prepareForValidation()
     {
         if (!isset($this->slug) || empty($this->slug)) {
-            //Field using in form for slug
-            $forSlug = request()->input('_for_slug');
-
             // Add slug to request
-            $this->merge(['slug' => Str::slug($this->$forSlug)]);
+            $this->merge(['slug' => Str::slug($this->title)]);
         };
     }
 
@@ -36,13 +34,11 @@ class CreateValidateSlugOnStoreRequest extends FormRequest
      */
     public function rules()
     {
-        // Get table name to check unique slug in db
-        $table = request()->input('_table');
-
-
-        // Validate slug
+        // Validate date
         return [
-            'slug' => 'required|min:3|unique:' . $table . ',slug'
+            'title' => 'required|min:3',
+            'slug' => 'required|min:3|unique:pages,slug',
+            'description' => 'required|min:3',
         ];
     }
 
