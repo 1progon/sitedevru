@@ -13,9 +13,6 @@
             <form action="{{ route('prices.store') }}" method="post">
                 @csrf
 
-                <input type="hidden" name="_table" value="prices" required>
-                <input type="hidden" name="_for_slug" value="title" required>
-
                 <div class="form-group">
                     <label for="title" class="required">Заголовок</label>
                     <input type="text"

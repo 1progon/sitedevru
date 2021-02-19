@@ -13,10 +13,6 @@
             <form action="{{ route('pages.store') }}" method="post">
                 @csrf
 
-                <input type="hidden" name="_table" value="pages" required>
-                <input type="hidden" name="_for_slug" value="title" required>
-
-
                 <div class="form-group">
                     <label for="title" class="required">Заголовок</label>
                     <input type="text" name="title" id="title" class="form-control"
