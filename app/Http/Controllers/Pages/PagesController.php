@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CreateValidateSlugOnStoreRequest;
+use App\Http\Requests\CreatePageRequest;
+use App\Http\Requests\UpdatePageRequest;
 use App\Model\Page\Page;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -46,13 +47,13 @@ class PagesController extends Controller
     }
 
     /**
-     * @param CreateValidateSlugOnStoreRequest $request
+     * @param CreatePageRequest $request
      * @return RedirectResponse
      */
-    public function store(CreateValidateSlugOnStoreRequest $request): RedirectResponse
+    public function store(CreatePageRequest $request): RedirectResponse
     {
         $page = new Page();
-        $page->fill($request->all());
+        $page->fill($request->validated());
         $page->save();
 
         return redirect()->route('pages.admin.index');
@@ -69,32 +70,25 @@ class PagesController extends Controller
         return view('page.single', compact('page'));
     }
 
+
     /**
-     * Show the form for editing the specified resource.
-     *
      * @param Page $page
-     * @return Response
+     * @return Application|Factory|View
      */
-    public function edit(Page $page)
+    public function edit(Page $page): View
     {
         return view('admin.page.edit', compact('page'));
     }
 
 
     /**
-     * @param Request $request
+     * @param UpdatePageRequest $request
      * @param Page $page
      * @return RedirectResponse
      */
-    public function update(Request $request, Page $page): RedirectResponse
+    public function update(UpdatePageRequest $request, Page $page): RedirectResponse
     {
-        $validated = $request->validate(
-            [
-                'slug' => 'required|min:3|unique:pages,slug'
-            ]
-        );
-
-        $page->fill($validated);
+        $page->fill($request->validated());
         $page->save();
 
         return redirect()->route('pages.admin.index', $page);
