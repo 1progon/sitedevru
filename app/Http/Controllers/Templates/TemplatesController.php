@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Templates;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CreateValidateSlugOnStoreRequest;
 use App\Model\Template\Template;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -55,8 +54,9 @@ class TemplatesController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateValidateSlugOnStoreRequest $request)
+    public function store(Request $request)
     {
+        //TODO validation need
         $template = new Template();
         $template->fill($request->all());
         $template->save();
@@ -94,6 +94,7 @@ class TemplatesController extends Controller
      */
     public function update(Request $request, Template $template): RedirectResponse
     {
+        //TODO validation need
         $validated = $request->validate(
             [
                 'slug' => 'required|min:3|unique:pages,slug'

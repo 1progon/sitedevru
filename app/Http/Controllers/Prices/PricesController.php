@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Prices;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CreateValidateSlugOnStoreRequest;
-use App\Model\Page\Page;
 use App\Model\Price\Price;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -53,8 +51,10 @@ class PricesController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateValidateSlugOnStoreRequest $request)
+    public function store(Request $request)
     {
+
+        //TODO validation need
         $price = new Price();
         $price->fill($request->all());
         $price->save();
@@ -91,6 +91,7 @@ class PricesController extends Controller
      */
     public function update(Request $request, Price $price): RedirectResponse
     {
+        //TODO validation need
         $validated = $request->validate(
             [
                 'slug' => 'required|min:3|unique:pages,slug'

@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Services;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CreateValidateSlugOnStoreRequest;
-use App\Model\Page\Page;
 use App\Model\Service\Service;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -55,8 +53,10 @@ class ServicesController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateValidateSlugOnStoreRequest $request)
+    public function store(Request $request)
     {
+        //TODO validation need
+
         $service = new Service();
         $service->fill($request->all());
         $service->save();
