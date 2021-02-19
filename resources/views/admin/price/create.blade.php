@@ -18,12 +18,20 @@
 
                 <div class="form-group">
                     <label for="title" class="required">Заголовок</label>
-                    <input type="text" name="title" id="title" class="form-control"
+                    <input type="text"
+                           name="title"
+                           id="title"
+                           class="form-control"
                            placeholder="Заголовок"
                            required
                            minlength="3"
                            aria-describedby="helpId">
                 </div>
+                @error('title')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
                 @error('slug')
                 <div class="alert alert-danger">
                     {{ $message }}
@@ -32,54 +40,102 @@
 
 
                 <div class="form-group">
-                    <label for="ewfefe">На главную</label>
+                    <label for="on-homepage" class="required">На главную</label>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="on-homepage1" name="on_homepage"
+                        <input type="radio"
+                               id="on-homepage1"
+                               name="on_homepage"
                                value="1"
+                               required
                                class="custom-control-input">
                         <label class="custom-control-label" for="on-homepage1">Да</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="on-homepage2" name="on_homepage"
+                        <input type="radio"
+                               id="on-homepage2"
+                               name="on_homepage"
                                value="0"
+                               required
                                checked
                                class="custom-control-input">
                         <label class="custom-control-label" for="on-homepage2">Нет</label>
                     </div>
                 </div>
+                @error('on_homepage')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
+
+                <div class="form-group">
+                    <label for="meta-description">Meta description</label>
+                    <input type="text" name="meta_description" id="meta-description" class="form-control"
+                           placeholder="meta description"
+                           aria-describedby="helpId">
+                </div>
+                @error('meta_description')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
+
+                <div class="form-group">
+                    <label for="meta-keywords">Meta keywords</label>
+                    <input type="text" name="meta_keywords" id="meta-keywords" class="form-control"
+                           placeholder="meta keywords"
+                           aria-describedby="helpId">
+                </div>
+                @error('meta_keywords')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-group">
                     <label for="img">Img</label>
-                    <input type="text" name="img" id="img" class="form-control"
+                    <input type="text"
+                           name="img"
+                           id="img"
+                           class="form-control"
                            placeholder="img"
                            aria-describedby="helpId">
                 </div>
+                @error('img')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-group">
-                    <label for="price">Цена</label>
-                    <input type="number" name="price" id="price"
-                           class="form-control" placeholder="price"
+                    <label for="price" class="required">Цена</label>
+                    <input type="number"
+                           name="price"
+                           id="price"
+                           class="form-control"
+                           placeholder="price"
+                           required
                            aria-describedby="helpId">
                 </div>
+                @error('price')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
 
 
                 <div class="form-group">
-                    <label for="meta_description">meta_description</label>
-                    <input type="text" name="meta_description" id="meta_description" class="form-control"
-                           placeholder="meta_description"
-                           aria-describedby="helpId">
+                    <label for="description" class="required">Описание</label>
+                    <textarea class="form-control"
+                              name="description"
+                              id="description"
+                              required
+                              rows="4"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="meta_keywords">meta_keywords</label>
-                    <input type="text" name="meta_keywords" id="meta_keywords" class="form-control"
-                           placeholder="meta_keywords"
-                           aria-describedby="helpId">
+                @error('description')
+                <div class="alert alert-danger">
+                    {{ $message }}
                 </div>
-
-                <div class="form-group">
-                    <label for="description">Описание</label>
-                    <textarea class="form-control" name="description" id="description" rows="4"></textarea>
-                </div>
+                @enderror
 
 
                 <button type="submit" class="btn btn-primary">Добавить</button>

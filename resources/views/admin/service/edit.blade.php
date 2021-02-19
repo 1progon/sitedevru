@@ -16,18 +16,26 @@
                 @csrf
                 @method('PUT')
                 <div class="form-group">
-                    <label for="title">Заголовок</label>
+                    <label for="title" class="required">Заголовок</label>
                     <input type="text" name="title" id="title" class="form-control"
                            placeholder="Заголовок"
+                           required
+                           minlength="3"
                            value="{{ $service->title }}"
                            aria-describedby="helpId">
                 </div>
+                @error('title')
+                <div class="alert alert-danger">
+                    {{ old('title') }}, {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-group">
-                    <label for="slug">Slug</label>
+                    <label for="slug" class="required">Slug</label>
                     <input type="text" name="slug" id="slug" class="form-control"
                            placeholder="slug"
                            value="{{ $service->slug }}"
+                           required
                            aria-describedby="helpId">
                 </div>
                 @error('slug')
@@ -37,19 +45,31 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="meta_description">meta_description</label>
-                    <input type="text" name="meta_description" id="meta_description" class="form-control"
-                           placeholder="meta_description"
+                    <label for="meta-description">Meta description</label>
+                    <input type="text" name="meta_description" id="meta-description" class="form-control"
+                           placeholder="meta description"
                            value="{{ $service->meta_description }}"
                            aria-describedby="helpId">
                 </div>
+                @error('meta_description')
+                <div class="alert alert-danger">
+                    {{ old('meta_description') }}, {{ $message }}
+                </div>
+                @enderror
+
+
                 <div class="form-group">
-                    <label for="meta_keywords">meta_keywords</label>
-                    <input type="text" name="meta_keywords" id="meta_keywords" class="form-control"
-                           placeholder="meta_keywords"
+                    <label for="meta-keywords">Meta keywords</label>
+                    <input type="text" name="meta_keywords" id="meta-keywords" class="form-control"
+                           placeholder="meta keywords"
                            value="{{ $service->meta_keywords }}"
                            aria-describedby="helpId">
                 </div>
+                @error('meta_keywords')
+                <div class="alert alert-danger">
+                    {{ old('meta_keywords') }}, {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-group">
                     <label for="on-homepage">На главную</label>
@@ -68,6 +88,12 @@
                         <label class="custom-control-label" for="on-homepage2">Нет</label>
                     </div>
                 </div>
+                @error('on_homepage')
+                <div class="alert alert-danger">
+                    {{ old('on_homepage') }}, {{ $message }}
+                </div>
+                @enderror
+
 
                 <div class="form-group">
                     <label for="img">Img</label>
@@ -76,6 +102,11 @@
                            value="{{ $service->img }}"
                            aria-describedby="helpId">
                 </div>
+                @error('img')
+                <div class="alert alert-danger">
+                    {{ old('img') }}, {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-group">
                     <label for="img2">Img2</label>
@@ -84,14 +115,25 @@
                            value="{{ $service->img2 }}"
                            aria-describedby="helpId">
                 </div>
+                @error('img2')
+                <div class="alert alert-danger">
+                    {{ old('img2') }}, {{ $message }}
+                </div>
+                @enderror
 
 
                 <div class="form-group">
-                    <label for="description">Описание</label>
+                    <label for="description" class="required">Описание</label>
                     <textarea class="form-control" name="description"
+                              required
+                              minlength="3"
                               id="description" rows="4">{{ $service->description }}</textarea>
                 </div>
-
+                @error('description')
+                <div class="alert alert-danger">
+                    {{ old('description') }}, {{ $message }}
+                </div>
+                @enderror
 
 
                 <button type="submit" class="btn btn-primary">Обновить</button>

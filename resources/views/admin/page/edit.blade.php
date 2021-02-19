@@ -17,18 +17,30 @@
                 @csrf
                 @method('PUT')
                 <div class="form-group">
-                    <label for="title">Заголовок</label>
+                    <label for="title" class="required">Заголовок</label>
                     <input type="text" name="title" id="title" class="form-control"
                            placeholder="Заголовок"
                            value="{{ $page->title }}"
+                           required
+                           minlength="3"
                            aria-describedby="helpId">
                 </div>
+                @error('title')
+                <div class="alert alert-danger">
+                    {{ old('title') }}, {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-group">
-                    <label for="slug">Slug</label>
-                    <input type="text" name="slug" id="slug" class="form-control"
+                    <label for="slug" class="required">Slug</label>
+                    <input type="text"
+                           name="slug"
+                           id="slug"
+                           class="form-control"
                            placeholder="slug"
                            value="{{ $page->slug }}"
+                           required
+                           minlength="3"
                            aria-describedby="helpId">
                 </div>
                 @error('slug')
@@ -38,26 +50,53 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="meta_description">meta_description</label>
-                    <input type="text" name="meta_description" id="meta_description" class="form-control"
-                           placeholder="meta_description"
+                    <label for="meta-description">Meta description</label>
+                    <input type="text"
+                           name="meta_description"
+                           id="meta-description"
+                           class="form-control"
+                           placeholder="meta description"
                            value="{{ $page->meta_description }}"
                            aria-describedby="helpId">
                 </div>
+                @error('meta_description')
+                <div class="alert alert-danger">
+                    {{ old('meta_description') }}, {{ $message }}
+                </div>
+                @enderror
+
+
                 <div class="form-group">
-                    <label for="meta_keywords">meta_keywords</label>
-                    <input type="text" name="meta_keywords" id="meta_keywords" class="form-control"
-                           placeholder="meta_keywords"
+                    <label for="meta-keywords">Meta keywords</label>
+                    <input type="text"
+                           name="meta_keywords"
+                           id="meta-keywords"
+                           class="form-control"
+                           placeholder="meta keywords"
                            value="{{ $page->meta_keywords }}"
                            aria-describedby="helpId">
                 </div>
+                @error('meta_keywords')
+                <div class="alert alert-danger">
+                    {{ old('meta_keywords') }}, {{ $message }}
+                </div>
+                @enderror
 
 
                 <div class="form-group">
-                    <label for="description">Описание</label>
-                    <textarea class="form-control" name="description"
-                              id="description" rows="4">{{ $page->description }}</textarea>
+                    <label for="description" class="required">Описание</label>
+                    <textarea class="form-control"
+                              name="description"
+                              required
+                              id="description"
+                              rows="4">{{ $page->description }}</textarea>
                 </div>
+                @error('description')
+                <div class="alert alert-danger">
+                    {{ old('description') }}, {{ $message }}
+                </div>
+                @enderror
+
 
                 <div class="form-group">
                     <label for="article">Статья</label>
@@ -66,6 +105,12 @@
                               id="article"
                               rows="10">{{ $page->article }}</textarea>
                 </div>
+                @error('article')
+                <div class="alert alert-danger">
+                    {{ old('article') }}, {{ $message }}
+                </div>
+                @enderror
+
 
                 <button type="submit" class="btn btn-primary">Обновить</button>
 
