@@ -22,12 +22,11 @@ class CreateTemplatesTable extends Migration
                 $table->string('title');
                 $table->string('slug')->unique();
 
-                $table->text('description');
-                $table->text('article')->nullable();
-
-
                 $table->text('meta_description')->nullable();
                 $table->text('meta_keywords')->nullable();
+
+                $table->text('description');
+                $table->text('article')->nullable();
 
                 $table->boolean('on_homepage')->default(0);
 

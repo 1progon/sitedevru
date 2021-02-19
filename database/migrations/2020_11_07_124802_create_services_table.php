@@ -22,12 +22,13 @@ class CreateServicesTable extends Migration
                 $table->string('title');
                 $table->string('slug')->unique();
 
-                $table->boolean('on_homepage')->default(0);
-
                 $table->text('meta_description')->nullable();
                 $table->text('meta_keywords')->nullable();
 
-                $table->text('description')->nullable();
+                $table->text('description');
+
+                $table->boolean('on_homepage')->default(0);
+
                 $table->string('img')->nullable();
                 $table->string('img2')->nullable();
             }

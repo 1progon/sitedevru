@@ -22,17 +22,15 @@ class CreatePricesTable extends Migration
                 $table->string('title');
                 $table->string('slug')->unique();
 
-
                 $table->text('meta_description')->nullable();
                 $table->text('meta_keywords')->nullable();
 
-
-                $table->text('description')->nullable();
-
+                $table->text('description');
 
                 $table->boolean('on_homepage')->default(0);
 
-                $table->unsignedInteger('price')->nullable();
+                $table->unsignedInteger('price');
+                
                 $table->string('img')->nullable();
             }
         );
