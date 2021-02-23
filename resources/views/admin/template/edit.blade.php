@@ -49,6 +49,7 @@
                     <label for="img">Img</label>
                     <input type="text" name="img" id="img" class="form-control"
                            placeholder="img"
+                           value="{{ $template->img }}"
                            aria-describedby="helpId">
                 </div>
                 @error('img')
@@ -61,6 +62,7 @@
                     <label for="img2">Img2</label>
                     <input type="text" name="img2" id="img2" class="form-control"
                            placeholder="img2"
+                           value="{{ $template->img2 }}"
                            aria-describedby="helpId">
                 </div>
                 @error('img2')
