@@ -107,6 +107,7 @@ class TemplatesController extends Controller
      */
     public function update(Request $request, Template $template): RedirectResponse
     {
+        //TODO Add middleware request for validation
         if ($request->has('img') && $request->img === '1') {
             Storage::delete($template->img);
             $template->img = '';
@@ -135,7 +136,7 @@ class TemplatesController extends Controller
      */
     public function destroy(Template $template): RedirectResponse
     {
-        //TODO Add remove images and empty folders
+        //TODO Add middleware validation req, remove images and empty folders
 
         Storage::delete([$template->img, $template->img2]);
         Storage::deleteDirectory('images/templates/' . $template->slug);
