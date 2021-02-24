@@ -75,11 +75,20 @@
                     <td>{{ Str::limit($template->article, 50) }}</td>
                     <td>{{ $template->on_homepage === 1 ? '✅' : '' }}</td>
 
-                    <td><img src="{{ asset($template->img) }}" width="80" height="80"
-                             alt=""></td>
+                    <td>
+                        @if( $template->img)
+                            <img src="{{ asset('storage/' . $template->img) }}" width="80" height="80"
+                                 alt="">
+                        @endif
+                    </td>
 
-                    <td><img src="{{ asset($template->img2) }}" width="80" height="80"
-                             alt=""></td>
+
+                    <td>
+                        @if( $template->img2)
+                            <img src="{{ asset('storage/' . $template->img2) }}" width="80" height="80"
+                                 alt="">
+                        @endif
+                    </td>
 
 
                     <td><a target="_blank" href="{{ route('templates.show', $template) }}">🔗</a></td>
