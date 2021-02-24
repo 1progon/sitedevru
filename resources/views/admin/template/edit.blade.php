@@ -12,7 +12,7 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <form action="{{ route('templates.update', $template ) }}" method="post">
+            <form action="{{ route('templates.update', $template ) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
@@ -45,12 +45,16 @@
                 </div>
                 @enderror
 
+
                 <div class="form-group">
-                    <label for="img">Img</label>
-                    <input type="text" name="img" id="img" class="form-control"
-                           placeholder="img"
-                           value="{{ $template->img }}"
-                           aria-describedby="helpId">
+                    @if( $template->img )
+                        <a href="#">
+                            <img src="{{ asset('storage/' . $template->img) }}" alt="image" width="100"
+                                 height="100">
+                        </a>
+                        <label for="img"></label>
+                        <input type="checkbox" name="img" id="img" value="1">
+                    @endif
                 </div>
                 @error('img')
                 <div class="alert alert-danger">
@@ -58,12 +62,16 @@
                 </div>
                 @enderror
 
+
                 <div class="form-group">
-                    <label for="img2">Img2</label>
-                    <input type="text" name="img2" id="img2" class="form-control"
-                           placeholder="img2"
-                           value="{{ $template->img2 }}"
-                           aria-describedby="helpId">
+                    @if( $template->img2 )
+                        <a href="#">
+                            <img src="{{ asset('storage/' . $template->img2) }}" alt="image" width="100"
+                                 height="100">
+                        </a>
+                        <label for="img2"></label>
+                        <input type="checkbox" name="img2" id="img2" value="1">
+                    @endif
                 </div>
                 @error('img2')
                 <div class="alert alert-danger">
