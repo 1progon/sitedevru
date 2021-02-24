@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Templates;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateTemplateRequest;
 use App\Model\Template\Template;
+use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Storage;
 
 class TemplatesController extends Controller
 {
@@ -48,17 +51,27 @@ class TemplatesController extends Controller
         return view('admin.template.create');
     }
 
+
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param CreateTemplateRequest $request
+     * @return RedirectResponse
      */
-    public function store(Request $request)
+    public function store(CreateTemplateRequest $request): RedirectResponse
     {
-        //TODO validation need
         $template = new Template();
+
         $template->fill($request->all());
+
+        if ($request->hasFile('img')) {
+            $template->img = $request->file('img')
+                ->store('images/templates/' . $request->slug);
+        }
+
+        if ($request->hasFile('img2')) {
+            $template->img2 = $request->file('img2')
+                ->store('images/templates/' . $request->slug);
+        }
+
         $template->save();
 
         return redirect()->route('templates.admin.index');
@@ -94,14 +107,22 @@ class TemplatesController extends Controller
      */
     public function update(Request $request, Template $template): RedirectResponse
     {
-        //TODO validation need
-        $validated = $request->validate(
-            [
-                'slug' => 'required|min:3|unique:pages,slug'
-            ]
-        );
+        if ($request->has('img') && $request->img === '1') {
+            Storage::delete($template->img);
+            $template->img = '';
+            $request->merge(['img' => '']);
+        }
 
-        $template->fill($validated);
+        if ($request->has('img2') && $request->img2 === '1') {
+            Storage::delete($template->img2);
+            $template->img2 = '';
+            $request->merge(['img2' => '']);
+        }
+
+
+        $template->fill($request->all());
+
+
         $template->save();
 
         return redirect()->route('templates.admin.index');
@@ -109,11 +130,18 @@ class TemplatesController extends Controller
 
     /**
      * @param Template $template
+     * @return RedirectResponse
+     * @throws Exception
      */
-    public function destroy(Template $template)
+    public function destroy(Template $template): RedirectResponse
     {
-        //TODO Add remove images etc..
+        //TODO Add remove images and empty folders
+
+        Storage::delete([$template->img, $template->img2]);
+        Storage::deleteDirectory('images/templates/' . $template->slug);
+
         $template->delete();
+
 
         return redirect()->route('templates.admin.index');
     }
