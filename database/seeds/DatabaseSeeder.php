@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
                 PagesSeeder::class,
                 PortfolioSeeder::class,
                 TestimonialsSeeder::class,
+                OurProsSeeder::class,
 
             ]
         );
