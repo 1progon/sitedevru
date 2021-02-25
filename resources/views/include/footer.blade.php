@@ -68,11 +68,14 @@
                             <div class="footer-title">
                                 <h4>Некоторые услуги</h4>
                                 <ul>
-                                    <li><a href="javascript:void(0)">Дизайн сайта</a></li>
-                                    <li><a href="javascript:void(0)">Я.Директ и Google Adwords</a></li>
-                                    <li><a href="javascript:void(0)">Продвижение в соц. сетях</a></li>
-                                    <li><a href="javascript:void(0)">Сбор заявок</a></li>
-                                    <li><a href="javascript:void(0)">Поддержка сайтов</a></li>
+
+                                    {{--services from app/Http/View FooterDataServiceProvider--}}
+                                    @forelse( $services as $service )
+                                        <li><a href="{{ route('pages.show', $service) }}">
+                                                {{ $service->title }}</a>
+                                        </li>
+                                    @empty
+                                    @endforelse
                                 </ul>
                             </div>
                         </div>
