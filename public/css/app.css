@@ -2112,36 +2112,8 @@ hr {
 }
 
 .create-padding {
-  padding-top: 240px;
-  padding-bottom: 190px;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .create-padding {
-    padding-top: 240px;
-    padding-bottom: 190px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .create-padding {
-    padding-top: 120px;
-    padding-bottom: 95px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .create-padding {
-    padding-top: 63px;
-    padding-bottom: 90px;
-  }
-}
-
-@media (max-width: 767px) {
-  .create-padding {
-    padding-top: 63px;
-    padding-bottom: 90px;
-  }
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-padding {
@@ -6685,8 +6657,42 @@ form .required::before {
   margin: 0 3px;
 }
 
+form .form-control {
+  color: #212529;
+}
+
 form label {
   cursor: pointer;
+}
+
+form input::-moz-placeholder, form textarea::-moz-placeholder, form select::-moz-placeholder {
+  color: #afafaf !important;
+  font-style: italic;
+}
+
+form input:-ms-input-placeholder, form textarea:-ms-input-placeholder, form select:-ms-input-placeholder {
+  color: #afafaf !important;
+  font-style: italic;
+}
+
+form input::placeholder,
+form textarea::placeholder,
+form select::placeholder {
+  color: #afafaf !important;
+  font-style: italic;
+}
+
+.pagination {
+  margin: 10px 0;
+}
+
+.pagination .page-item {
+  color: #2b4b80;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #ff5c97;
+  border-color: #ff5c97;
 }
 
 .page-single .description {

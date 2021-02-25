@@ -6,7 +6,19 @@ form {
         margin: 0 3px;
     }
 
+    .form-control {
+        color: #212529;
+    }
+
     label {
         cursor: pointer;
     }
+
+    & input, textarea, select {
+        &::placeholder {
+            color: #afafaf !important;
+            font-style: italic;
+        }
+    }
+
 }
