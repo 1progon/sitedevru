@@ -109,6 +109,13 @@ Route::middleware(['auth', 'active_or_not', 'access_roles:' . User::ROLE['admin'
 
             Route::get('prices', 'Prices\PricesController@adminIndex')
                 ->name('prices.admin.index');
+
+            Route::resource('our-pros', 'Pros\OurProsController')
+                ->except(['index', 'show'])
+                ->parameters(['our-pros' => 'pros']);
+
+            Route::get('our-pros', 'Pros\OurProsController@adminIndex')
+                ->name('our-pros.admin.index');
         }
     );
 
