@@ -38,7 +38,6 @@
                 <div class="form-group">
                     <label for="meta-description">Meta Description</label>
                     <input type="text" name="meta_description" id="meta-description" class="form-control"
-                           placeholder="meta description"
                            value="{{ old('meta_description') }}"
                            aria-describedby="helpId">
                 </div>
@@ -51,7 +50,6 @@
                 <div class="form-group">
                     <label for="meta-keywords">Meta Keywords</label>
                     <input type="text" name="meta_keywords" id="meta-keywords" class="form-control"
-                           placeholder="meta keywords"
                            value="{{ old('meta_keywords') }}"
                            aria-describedby="helpId">
                 </div>
