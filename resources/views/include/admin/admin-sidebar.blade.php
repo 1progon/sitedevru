@@ -65,6 +65,18 @@
             </div>
 
 
+            <div class="list-group list-group-flush">
+                <div class="list-group-item list-group-item-secondary font-weight-bold">Наши плюсы</div>
+                <a href="{{ route('our-pros.create') }}"
+                   class="list-group-item list-group-item-action @if( $route == 'our-pros.create') active @endif">Добавить
+                    плюс</a>
+
+                <a href="{{ route('our-pros.admin.index') }}"
+                   class="list-group-item list-group-item-action @if( $route == 'our-pros.admin.index') active @endif">Все
+                    плюсы</a>
+            </div>
+
+
         </div>
     </div>
 </div>
