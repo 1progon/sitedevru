@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header">Редактировать сервис id:{{ $service->id }},
+        <div class="card-header">Редактировать услугу id:{{ $service->id }},
             <a target="_blank" href="{{ route('services.show', $service) }}">открыть</a>
         </div>
 
@@ -55,8 +55,8 @@
                         <label for="img">Удалить</label>
                         <input type="checkbox" name="img" id="img" value="1">
                     @else
-                            <input type="file" class="form-control-file" name="image1" id="" placeholder=""
-                                   aria-describedby="fileHelpId">
+                        <input type="file" class="form-control-file" name="image1" id="" placeholder=""
+                               aria-describedby="fileHelpId">
                     @endif
                 </div>
                 @error('img')
@@ -74,8 +74,8 @@
                         <label for="img2">Удалить</label>
                         <input type="checkbox" name="img2" id="img2" value="1">
                     @else
-                            <input type="file" class="form-control-file" name="image2" id="" placeholder=""
-                                   aria-describedby="fileHelpId">
+                        <input type="file" class="form-control-file" name="image2" id="" placeholder=""
+                               aria-describedby="fileHelpId">
                     @endif
                 </div>
                 @error('img2')
@@ -111,7 +111,7 @@
                 </div>
                 @enderror
 
-                <div class="form-group">
+                <div class="form-group list-group-item rounded">
                     <label for="on-homepage">На главную</label>
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" id="on-homepage1" name="on_homepage"

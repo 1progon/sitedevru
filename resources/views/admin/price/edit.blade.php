@@ -46,7 +46,7 @@
                 </div>
                 @enderror
 
-                <div class="form-group">
+                <div class="form-group list-group-item rounded">
                     <label for="on-homepage" class="required">На главную</label>
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio"

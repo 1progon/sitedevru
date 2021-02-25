@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header">Добавить сервис</div>
+        <div class="card-header">Добавить услугу</div>
 
         <div class="card-body">
             @if ( session('status'))
@@ -62,7 +62,7 @@
                 </div>
                 @enderror
 
-                <div class="form-group">
+                <div class="form-group list-group-item rounded">
                     <label for="on-homepage" class="required">На главную</label>
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" id="on-homepage1" name="on_homepage"
@@ -88,7 +88,6 @@
 
                 <div class="form-group">
 
-                    <label for="img"></label>
                     <input type="file" class="form-control-file" name="img" id="img" placeholder=""
                            aria-describedby="fileHelpId">
 
@@ -126,7 +125,6 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="img2"></label>
                     <input type="file" class="form-control-file" name="img2" id="img2" placeholder=""
                            aria-describedby="fileHelpId">
 
