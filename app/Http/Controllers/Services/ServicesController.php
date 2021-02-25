@@ -3,9 +3,13 @@
 namespace App\Http\Controllers\Services;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateServiceRequest;
+use App\Http\Requests\UpdateServiceRequest;
 use App\Model\Service\Service;
+use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Storage;
 
 class ServicesController extends Controller
 {
@@ -47,18 +51,27 @@ class ServicesController extends Controller
         return view('admin.service.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //TODO validation need
 
+    /**
+     * @param CreateServiceRequest $request
+     * @return RedirectResponse
+     */
+    public function store(CreateServiceRequest $request): RedirectResponse
+    {
         $service = new Service();
         $service->fill($request->all());
+
+        if ($request->hasFile('img')) {
+            $service->img = $request->file('img')
+                ->store('images/services/' . $request->slug);
+        }
+
+        if ($request->hasFile('img2')) {
+            $service->img2 = $request->file('img2')
+                ->store('images/services/' . $request->slug);
+        }
+
+
         $service->save();
 
         return redirect()->route('services.admin.index');
@@ -89,34 +102,55 @@ class ServicesController extends Controller
 
 
     /**
-     * @param Request $request
+     * @param UpdateServiceRequest $request
      * @param Service $service
      * @return RedirectResponse
      */
-    public function update(Request $request, Service $service): RedirectResponse
+    public function update(UpdateServiceRequest $request, Service $service): RedirectResponse
     {
-        $validated = $request->validate(
-            [
-                'slug' => 'required|min:3|unique:pages,slug'
-            ]
-        );
+        // To remove img and img2
+        if ($request->has('img') && $request->img === 1) {
+            Storage::delete($service->img);
+            $request->merge(['img' => null]);
+        }
 
-        $service->fill($validated);
+        if ($request->has('img2') && $request->img2 === 1) {
+            Storage::delete($service->img2);
+            $request->merge(['img2' => null]);
+        }
+
+
+        // Add new instead old img and img2
+        if ($request->hasFile('image1')) {
+            $service->img = $request->file('image1')
+                ->store('images/services/' . $request->slug);
+        }
+
+        if ($request->hasFile('image2')) {
+            $service->img2 = $request->file('image2')
+                ->store('images/services/' . $request->slug);
+        }
+
+
+        $service->fill($request->all());
         $service->save();
 
 
         return redirect()->route('services.admin.index');
     }
 
+
     /**
-     * Remove the specified resource from storage.
-     *
      * @param Service $service
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse
+     * @throws Exception
      */
-    public function destroy(Service $service)
+    public function destroy(Service $service): RedirectResponse
     {
         //TODO Add remove images
+        Storage::delete([$service->img, $service->img2]);
+        Storage::deleteDirectory('images/templates/' . $service->slug);
+
         $service->delete();
 
         return redirect()->route('services.admin.index');

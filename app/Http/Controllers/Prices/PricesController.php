@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Prices;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreatePriceRequest;
+use App\Http\Requests\UpdatePriceRequest;
 use App\Model\Price\Price;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Storage;
 
 class PricesController extends Controller
 {
@@ -45,18 +48,22 @@ class PricesController extends Controller
         return view('admin.price.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
 
-        //TODO validation need
+    /**
+     * @param CreatePriceRequest $request
+     * @return RedirectResponse
+     */
+    public function store(CreatePriceRequest $request): RedirectResponse
+    {
         $price = new Price();
         $price->fill($request->all());
+
+        if ($request->hasFile('img')) {
+            $price->img = $request->file('img')
+                ->store('images/prices/' . $request->slug);
+        }
+
+
         $price->save();
 
         return redirect()->route('prices.admin.index');
@@ -84,21 +91,23 @@ class PricesController extends Controller
     }
 
 
-    /**
-     * @param Request $request
-     * @param Price $price
-     * @return RedirectResponse
-     */
-    public function update(Request $request, Price $price): RedirectResponse
+    public function update(UpdatePriceRequest $request, Price $price): RedirectResponse
     {
-        //TODO validation need
-        $validated = $request->validate(
-            [
-                'slug' => 'required|min:3|unique:pages,slug'
-            ]
-        );
+        // To remove img and img2
+        if ($request->has('img') && $request->img === 1) {
+            Storage::delete($price->img);
+            $request->merge(['img' => null]);
+        }
 
-        $price->fill($validated);
+
+        // Add new instead old img and img2
+        if ($request->hasFile('image1')) {
+            $price->img = $request->file('image1')
+                ->store('images/prices/' . $request->slug);
+        }
+
+
+        $price->fill($request->all());
         $price->save();
         return redirect()->route('prices.admin.index');
     }
