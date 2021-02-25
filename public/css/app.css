@@ -6685,6 +6685,10 @@ form .required::before {
   margin: 0 3px;
 }
 
+form label {
+  cursor: pointer;
+}
+
 .page-single .description {
   background-color: #ff5c97;
   border-radius: 10px;
