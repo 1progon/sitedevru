@@ -9,7 +9,7 @@
                         <div class="logo">
                             <img src="{{ asset('assets/img/logo/logo.svg') }}" alt="логотип компании по изготовлению
                             сайтов" width="40" height="60">
-                            <h3>Сайтодел</h3>
+                            <h3>Модуль</h3>
                         </div>
                     </a>
 
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <!-- Mobile Menu -->
-                        <div class="mobile_menu d-lg-none flex-grow-1 flex-shrink-1"></div>
+                    <div class="mobile_menu d-lg-none flex-grow-1 flex-shrink-1"></div>
                 </div>
             </div>
         </div>
