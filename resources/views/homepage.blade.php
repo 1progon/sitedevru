@@ -69,7 +69,13 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-do text-center mb-30">
                             <div class="do-icon mb-4">
-                                <img src="{{ asset($do->img) }}" alt="{{ $do->title }}" width="50">
+                                @if( $do->img )
+                                    <img src="{{ asset($do->img) }}" alt="{{ $do->title }}" width="50">
+                                @else
+                                    <img src="{{ asset('assets/img/icons/service.svg') }}" alt="{{ $do->title }}"
+                                         width="50">
+                                @endif
+
                             </div>
                             <div class="do-caption">
                                 <h4>{{ $do->title }}</h4>
@@ -143,11 +149,18 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="single-generating d-flex mb-30">
                             <div class="generating-icon">
-                                <img src="{{ asset($pros['img']) }}" alt="{{ $pros['title'] }}" width="50">
+                                @if( $pros->img )
+                                    <img src="{{ asset('storage/' . $pros->img) }}" alt="{{ $pros->title }}"
+                                         width="50">
+                                @else
+                                    <img src="{{ asset('assets/img/icons/docs.svg') }}" alt="{{ $pros->title }}"
+                                         width="50">
+                                @endif
+
                             </div>
                             <div class="generating-cap">
-                                <h4>{{ $pros['title'] }}</h4>
-                                <p>{{ $pros['description'] }}</p>
+                                <h4>{{ $pros->title }}</h4>
+                                <p>{{ $pros->description }}</p>
                             </div>
                         </div>
                     </div>
@@ -174,7 +187,13 @@
                         <a href="{{ route('prices.show', $price) }}">
                             <div class="single-choose text-center mb-30">
                                 <div class="do-icon mb-4">
-                                    <img src="{{ asset($price->img) }}" alt="price {{ $price->price }}" width="50">
+                                    @if( $price->img )
+                                        <img src="{{ asset($price->img) }}" alt="price {{ $price->price }}" width="50">
+                                    @else
+                                        <img src="{{ asset('assets/img/icons/price-tag.svg') }}"
+                                             alt="price {{ $price->price }}" width="50">
+                                    @endif
+
                                 </div>
                                 <div class="do-caption">
                                     <h4>{{ $price->title }}</h4>
@@ -270,9 +289,17 @@
                 @forelse( $blogs as $blog )
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <a href="{{ route('blogs.show', $blog) }}">
-                            <div class="single-tips mb-50">
+                            <div class="single-tips mb-50 text-center">
                                 <div class="tips-img">
-                                    <img src="{{ $blog->img }}" alt="{{ $blog->title }}">
+                                    @if( $blog->img )
+                                        <img src="{{ asset('storage/' . $blog->img) }}" alt="{{ $blog->title }}">
+                                    @else
+                                        <img src="{{ asset('assets/img/icons/blog.svg') }}"
+                                             alt="{{ $blog->title }}"
+                                             width="150">
+                                    @endif
+
+
                                 </div>
                                 <div class="tips-caption">
                                     <h4>{{ $blog->title }}</h4>
