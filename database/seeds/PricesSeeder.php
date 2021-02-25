@@ -22,7 +22,8 @@ class PricesSeeder extends Seeder
                 'slug' => Str::slug('Простой сайт визитка цена'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
                 'price' => 28000,
-                'on_homepage' => true
+                'on_homepage' => true,
+                'description' => '',
                 //'included' => [
                 //    'WordPress CMS Website', 'Simple company website', 'Business card site', 'Admin panel', 'SEO Friendly',
                 //    'Domain name',
@@ -35,7 +36,8 @@ class PricesSeeder extends Seeder
                 'slug' => Str::slug('сайт интернет магазина цена'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
                 'price' => 78000,
-                'on_homepage' => true
+                'on_homepage' => true,
+                'description' => '',
                 //'included' => [
                 //    'WordPress WooCommerce Shop CMS',
                 //    'Simple shop',
@@ -53,7 +55,8 @@ class PricesSeeder extends Seeder
                 'slug' => Str::slug('Сайт бизнес портал цена'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
                 'price' => 150000,
-                'on_homepage' => true
+                'on_homepage' => true,
+                'description' => '',
 
             ],[
                 'created_at' => date('Y-m-d H:m:s'),
@@ -62,7 +65,8 @@ class PricesSeeder extends Seeder
                 'slug' => Str::slug('лендинг сайт цена'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/3462/3462067.svg',
                 'price' => 60000,
-                'on_homepage' => false
+                'on_homepage' => false,
+                'description' => '',
 
             ],
 

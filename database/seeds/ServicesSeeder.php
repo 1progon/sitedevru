@@ -115,11 +115,6 @@ class ServicesSeeder extends Seeder
                 'on_homepage' => 0,
                 'description' => '"Родные" приложения для гаджетов на iOS от компании Apple. Приложения различной степени сложности.'
             ],
-        ];
-
-        $services = [
-
-
             [
                 'title' => 'SEO оптимизация и продвижение сайтов в ТОП',
                 'slug' => Str::slug('оптимизация и продвижение сайтов в топ seo'),
@@ -127,6 +122,7 @@ class ServicesSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:m:s'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1471/1471532.svg',
                 'on_homepage' => 0,
+                'description' => '',
             ],
             [
                 'title' => 'Покупка и продажа сайтов, доменов',
@@ -135,6 +131,7 @@ class ServicesSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:m:s'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1471/1471532.svg',
                 'on_homepage' => 0,
+                'description' => '',
             ],
             [
                 'title' => 'Поддержка выделенных серверов, хостинг и виртуальные сервера VPS',
@@ -143,6 +140,7 @@ class ServicesSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:m:s'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1471/1471532.svg',
                 'on_homepage' => 0,
+                'description' => '',
             ],
             [
                 'title' => 'Вёрстка HTML шаблонов для сайтов из макетов PSD, Figma и других',
@@ -151,6 +149,7 @@ class ServicesSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:m:s'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1471/1471532.svg',
                 'on_homepage' => 0,
+                'description' => '',
             ],
             [
                 'title' => 'Стратегия построения ссылок для сайта',
@@ -159,6 +158,7 @@ class ServicesSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:m:s'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1471/1471532.svg',
                 'on_homepage' => 0,
+                'description' => '',
             ],
             [
                 'title' => 'Создание шаблонов для HTML сайтов и CMS',
@@ -167,6 +167,7 @@ class ServicesSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:m:s'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1471/1471532.svg',
                 'on_homepage' => 0,
+                'description' => '',
             ],
             [
                 'title' => 'Работы с контентом, наполнение сайтов копирайт, контент для оптимизации и SEO',
@@ -175,12 +176,10 @@ class ServicesSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:m:s'),
                 'img' => 'https://www.flaticon.com/svg/static/icons/svg/1471/1471532.svg',
                 'on_homepage' => 0,
+                'description' => '',
             ],
-
         ];
 
-        DB::table('services')
-            ->insert($services);
 
         DB::table('services')
             ->insert($servicesWithDesc);
