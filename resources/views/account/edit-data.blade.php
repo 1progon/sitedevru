@@ -42,7 +42,7 @@
                            name="first_name"
                            id="first_name"
                            class="form-control"
-                           value="{{ $user->first_name }}">
+                           value="{{ $user->first_name ?? old('first_name')}}">
                 </div>
                 @error('first_name')
                 <div class="alert alert-danger">
@@ -56,7 +56,7 @@
                            name="last_name"
                            id="last-name"
                            class="form-control"
-                           value="{{ $user->last_name }}">
+                           value="{{ $user->last_name ?? old('last_name') }}">
                 </div>
                 @error('last_name')
                 <div class="alert alert-danger">
@@ -70,7 +70,7 @@
                            name="patronymic_name"
                            id="patronymic-name"
                            class="form-control"
-                           value="{{ $user->patronymic_name }}">
+                           value="{{ $user->patronymic_name ?? old('patronymic_name') }}">
                 </div>
                 @error('patronymic_name')
                 <div class="alert alert-danger">

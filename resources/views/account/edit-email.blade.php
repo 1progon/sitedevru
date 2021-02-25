@@ -27,6 +27,7 @@
                            name="old_email"
                            id="old-email"
                            class="form-control"
+                           value="{{ old('old_email') }}"
                            required>
                 </div>
                 @error('old_email')
@@ -41,6 +42,7 @@
                            name="email"
                            id="email"
                            class="form-control"
+                           value="{{ old('email') }}"
                            required>
                 </div>
                 @error('email')
@@ -55,6 +57,7 @@
                            name="email_confirmation"
                            id="email-confirmation"
                            class="form-control"
+                           value="{{ old('email_confirmation') }}"
                            required>
                 </div>
                 @error('email_confirmation')
