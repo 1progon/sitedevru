@@ -19,7 +19,8 @@
                     <a href="{{ route('prices.show', $price) }}">
                         <div class="single-do text-center mb-30">
                             <div class="do-icon mb-4">
-                                <img src="{{ asset($price->img) }}" alt="price {{ $price->title }}" width="50">
+                                <img src="{{ asset('storage/' . $price->img) }}" alt="price {{ $price->title }}"
+                                     width="50">
                             </div>
                             <div class="do-caption">
                                 <h4>{{ $price->title }}</h4>

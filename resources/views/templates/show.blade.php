@@ -19,12 +19,14 @@
         {{--TODO Hardcoded Max width thumbs--}}
         <div>
             <h2>Иконки сайта. Клик, чтобы развернуть</h2>
-            <a target="_blank" rel="nofollow noopener" href="{{ $template->img }}">
-                <img style="max-width: 200px" src="{{ $template->img }}" alt="первое изображение шаблона">
+            <a target="_blank" rel="nofollow noopener" href="{{ asset('storage/' . $template->img) }}">
+                <img style="max-width: 200px" src="{{ asset('storage/' . $template->img) }}" alt="первое изображение
+                шаблона">
             </a>
 
-            <a target="_blank" rel="nofollow noopener" href="{{ $template->img2 }}">
-                <img style="max-width: 200px" src="{{ $template->img2 }}" alt="второе изображение шаблона">
+            <a target="_blank" rel="nofollow noopener" href="{{ asset('storage/' . $template->img2) }}">
+                <img style="max-width: 200px" src="{{ asset('storage/' . $template->img2) }}" alt="второе изображение
+                шаблона">
             </a>
 
         </div>

@@ -17,8 +17,16 @@
 
         <div>
             <div class="description">{!! $service->description !!}</div>
-
         </div>
+
+
+        @if( $service->img || $service->img2)
+            <div>
+                <img src="{{ asset( 'storage/' . $service->img) }}" width="100" alt="">
+                <img src="{{ asset( 'storage/' . $service->img2) }}" width="100" alt="">
+            </div>
+        @endif
+
 
     </div>
 @endsection

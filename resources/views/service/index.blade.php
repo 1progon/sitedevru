@@ -20,7 +20,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-do text-center mb-30">
                         <div class="do-icon mb-3">
-                            <img src="{{ $service->img }}"
+                            <img src="{{ asset('storage/' . $service->img) }}"
                                  alt="icon service {{ $service->title }}"
                                  width="50">
                         </div>
@@ -39,7 +39,6 @@
 
 
         </div>
-
 
 
         <div class="row">
