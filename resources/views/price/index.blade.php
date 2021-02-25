@@ -19,8 +19,15 @@
                     <a href="{{ route('prices.show', $price) }}">
                         <div class="single-do text-center mb-30">
                             <div class="do-icon mb-4">
-                                <img src="{{ asset('storage/' . $price->img) }}" alt="price {{ $price->title }}"
-                                     width="50">
+                                @if( $price->img )
+                                    <img src="{{ asset('storage/' . $price->img) }}" alt="price {{ $price->title }}"
+                                         width="50">
+                                @else
+                                    <img src="{{ asset('assets/img/icons/price-tag.svg') }}"
+                                         alt="price {{ $price->title }}"
+                                         width="50">
+                                @endif
+
                             </div>
                             <div class="do-caption">
                                 <h4>{{ $price->title }}</h4>

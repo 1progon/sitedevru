@@ -20,9 +20,16 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-do text-center mb-30">
                         <div class="do-icon mb-3">
-                            <img src="{{ asset('storage/' . $service->img) }}"
-                                 alt="icon service {{ $service->title }}"
-                                 width="50">
+                            @if( $service->img )
+                                <img src="{{ asset('storage/' . $service->img) }}"
+                                     alt="icon service {{ $service->title }}"
+                                     width="50">
+                            @else
+                                <img src="{{ asset('assets/img/icons/service.svg') }}"
+                                     alt="icon service {{ $service->title }}"
+                                     width="50">
+                            @endif
+
                         </div>
                         <div class="do-caption">
                             <h4>{{ $service->title }}</h4>
