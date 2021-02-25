@@ -72,8 +72,22 @@
                     <td>{{ $service->title }}</td>
                     <td>{{ $service->slug }}</td>
                     <td>{{ Str::limit($service->description, 50) }}</td>
-                    <td><img src="{{ $service->img }}" alt="" width="80" height="80"></td>
-                    <td><img src="{{ $service->img2 }}" alt="" width="80" height="80"></td>
+
+                    <td>
+                        @if( $service->img)
+                            <img src="{{ asset('storage/' . $service->img) }}" width="80" height="80"
+                                 alt="">
+                        @endif
+                    </td>
+
+
+                    <td>
+                        @if( $service->img2)
+                            <img src="{{ asset('storage/' . $service->img2) }}" width="80" height="80"
+                                 alt="">
+                        @endif
+                    </td>
+
                     <td>{{ $service->on_homepage === 1 ? '✅' : '' }}</td>
                     <td>
                         <a target="_blank" href="{{ route('services.show', $service) }}">🔗</a>

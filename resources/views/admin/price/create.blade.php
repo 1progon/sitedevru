@@ -10,7 +10,7 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <form action="{{ route('prices.store') }}" method="post">
+            <form action="{{ route('prices.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-group">
@@ -22,6 +22,7 @@
                            placeholder="Заголовок"
                            required
                            minlength="3"
+                           value="{{ old('title') }}"
                            aria-describedby="helpId">
                 </div>
                 @error('title')
@@ -65,9 +66,49 @@
                 @enderror
 
                 <div class="form-group">
+
+                    <label for="img"></label>
+                    <input type="file" class="form-control-file" name="img" id="img" placeholder=""
+                           aria-describedby="fileHelpId">
+
+
+                    <div id="image1" class="my-1">
+                        <span id="file"></span>
+                        <span id="size"></span>
+                        <span id="type"></span>
+                        <span id="filename"></span>
+                    </div>
+                    <script>
+                        let input = document.getElementById('img');
+                        input.addEventListener('change', (e) => {
+                            console.log(input.files[0])
+                            let file = input.files[0];
+
+                            document.querySelector('#image1 #size')
+                                .innerHTML = 'Size: ' + Math.floor(file.size / 1000) + ' kb.';
+
+                            document.querySelector('#image1 #type')
+                                .innerHTML = 'Type: ' + file.type;
+
+                            document.querySelector('#image1 #filename')
+                                .innerHTML = 'Name: ' + file.name;
+
+                            document.querySelector('#image1 #file')
+                                .innerHTML = '<img src="' + window.URL.createObjectURL(file) + '" alt="" width="200"/>';
+                        })
+                    </script>
+                </div>
+                @error('img')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
+
+                <div class="form-group">
                     <label for="meta-description">Meta description</label>
                     <input type="text" name="meta_description" id="meta-description" class="form-control"
                            placeholder="meta description"
+                           value="{{ old('meta_description') }}"
                            aria-describedby="helpId">
                 </div>
                 @error('meta_description')
@@ -76,10 +117,12 @@
                 </div>
                 @enderror
 
+
                 <div class="form-group">
                     <label for="meta-keywords">Meta keywords</label>
                     <input type="text" name="meta_keywords" id="meta-keywords" class="form-control"
                            placeholder="meta keywords"
+                           value="{{ old('meta_keywords') }}"
                            aria-describedby="helpId">
                 </div>
                 @error('meta_keywords')
@@ -88,20 +131,6 @@
                 </div>
                 @enderror
 
-                <div class="form-group">
-                    <label for="img">Img</label>
-                    <input type="text"
-                           name="img"
-                           id="img"
-                           class="form-control"
-                           placeholder="img"
-                           aria-describedby="helpId">
-                </div>
-                @error('img')
-                <div class="alert alert-danger">
-                    {{ $message }}
-                </div>
-                @enderror
 
                 <div class="form-group">
                     <label for="price" class="required">Цена</label>
@@ -111,6 +140,7 @@
                            class="form-control"
                            placeholder="price"
                            required
+                           value="{{ old('price') }}"
                            aria-describedby="helpId">
                 </div>
                 @error('price')
@@ -126,7 +156,7 @@
                               name="description"
                               id="description"
                               required
-                              rows="4"></textarea>
+                              rows="4">{{ old('description') }}</textarea>
                 </div>
                 @error('description')
                 <div class="alert alert-danger">

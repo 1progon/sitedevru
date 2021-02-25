@@ -16,6 +16,7 @@
             <form action="{{ route('pages.update', $page ) }}" method="post">
                 @csrf
                 @method('PUT')
+                <input type="hidden" name="_old_slug" id="" value="{{ $page->slug }}" required>
                 <div class="form-group">
                     <label for="title" class="required">Заголовок</label>
                     <input type="text" name="title" id="title" class="form-control"

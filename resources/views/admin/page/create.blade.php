@@ -39,6 +39,7 @@
                     <label for="meta-description">Meta Description</label>
                     <input type="text" name="meta_description" id="meta-description" class="form-control"
                            placeholder="meta description"
+                           value="{{ old('meta_description') }}"
                            aria-describedby="helpId">
                 </div>
                 @error('meta_description')
@@ -51,6 +52,7 @@
                     <label for="meta-keywords">Meta Keywords</label>
                     <input type="text" name="meta_keywords" id="meta-keywords" class="form-control"
                            placeholder="meta keywords"
+                           value="{{ old('meta_keywords') }}"
                            aria-describedby="helpId">
                 </div>
                 @error('meta_keywords')
@@ -65,7 +67,7 @@
                               name="description"
                               id="description"
                               required
-                              rows="4"></textarea>
+                              rows="4">{{ old('description') }}</textarea>
                 </div>
                 @error('description')
                 <div class="alert alert-danger">
@@ -79,7 +81,7 @@
                     <textarea class="form-control tinymce"
                               name="article"
                               id="article"
-                              rows="10"></textarea>
+                              rows="10">{{ old('article') }}</textarea>
                 </div>
                 @error('article')
                 <div class="alert alert-danger">

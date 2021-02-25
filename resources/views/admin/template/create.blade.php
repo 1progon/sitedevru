@@ -19,6 +19,7 @@
                            placeholder="Заголовок"
                            required
                            minlength="3"
+                           value="{{ old('title') }}"
                            aria-describedby="helpId">
                 </div>
                 @error('title')
@@ -36,6 +37,7 @@
                     <label for="meta-description">Meta description</label>
                     <input type="text" name="meta_description" id="meta-description" class="form-control"
                            placeholder="meta description"
+                           value="{{ old('meta_description') }}"
                            aria-describedby="helpId">
                 </div>
                 @error('meta_description')
@@ -49,6 +51,7 @@
                     <label for="meta-keywords">Meta keywords</label>
                     <input type="text" name="meta_keywords" id="meta-keywords" class="form-control"
                            placeholder="meta keywords"
+                           value="{{ old('meta_keywords') }}"
                            aria-describedby="helpId">
                 </div>
                 @error('meta_keywords')
@@ -82,14 +85,10 @@
                 @enderror
 
                 <div class="form-group">
-                    <div class="custom-file">
-                        <input type="file"
-                               name="img"
-                               class="custom-file-input"
-                               id="img"
-                               value="Выбрать">
-                        <label class="custom-file-label" for="img">Выбрать файл</label>
-                    </div>
+                    <label for="img"></label>
+                    <input type="file" class="form-control-file" name="img" id="img" placeholder=""
+                           aria-describedby="fileHelpId">
+
 
                     <div id="image1" class="my-1">
                         <span id="file"></span>
@@ -115,8 +114,6 @@
                             document.querySelector('#image1 #file')
                                 .innerHTML = '<img src="' + window.URL.createObjectURL(file) + '" alt="" width="200"/>';
                         })
-
-
                     </script>
                 </div>
                 @error('img')
@@ -126,14 +123,9 @@
                 @enderror
 
                 <div class="form-group">
-                    <div class="custom-file">
-                        <input type="file"
-                               name="img2"
-                               class="custom-file-input"
-                               id="img2"
-                               value="Выбрать">
-                        <label class="custom-file-label" for="img2">Выбрать файл2</label>
-                    </div>
+                    <label for="img2"></label>
+                    <input type="file" class="form-control-file" name="img2" id="img2" placeholder=""
+                           aria-describedby="fileHelpId">
 
                     <div id="image2" class="my-1">
                         <span id="file2"></span>
@@ -176,7 +168,7 @@
                               name="description"
                               id="description"
                               required
-                              rows="4"></textarea>
+                              rows="4">{{ old('description') }}</textarea>
                 </div>
                 @error('description')
                 <div class="alert alert-danger">
@@ -189,7 +181,7 @@
                     <textarea class="form-control tinymce"
                               name="article"
                               id="article"
-                              rows="10"></textarea>
+                              rows="10">{{ old('article') }}</textarea>
                 </div>
                 @error('article')
                 <div class="alert alert-danger">

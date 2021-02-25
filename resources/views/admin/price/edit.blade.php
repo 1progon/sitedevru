@@ -12,9 +12,11 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <form action="{{ route('prices.update', $price ) }}" method="post">
+            <form action="{{ route('prices.update', $price ) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
+                <input type="hidden" name="_old_slug" id="" value="{{ $price->slug }}">
+
                 <div class="form-group">
                     <label for="title" class="required">Заголовок</label>
                     <input type="text" name="title" id="title" class="form-control"
@@ -98,11 +100,17 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="img">Img</label>
-                    <input type="text" name="img" id="img" class="form-control"
-                           value="{{ $price->img }}"
-                           placeholder="img"
-                           aria-describedby="helpId">
+                    @if( $price->img )
+                        <a href="#">
+                            <img src="{{ asset('storage/' . $price->img) }}" alt="image" width="100"
+                                 height="100">
+                        </a>
+                        <label for="img">Удалить</label>
+                        <input type="checkbox" name="img" id="img" value="1">
+                    @else
+                        <input type="file" class="form-control-file" name="image1" id="" placeholder=""
+                               aria-describedby="fileHelpId">
+                    @endif
                 </div>
                 @error('img')
                 <div class="alert alert-danger">

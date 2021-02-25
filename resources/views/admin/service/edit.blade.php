@@ -12,9 +12,11 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <form action="{{ route('services.update', $service ) }}" method="post">
+            <form action="{{ route('services.update', $service ) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
+
+                <input type="hidden" name="_old_slug" value="{{ $service->slug }}">
                 <div class="form-group">
                     <label for="title" class="required">Заголовок</label>
                     <input type="text" name="title" id="title" class="form-control"
@@ -41,6 +43,44 @@
                 @error('slug')
                 <div class="alert alert-danger">
                     {{ old('slug') }}, {{ $message }}
+                </div>
+                @enderror
+
+                <div class="form-group">
+                    @if( $service->img )
+                        <a href="#">
+                            <img src="{{ asset('storage/' . $service->img) }}" alt="image" width="100"
+                                 height="100">
+                        </a>
+                        <label for="img">Удалить</label>
+                        <input type="checkbox" name="img" id="img" value="1">
+                    @else
+                            <input type="file" class="form-control-file" name="image1" id="" placeholder=""
+                                   aria-describedby="fileHelpId">
+                    @endif
+                </div>
+                @error('img')
+                <div class="alert alert-danger">
+                    {{ old('img') }}, {{ $message }}
+                </div>
+                @enderror
+
+                <div class="form-group">
+                    @if( $service->img2 )
+                        <a href="#">
+                            <img src="{{ asset('storage/' . $service->img2) }}" alt="image" width="100"
+                                 height="100">
+                        </a>
+                        <label for="img2">Удалить</label>
+                        <input type="checkbox" name="img2" id="img2" value="1">
+                    @else
+                            <input type="file" class="form-control-file" name="image2" id="" placeholder=""
+                                   aria-describedby="fileHelpId">
+                    @endif
+                </div>
+                @error('img2')
+                <div class="alert alert-danger">
+                    {{ old('img2') }}, {{ $message }}
                 </div>
                 @enderror
 
@@ -91,33 +131,6 @@
                 @error('on_homepage')
                 <div class="alert alert-danger">
                     {{ old('on_homepage') }}, {{ $message }}
-                </div>
-                @enderror
-
-
-                <div class="form-group">
-                    <label for="img">Img</label>
-                    <input type="text" name="img" id="img" class="form-control"
-                           placeholder="img"
-                           value="{{ $service->img }}"
-                           aria-describedby="helpId">
-                </div>
-                @error('img')
-                <div class="alert alert-danger">
-                    {{ old('img') }}, {{ $message }}
-                </div>
-                @enderror
-
-                <div class="form-group">
-                    <label for="img2">Img2</label>
-                    <input type="text" name="img2" id="img2" class="form-control"
-                           placeholder="img2"
-                           value="{{ $service->img2 }}"
-                           aria-describedby="helpId">
-                </div>
-                @error('img2')
-                <div class="alert alert-danger">
-                    {{ old('img2') }}, {{ $message }}
                 </div>
                 @enderror
 

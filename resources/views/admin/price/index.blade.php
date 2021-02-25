@@ -73,7 +73,15 @@
                     <td>{{ $price->on_homepage === 1 ? '✅' : '' }}</td>
                     <td>{{ $price->description }}</td>
                     <td>{{ $price->price }}</td>
-                    <td><img src="{{ $price->img }}" alt="" width="80" height="80"></td>
+
+
+                    <td>
+                        @if( $price->img)
+                            <img src="{{ asset('storage/' . $price->img) }}" width="80" height="80"
+                                 alt="">
+                        @endif
+                    </td>
+
                     <td>
                         <a target="_blank" href="{{ route('prices.show', $price) }}">🔗</a>
                     </td>
