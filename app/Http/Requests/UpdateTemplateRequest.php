@@ -48,4 +48,12 @@ class UpdateTemplateRequest extends FormRequest
             'description' => 'required|min:3',
         ];
     }
+
+    public function messages(): array
+    {
+        // Error message on unique db
+        return [
+            'slug.unique' => 'Такой slug("' . $this->slug . '") уже есть. Попробуйте его изменить.'
+        ];
+    }
 }

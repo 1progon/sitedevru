@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdatePageRequest extends FormRequest
 {
@@ -18,17 +19,28 @@ class UpdatePageRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
-     *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         // Validate date
         return [
             'title' => 'required|min:3',
-            'slug' => 'required|min:3|unique:pages,slug',
+            'slug' => [
+                'required',
+                'min:3',
+                Rule::unique('pages', 'slug')
+                    ->ignore($this->_old_slug, 'slug')
+            ],
             'description' => 'required|min:3',
+        ];
+    }
+
+    public function messages(): array
+    {
+        // Error message on unique db
+        return [
+            'slug.unique' => 'Такой slug("' . $this->slug . '") уже есть. Попробуйте его изменить.'
         ];
     }
 }
