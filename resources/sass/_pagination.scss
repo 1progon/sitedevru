@@ -1,0 +1,18 @@
+@use "color" as *;
+.pagination {
+
+    margin: 10px 0;
+
+    .page-item {
+        color: $heading-color;
+        &.active {
+            .page-link {
+
+                background-color: $theme-color;
+                border-color: $theme-color;
+            }
+        }
+    }
+
+
+}
