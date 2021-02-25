@@ -34,6 +34,19 @@
                 @enderror
 
                 <div class="form-group">
+                    <label for="url">URL шаблона</label>
+                    <input type="text" name="url"
+                           id="url" class="form-control"
+                           value="{{ old('url') }}"
+                           aria-describedby="helpId">
+                </div>
+                @error('url')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
+
+                <div class="form-group">
                     <label for="meta-description">Meta description</label>
                     <input type="text" name="meta_description" id="meta-description" class="form-control"
                            value="{{ old('meta_description') }}"
