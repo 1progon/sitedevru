@@ -26,11 +26,12 @@ class CreatePricesTable extends Migration
                 $table->text('meta_keywords')->nullable();
 
                 $table->text('description');
+                $table->text('article')->nullable();
 
                 $table->boolean('on_homepage')->default(0);
 
                 $table->unsignedInteger('price');
-                
+
                 $table->string('img')->nullable();
             }
         );
