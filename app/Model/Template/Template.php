@@ -18,6 +18,7 @@ class Template extends Model
         'on_homepage',
         'img',
         'img2',
+        'url',
     ];
 
     public function getRouteKeyName()
