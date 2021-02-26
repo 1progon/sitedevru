@@ -28,6 +28,8 @@ class CreatePortfolioTable extends Migration
                 $table->text('description');
                 $table->text('article')->nullable();
 
+                $table->boolean('on_homepage')->default(0);
+
                 $table->string('img')->nullable();
                 $table->string('img2')->nullable();
                 $table->string('img3')->nullable();
