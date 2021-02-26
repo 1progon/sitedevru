@@ -24,5 +24,7 @@
 
     <link rel="preload" href="{{ asset('assets/img/logo/logo.svg') }}" as="image">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+
     @yield('head')
 </head>
