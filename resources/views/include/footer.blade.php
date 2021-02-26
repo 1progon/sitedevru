@@ -71,7 +71,7 @@
 
                                     {{--services from app/Http/View FooterDataServiceProvider--}}
                                     @forelse( $services as $service )
-                                        <li><a href="{{ route('pages.show', $service) }}">
+                                        <li><a href="{{ route('services.show', $service) }}">
                                                 {{ $service->title }}</a>
                                         </li>
                                     @empty
