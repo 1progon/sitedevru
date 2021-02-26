@@ -23,6 +23,8 @@ class UpdatePriceRequest extends FormRequest
         if (isset($this->img) || !empty($this->img)) {
             $this->merge(['img' => intval($this->img)]);
         }
+
+        $this->merge(['on_homepage' => intval($this->on_homepage)]);
     }
 
     /**

@@ -19,10 +19,8 @@ class CreateServiceRequest extends FormRequest
 
     protected function prepareForValidation()
     {
-        if (!isset($this->slug) || empty($this->slug)) {
-            // Add slug to request
-            $this->merge(['slug' => Str::slug($this->title)]);
-        };
+        // Add slug to request
+        $this->merge(['slug' => Str::slug($this->title)]);
     }
 
     /**
