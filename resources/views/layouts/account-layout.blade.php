@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
 
+@section('head')
+    <link rel="stylesheet" href="{{ asset('css/account/account-app.css') }}">
+@endsection
+
 @include('include.head')
 
 <body class="account-template">
@@ -9,7 +13,7 @@
 
 
 <main class="container-fluid d-flex flex-row flex-wrap my-3">
-    <div class="col-12 col-md-3 my-2">
+    <div class="col-12 col-sm-5 col-md-4 col-lg-3 col-xl-2 my-2">
         @include('include.account.account-sidebar')
     </div>
     <div class="col my-2">
