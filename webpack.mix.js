@@ -16,6 +16,7 @@ mix
     .js('resources/js/app.js', 'public/js')
     // TODO Need to minify app.css
     .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/admin/admin-app.scss', 'public/css/admin')
     .sourceMaps(false, 'source-map')
 
 
