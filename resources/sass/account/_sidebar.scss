@@ -1,0 +1,8 @@
+.account-sidebar {
+    overflow-y: scroll;
+    height: 80vh;
+
+    @media all and (max-width: 576px) {
+        max-height: 40vh;
+    }
+}

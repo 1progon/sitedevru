@@ -1,0 +1,13 @@
+.account-sidebar {
+  overflow-y: scroll;
+  height: 80vh;
+}
+
+@media all and (max-width: 576px) {
+  .account-sidebar {
+    max-height: 40vh;
+  }
+}
+
+
+/*# sourceMappingURL=account-app.css.map*/

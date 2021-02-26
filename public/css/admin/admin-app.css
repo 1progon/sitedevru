@@ -3,5 +3,11 @@
   height: 80vh;
 }
 
+@media all and (max-width: 576px) {
+  .admin-template .admin-sidebar {
+    max-height: 40vh;
+  }
+}
+
 
 /*# sourceMappingURL=admin-app.css.map*/
