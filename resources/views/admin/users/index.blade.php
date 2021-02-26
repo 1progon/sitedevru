@@ -26,7 +26,7 @@
             <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Name</th>
+                <th scope="col">Login</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Patronymic Name</th>
@@ -42,13 +42,13 @@
 
                 <tr>
                     <th scope="row">{{ $user->id }}</th>
-                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->login }}</td>
                     <td>{{ $user->first_name }}</td>
                     <td>{{ $user->last_name }}</td>
                     <td>{{ $user->patronymic_name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ array_search($user->role, \App\Model\User\User::ROLE) }}</td>
-                    <td>{{ $user->active ? '🙂' : '😞' }}</td>
+                    <td>{{ $user->active ? '🟢' : '🔴' }}</td>
 
                 </tr>
 

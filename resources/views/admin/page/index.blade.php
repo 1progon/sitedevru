@@ -2,17 +2,18 @@
 
 @section('main')
     <div class="card">
-        <div class="card-header d-flex flex-wrap">
+        <div class="card-header d-flex flex-wrap align-items-baseline">
             <span class="mr-2">Все страницы</span>
             <form name="search_form" method="get">
                 <label>
-                    <input type="text"
+                    <input class="form-control"
+                           type="text"
                            name="s_by_title"
                            id="s-by-title"
                            placeholder="id, заголовок, slug"
                            value="{{ $search }}">
                 </label>
-                <input type="submit" class="btn-success" value="Найти">
+                <input type="submit" class="btn btn-success" value="Найти">
             </form>
 
             <script>
@@ -27,6 +28,10 @@
 
                 })
             </script>
+
+            <span class="ml-2">
+                <a class="btn header-btn" href="{{ route('pages.create') }}">Добавить страницу</a>
+            </span>
         </div>
 
 
@@ -80,7 +85,7 @@
                               method="post">
                             @csrf
                             @method('DELETE')
-                            <input class="btn btn-danger" type="submit" value="Delete">
+                            <input class="btn btn-danger btn-sm" type="submit" value="Delete">
                         </form>
                     </td>
                 </tr>
