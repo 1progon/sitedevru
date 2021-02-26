@@ -3,7 +3,7 @@
 
 @include('include.head')
 
-<body>
+<body class="account-template">
 
 @include('include.header')
 

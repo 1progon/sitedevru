@@ -3,7 +3,7 @@
 
 @include('include.head')
 
-<body>
+<body class="base-template">
 
 @include('include.header')
 
