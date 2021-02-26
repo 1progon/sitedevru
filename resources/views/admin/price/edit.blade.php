@@ -53,7 +53,7 @@
                                id="on-homepage1"
                                name="on_homepage"
                                value="1"
-                               @if( $price->on_homepage == 1) checked @endif
+                               @if( $price->on_homepage === 1) checked @endif
                                class="custom-control-input">
                         <label class="custom-control-label" for="on-homepage1">Да</label>
                     </div>
@@ -62,7 +62,7 @@
                                id="on-homepage2"
                                name="on_homepage"
                                value="0"
-                               @if( $price->on_homepage == 0) checked @endif
+                               @if( $price->on_homepage === 0) checked @endif
                                class="custom-control-input">
                         <label class="custom-control-label" for="on-homepage2">Нет</label>
                     </div>
