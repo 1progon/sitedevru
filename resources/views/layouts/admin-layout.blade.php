@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="en">
 
+@section('head')
+    <link rel="stylesheet" href="{{ asset('css/admin/admin-app.css') }}">
+@endsection
+
 @include('include.head')
 
-<body>
+
+<body class="admin-template">
 
 @include('include.header')
 
@@ -21,11 +26,11 @@
 
 @yield('scripts_before')
 @include('include.scripts')
+@include('include.admin.scripts')
 @yield('scripts_after')
 
 
 <script defer src="{{ asset('assets/js/main.js') }}"></script>
-
 
 </body>
 </html>
