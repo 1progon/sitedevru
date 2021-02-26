@@ -17,6 +17,7 @@ mix
     // TODO Need to minify app.css
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/admin/admin-app.scss', 'public/css/admin')
+    .sass('resources/sass/account/account-app.scss', 'public/css/account')
     .sourceMaps(false, 'source-map')
 
 
