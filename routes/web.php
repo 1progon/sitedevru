@@ -116,6 +116,12 @@ Route::middleware(['auth', 'active_or_not', 'access_roles:' . User::ROLE['admin'
 
             Route::get('our-pros', 'Pros\OurProsController@adminIndex')
                 ->name('our-pros.admin.index');
+
+            Route::resource('portfolio', 'Portfolio\PortfolioController')
+                ->except(['index', 'show']);
+
+            Route::get('portfolio', 'Portfolio\PortfolioController@adminIndex')
+                ->name('portfolio.admin.index');
         }
     );
 
@@ -129,6 +135,8 @@ Route::resource('templates', 'Templates\TemplatesController')
 Route::resource('services', 'Services\ServicesController')
     ->only(['index', 'show']);
 Route::resource('prices', 'Prices\PricesController')
+    ->only(['index', 'show']);
+Route::resource('portfolio', 'Portfolio\PortfolioController')
     ->only(['index', 'show']);
 
 
