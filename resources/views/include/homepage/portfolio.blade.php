@@ -10,23 +10,34 @@
     </div>
     <div class="container-fluid px-1">
         <div class="row justify-content-around">
-            @forelse( $portfolio as $work)
+            @forelse( $portfolios as $portfolio)
                 <div class="col-6 col-sm-4 col-lg-3">
-                    <a href="{{ $work->url }}">
+                    <a href="{{ route('portfolio.show', $portfolio) }}">
                         <div class="single-visited mb-30">
                             <div class="visited-img">
-                                {{--<img src="{{ asset($work['img']) }}" alt="">--}}
-                                <img src="{{ $work->img }}" alt="{{ $work->title }}">
+                                @if( $portfolio->img )
+                                    <img src="{{ asset('storage/' . $portfolio->img) }}"
+                                         alt="price {{ $portfolio->title }}"
+                                         width="50">
+                                @else
+                                    <img src="{{ asset('assets/img/visit/visit_1.jpg') }}"
+                                         alt="price {{ $portfolio->title }}"
+                                         width="50">
+                                @endif
                             </div>
                             <div class="visited-cap">
-                                <h5>{{ $work->title }}</h5>
-                                <p class="" style="font-size: 13px">{{ $work->description }}</p>
+                                <h5>{{ $portfolio->title }}</h5>
+                                <p class="" style="font-size: 13px">{{ $portfolio->description }}</p>
                             </div>
                         </div>
                     </a>
                 </div>
             @empty
             @endforelse
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <a href="{{ route ('portfolio.index') }}" class="btn btn-primary hero-btn">Ещё работы</a>
         </div>
     </div>
 </section>

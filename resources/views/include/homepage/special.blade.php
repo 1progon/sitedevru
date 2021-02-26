@@ -66,8 +66,8 @@
 
                 <br/>
 
-                <a href="{{ route('templates.index') }}" class="btn btn-primary">Смотреть шаблоны</a>
-                <a href="{{ route('pages.show', 'pros-and-cons-template-site') }}" class="btn btn-primary">Плюсы и
+                <a href="{{ route('templates.index') }}" class="btn btn-primary hero-btn">Смотреть шаблоны</a>
+                <a href="{{ route('pages.show', 'pros-and-cons-template-site') }}" class="btn btn-primary hero-btn">Плюсы и
                     минусы</a>
             </div>
         </div>
