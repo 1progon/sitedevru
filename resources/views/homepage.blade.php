@@ -35,7 +35,7 @@
                                     доработками уже готовых проектов, оптимизацией, а также продвижением и
                                     тестированием готовых систем.</p>
                                 {{--Hero-btn --}}
-                                <div class="hero__btn">
+                                <div>
                                     <a href="{{ route('pages.show', 'contact') }}"
                                        class="btn hero-btn btn-primary">Связаться с нами</a>
                                 </div>
@@ -91,7 +91,7 @@
                 @endforelse
             </div>
             <div class="row justify-content-center mt-5">
-                <a href="{{ route('services.index') }}" class="btn btn-primary">Все услуги</a>
+                <a href="{{ route('services.index') }}" class="btn btn-primary hero-btn">Все услуги</a>
             </div>
         </div>
     </section>
@@ -126,7 +126,8 @@
                             <br/>
                             {{--<strong>Настольные приложения</strong> - Electron or ASP.NET WPF, UWF and WinForms.--}}
                         </p>
-                        <a href="{{ route('pages.show', 'contact') }}" class="btn btn-primary">Наши контакты и связь</a>
+                        <a href="{{ route('pages.show', 'contact') }}" class="btn btn-primary hero-btn">Наши контакты и
+                            связь</a>
                     </div>
                 </div>
             </div>
@@ -219,7 +220,7 @@
             </div>
 
             <div class="row justify-content-center mt-5">
-                <a href="{{ route ('prices.index') }}" class="btn btn-primary">Цены на другие услуги</a>
+                <a href="{{ route ('prices.index') }}" class="btn btn-primary hero-btn">Цены на другие услуги</a>
             </div>
         </div>
     </section>
@@ -329,7 +330,7 @@
                     <div class="col-xl-5 col-lg-3 col-md-12">
                         <div class="wantToWork-btn f-right">
                             <a href="{{ route('pages.show', 'contact') }}"
-                               class="btn btn-ans btn-primary">Перейти в раздел контакты</a>
+                               class="btn btn-ans hero-btn">Перейти в раздел контакты</a>
                         </div>
                     </div>
                 </div>
