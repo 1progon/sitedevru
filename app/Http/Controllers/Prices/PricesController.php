@@ -66,7 +66,8 @@ class PricesController extends Controller
 
         $price->save();
 
-        return redirect()->route('prices.admin.index');
+        return redirect()->route('prices.edit', $price)
+            ->with('status', 'Created');
     }
 
 
@@ -109,7 +110,9 @@ class PricesController extends Controller
 
         $price->fill($request->all());
         $price->save();
-        return redirect()->route('prices.admin.index');
+
+        return redirect()->route('prices.edit', $price)
+            ->with('status', 'Updated');
     }
 
     /**

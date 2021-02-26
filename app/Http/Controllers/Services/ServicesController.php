@@ -74,7 +74,8 @@ class ServicesController extends Controller
 
         $service->save();
 
-        return redirect()->route('services.admin.index');
+        return redirect()->route('services.edit', $service)
+            ->with('status', 'Created');
     }
 
     /**
@@ -136,7 +137,8 @@ class ServicesController extends Controller
         $service->save();
 
 
-        return redirect()->route('services.admin.index');
+        return redirect()->route('services.edit', $service)
+            ->with('status', 'Updated');
     }
 
 

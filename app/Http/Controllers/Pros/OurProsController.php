@@ -75,7 +75,8 @@ class OurProsController extends Controller
 
         $pros->save();
 
-        return redirect()->route('our-pros.admin.index');
+        return redirect()->route('our-pros.edit', $pros)
+            ->with('status', 'Created');
     }
 
     /**
@@ -133,7 +134,8 @@ class OurProsController extends Controller
         $pros->fill($request->all());
         $pros->save();
 
-        return redirect()->route('our-pros.admin.index');
+        return redirect()->route('our-pros.edit', $pros)
+            ->with('status', 'Updated');
     }
 
     /**

@@ -74,7 +74,8 @@ class TemplatesController extends Controller
 
         $template->save();
 
-        return redirect()->route('templates.admin.index');
+        return redirect()->route('templates.edit', $template)
+            ->with('status', 'Created');
     }
 
     /**
@@ -132,7 +133,8 @@ class TemplatesController extends Controller
         $template->fill($request->all());
         $template->save();
 
-        return redirect()->route('templates.admin.index');
+        return redirect()->route('templates.edit', $template)
+            ->with('status', 'Updated');
     }
 
     /**

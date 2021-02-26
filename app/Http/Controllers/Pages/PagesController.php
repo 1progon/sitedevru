@@ -56,7 +56,8 @@ class PagesController extends Controller
         $page->fill($request->validated());
         $page->save();
 
-        return redirect()->route('pages.admin.index');
+        return redirect()->route('pages.edit', $page)
+            ->with('status', 'Created');
     }
 
     /**
@@ -91,7 +92,7 @@ class PagesController extends Controller
         $page->fill($request->validated());
         $page->save();
 
-        return redirect()->route('pages.admin.index', $page);
+        return redirect()->route('pages.edit', $page)->with('status', 'Updated');
     }
 
     /**
