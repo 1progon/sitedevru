@@ -18,16 +18,23 @@
 
         {{--TODO Hardcoded Max width thumbs--}}
         <div>
-            <h2>Иконки сайта. Клик, чтобы развернуть</h2>
-            <a target="_blank" rel="nofollow noopener" href="{{ asset('storage/' . $template->img) }}">
-                <img style="max-width: 200px" src="{{ asset('storage/' . $template->img) }}" alt="первое изображение
-                шаблона">
-            </a>
 
-            <a target="_blank" rel="nofollow noopener" href="{{ asset('storage/' . $template->img2) }}">
-                <img style="max-width: 200px" src="{{ asset('storage/' . $template->img2) }}" alt="второе изображение
+            <h2>Иконки сайта. Клик, чтобы развернуть</h2>
+
+            @if( $template->img )
+                <a data-fancybox="gallery" href="{{ asset('storage/' . $template->img) }}">
+                    <img style="max-width: 200px" src="{{ asset('storage/' . $template->img) }}" alt="первое изображение
                 шаблона">
-            </a>
+                </a>
+            @endif
+
+            @if( $template->img2 )
+                <a data-fancybox="gallery" href="{{ asset('storage/' . $template->img2) }}">
+                    <img style="max-width: 200px" src="{{ asset('storage/' . $template->img2) }}" alt="второе изображение
+                шаблона">
+                </a>
+            @endif
+
 
         </div>
 
