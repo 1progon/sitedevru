@@ -3,11 +3,19 @@
 
 .visit-area {
     .single-visited {
+        border-radius: 10px;
+        overflow: hidden;
+
         .visited-img {
             position: relative;
 
-            img {
+            & img {
                 width: 100%;
+                transition: transform .3s;
+            }
+
+            & img:hover {
+                transform: scale(1.2);
             }
         }
 

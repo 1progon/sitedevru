@@ -428,16 +428,21 @@ hr {
 }
 
 .btn {
-  background: #ff5c97;
   border: 0;
   -moz-user-select: none;
   color: #fff;
-  letter-spacing: 1px;
-  padding: 15px 10px;
-  min-width: 200px;
   position: relative;
   z-index: 1;
   margin: 1px;
+}
+
+.btn.hero-btn {
+  padding: 15px 10px;
+  min-width: 200px;
+}
+
+.btn.btn-primary {
+  background: #ff5c97;
 }
 
 .btn:hover::before {
@@ -476,8 +481,6 @@ hr {
 
 .header-btn {
   background: #4043bc;
-  padding: 10px;
-  min-width: 120px;
 }
 
 .header-btn::before {
@@ -2362,11 +2365,6 @@ header .header-area .main-header .main-menu ul > * {
   margin: 0 15px;
 }
 
-header .header-area .main-header .main-menu ul .btn {
-  min-width: unset;
-  padding: 10px;
-}
-
 header .header-area .main-header .main-menu ul li {
   position: relative;
   z-index: 1;
@@ -3312,12 +3310,22 @@ header .header-area .header-top .header-info-right .header-social a:hover i {
   background: #7b40c0;
 }
 
+.visit-area .single-visited {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .visit-area .single-visited .visited-img {
   position: relative;
 }
 
 .visit-area .single-visited .visited-img img {
   width: 100%;
+  transition: transform 0.3s;
+}
+
+.visit-area .single-visited .visited-img img:hover {
+  transform: scale(1.2);
 }
 
 .visit-area .single-visited .visited-cap {
@@ -3408,7 +3416,7 @@ header .header-area .header-top .header-info-right .header-social a:hover i {
 .tips-tricks-area .single-tips .tips-img img {
   border-radius: 10px;
   margin-bottom: 40px;
-  transition: all 0.4s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 }
 
 .tips-tricks-area .single-tips .tips-caption h4 {
@@ -3453,7 +3461,7 @@ header .header-area .header-top .header-info-right .header-social a:hover i {
 }
 
 .single-tips:hover .tips-img img {
-  transform: rotate(1deg) scale(1.1);
+  transform: scale(1.1);
 }
 
 .haveProject {
@@ -3813,19 +3821,20 @@ header .header-area .header-top .header-info-right .header-social a:hover i {
 }
 
 .footer-main .footer-area .footer-title ul li {
-  color: #012f5f;
   margin-bottom: 15px;
+  transition: padding 0.2s;
+}
+
+.footer-main .footer-area .footer-title ul li:hover {
+  padding-left: 5px;
+}
+
+.footer-main .footer-area .footer-title ul li:hover a {
+  color: #ff5c97;
 }
 
 .footer-main .footer-area .footer-title ul li a {
   color: #868c98;
-  font-weight: 300;
-  transition: padding 0.2s;
-}
-
-.footer-main .footer-area .footer-title ul li a:hover {
-  color: #ff5c97;
-  padding-left: 5px;
 }
 
 .footer-main .footer-area .footer-form {
@@ -6622,20 +6631,6 @@ table tr th,
 table tr td {
   word-break: break-word;
   flex: 1;
-}
-
-table .btn {
-  min-width: unset;
-  padding: 5px;
-  background-color: unset;
-}
-
-table .btn.btn-warning {
-  background-color: orange;
-}
-
-table .btn.btn-danger {
-  background-color: red;
 }
 
 .rose-border {

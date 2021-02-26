@@ -289,13 +289,20 @@ hr {
 
 
 .btn {
-    background: $btn_bg;
+
+    &.hero-btn {
+        padding: 15px 10px;
+        min-width: 200px;
+    }
+
+    &.btn-primary {
+        background: $btn_bg;
+    }
+
     border: 0;
     -moz-user-select: none;
     color: #fff;
-    letter-spacing: 1px;
-    padding: 15px 10px;
-    min-width: 200px;
+
     position: relative;
     z-index: 1;
     margin: 1px;
@@ -342,8 +349,6 @@ hr {
 // other
 .header-btn {
     background: #4043bc;
-    padding: 10px;
-    min-width: 120px;
 
     &::before {
         background: #ec4683;;
