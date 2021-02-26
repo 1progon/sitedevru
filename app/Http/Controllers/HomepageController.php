@@ -26,7 +26,7 @@ class HomepageController extends Controller
 
         $canDo = Service::where('on_homepage', true)->get();
 
-        $portfolio = Portfolio::latest()->take(8)->get();
+        $portfolios = Portfolio::where('on_homepage', true)->latest()->take(8)->get();
 
         $testimonials = Testimonial::latest()->take(10)->get();
 
@@ -39,7 +39,7 @@ class HomepageController extends Controller
             'homepage',
             compact(
                 'testimonials',
-                'portfolio',
+                'portfolios',
                 'canDo',
                 'ourPros',
                 'prices',
