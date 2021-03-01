@@ -59,6 +59,10 @@ p {
     @include transition(.3s);
 }
 
+.img80 {
+    max-width: 80px;
+}
+
 .f-left {
     float: left
 }

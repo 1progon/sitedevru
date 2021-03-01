@@ -206,6 +206,10 @@ p {
   transition: all 0.3s ease-out 0s;
 }
 
+.img80 {
+  max-width: 80px;
+}
+
 .f-left {
   float: left;
 }
