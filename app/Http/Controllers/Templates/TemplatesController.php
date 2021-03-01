@@ -7,8 +7,11 @@ use App\Http\Requests\CreateTemplateRequest;
 use App\Http\Requests\UpdateTemplateRequest;
 use App\Model\Template\Template;
 use Exception;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 use Storage;
 
 class TemplatesController extends Controller
@@ -78,22 +81,55 @@ class TemplatesController extends Controller
             ->with('status', 'Created');
     }
 
+
     /**
-     * Display the specified resource.
-     *
      * @param Template $template
-     * @return \Illuminate\Http\Response
+     * @return Application|Factory|View
      */
     public function show(Template $template)
     {
         $template = Template::find($template->id);
 
-        return view('templates.show', compact('template'));
+
+        //TODO Hardcoded dummy data
+        $templateParts = [
+            [
+                'img' => 'https://preview.uideck.com/items/agency/assets/images/feature-icon-1.png',
+                'title' => 'title template',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae sollicitudin sapien. Curabitur ac elit dolor. Nam eget consectetur nisl.'
+            ],
+            [
+                'img' => 'https://preview.uideck.com/items/agency/assets/images/feature-icon-1.png',
+                'title' => 'title template',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae sollicitudin sapien. Curabitur ac elit dolor. Nam eget consectetur nisl.'
+            ],
+            [
+                'img' => 'https://preview.uideck.com/items/agency/assets/images/feature-icon-1.png',
+                'title' => 'title template',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae sollicitudin sapien. Curabitur ac elit dolor. Nam eget consectetur nisl.'
+            ],
+            [
+                'img' => 'https://preview.uideck.com/items/agency/assets/images/feature-icon-1.png',
+                'title' => 'title template',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae sollicitudin sapien. Curabitur ac elit dolor. Nam eget consectetur nisl.'
+            ],
+
+
+        ];
+
+
+        $templateParts = json_decode(json_encode($templateParts), false);
+
+
+        return view(
+            'templates.show',
+            compact('template', 'templateParts')
+        );
     }
 
     /**
      * @param Template $template
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Application|Factory|View
      */
     public function edit(Template $template)
     {
