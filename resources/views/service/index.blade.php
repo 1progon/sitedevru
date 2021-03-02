@@ -18,28 +18,31 @@
         <div class="row">
             @forelse( $services as $service )
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-do text-center mb-30">
-                        <div class="do-icon mb-3">
-                            @if( $service->img )
-                                <img src="{{ asset('storage/' . $service->img) }}"
-                                     alt="icon service {{ $service->title }}"
-                                     width="50">
-                            @else
-                                <img src="{{ asset('assets/img/icons/service.svg') }}"
-                                     alt="icon service {{ $service->title }}"
-                                     width="50">
-                            @endif
+                    <a href="{{ route('services.show', $service->slug) }}">
+                        <div class="single-do text-center mb-30">
+                            <div class="do-icon mb-3">
+                                @if( $service->img )
+                                    <img src="{{ asset('storage/' . $service->img) }}"
+                                         alt="icon service {{ $service->title }}"
+                                         width="50">
+                                @else
+                                    <img src="{{ asset('assets/img/icons/service.svg') }}"
+                                         alt="icon service {{ $service->title }}"
+                                         width="50">
+                                @endif
 
+                            </div>
+                            <div class="do-caption">
+                                <h4>{{ $service->title }}</h4>
+                                <p>{{ $service->description }}</p>
+                            </div>
+                            <div class="do-btn">
+                                <a href="{{ route('services.show', $service->slug) }}">
+                                    <i class="ti-arrow-right"></i> Более подробно
+                                </a>
+                            </div>
                         </div>
-                        <div class="do-caption">
-                            <h4>{{ $service->title }}</h4>
-                            <p>{{ $service->description }}</p>
-                        </div>
-                        <div class="do-btn">
-                            <a href="{{ route('services.show', $service->slug) }}"><i class="ti-arrow-right"></i> Более
-                                подробно</a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             @empty
             @endforelse

@@ -19,18 +19,21 @@
             <div class="description">{!! $service->description !!}</div>
         </div>
 
+        <div class="article-block">
 
-        @if( $service->img)
-            <a data-fancybox="gallery" href="{{ asset( 'storage/' . $service->img) }}">
-                <img src="{{ asset( 'storage/' . $service->img) }}" width="100" alt="">
-            </a>
-        @endif
+            <div class="images-block float-left mr-3 mb-3">
 
-        @if( $service->img2)
-            <a data-fancybox="gallery" href="{{ asset( 'storage/' . $service->img2) }}">
-                <img src="{{ asset( 'storage/' . $service->img2) }}" width="100" alt="">
-            </a>
-        @endif
+                {{--Show only second image. First image is a service icon--}}
+                @if( $service->img2)
+                    <a data-fancybox="gallery" href="{{ asset( 'storage/' . $service->img2) }}">
+                        <img src="{{ asset( 'storage/' . $service->img2) }}" width="250" alt="">
+                    </a>
+                @endif
+            </div>
+
+            <article>{!! $service->article !!}</article>
+
+        </div>
 
 
     </div>

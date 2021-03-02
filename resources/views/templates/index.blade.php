@@ -18,31 +18,33 @@
         <div class="row">
             @forelse( $templates as $template )
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-do text-center mb-30">
-                        <div class="do-icon mb-3">
-                            @if( $template->img)
-                                <img src="{{ asset('storage/' . $template->img) }}"
-                                     alt="icon service {{ $template->title }}"
-                                     width="150">
-                            @else
-                                <img
-                                    src="{{ asset('assets/img/icons/template.svg') }}"
-                                    alt="icon service {{ $template->title }}"
-                                    width="150">
-                            @endif
+                    <a href="{{ route('templates.show', $template) }}">
+                        <div class="single-do text-center mb-30">
+                            <div class="do-icon mb-3">
+                                @if( $template->img)
+                                    <img src="{{ asset('storage/' . $template->img) }}"
+                                         alt="icon service {{ $template->title }}"
+                                         width="150">
+                                @else
+                                    <img
+                                        src="{{ asset('assets/img/icons/template.svg') }}"
+                                        alt="icon service {{ $template->title }}"
+                                        width="150">
+                                @endif
 
+                            </div>
+                            <div class="do-caption">
+                                <h4>{{ $template->title }}</h4>
+                                <p>{{ $template->description }}</p>
+                            </div>
+                            <div class="do-btn">
+                                <a href="{{ route('templates.show', $template) }}">
+                                    <i class="ti-arrow-right"></i>
+                                    Более подробно
+                                </a>
+                            </div>
                         </div>
-                        <div class="do-caption">
-                            <h4>{{ $template->title }}</h4>
-                            <p>{{ $template->description }}</p>
-                        </div>
-                        <div class="do-btn">
-                            <a href="{{ route('templates.show', $template) }}">
-                                <i class="ti-arrow-right"></i>
-                                Более подробно
-                            </a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             @empty
             @endforelse

@@ -10,33 +10,44 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="section-tittle text-center">
-                    <h2>{{ $template->name }}</h2>
-                    <h4 class="description">ID: {{ $template->id }}</h4>
+                    <h2>{{ $template->title }}, id: {{ $template->id }}</h2>
                 </div>
             </div>
         </div>
 
-
-        <div>
-            <div class="description">{!!  $template->description !!}</div>
-        </div>
 
         {{--Page panels--}}
         <div class="row">
 
             {{--Left big images and thumbs--}}
             <div class="col-lg-6">
+
                 <div class="about-feature mt-30">
                     <div class="about-feature-image">
                         @if( $template->img)
                             <a data-fancybox="gallery"
                                href="{{ asset( 'storage/' . $template->img) }}">
+                                {{--TODO Hardcoded styles, move to css--}}
                                 <img src="{{ asset( 'storage/' . $template->img) }}"
+                                     style="border-top-left-radius: 10px; border-top-right-radius: 10px"
                                      width="100%" alt="">
 
                             </a>
                         @endif
                     </div>
+
+                    <div class="d-flex flex-wrap justify-content-around my-3">
+                        @if( $template->url)
+                            <a target="_blank"
+                               rel="nofollow noopener"
+                               href="{{ $template->url }}" class="btn btn-success">Открыть пример</a>
+                        @endif
+
+                        {{--TODO add link to create order through reg or login page--}}
+                        <a href="#" class="btn btn-info">Заказать сайт с таким шаблоном</a>
+                    </div>
+
+                    {{--Image thumbs--}}
                     <div class="about-feature-thumbs my-3">
                         @if( $template->img2)
                             <a data-fancybox="gallery"
@@ -44,20 +55,14 @@
                                 <img src="{{ asset( 'storage/' . $template->img2) }}"
                                      width="100" alt="">
                             </a>
-                        @else
-                            <img src="{{ asset('assets/img/icons/image-placeholder.svg')}}"
-                                 width="100" alt="">
-                            <img src="{{ asset('assets/img/icons/image-placeholder.svg')}}"
-                                 width="100" alt="">
-                            <img src="{{ asset('assets/img/icons/image-placeholder.svg')}}"
-                                 width="100" alt="">
                         @endif
                     </div>
+
                     <div class="about-feature-content">
-                        <h2 class="feature-title">The future of designing starts here</h2>
-                        <p class="text">An open platform for presentations and content collaboration. Sign up to get
-                            early access.</p>
+                        <p class="description">{!! $template->description !!}</p>
                     </div>
+
+
                 </div>
             </div>
 
@@ -85,7 +90,7 @@
             </div>
         </div>
 
-
+        {{--Article--}}
         <div class="row">
             <article>{!! $template->article !!}</article>
         </div>

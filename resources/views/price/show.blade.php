@@ -18,7 +18,10 @@
 
         <div>
             <div class="description">{!! $price->description !!}</div>
+        </div>
 
+        <div>
+            <article>{!! $price->article !!}</article>
         </div>
 
         {{--TODO Add price includes--}}
