@@ -22,6 +22,7 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/architect-4238976274623/',
+                'url_original_link'=> 'https://demos.freehtml5.co/architect/premium/index.html'
             ],
 
         ];
