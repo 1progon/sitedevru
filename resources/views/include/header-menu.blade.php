@@ -6,8 +6,8 @@
             <a class="popup" href="{{ route('services.index') }}"><span>Услуги</span></a>
             <a class="popup" href="{{ route('prices.index') }}"><span>Цены</span></a>
             <a class="popup" href="{{ route('templates.index') }}"><span>Шаблоны</span></a>
-
-            <a class="popup" href="{{ route('blog') }}">Блог</a>
+            {{--TODO hided blog header link--}}
+            {{--            <a class="popup" href="{{ route('blog') }}">Блог</a>--}}
 
             @auth()
                 <form id="logout-form" action="{{ route('logout') }}"

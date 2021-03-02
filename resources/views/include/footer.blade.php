@@ -26,11 +26,12 @@
                                         <p class="info2">info@siteprm.ru</p>
                                     </div>
                                 </div>
-                                <div class="footer-social">
-                                    <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                                    <a href="javascript:void(0)"><i class="fab fa-vk"></i></a>
-                                </div>
+                                {{--TODO Hided social links--}}
+                                {{--                                <div class="footer-social">--}}
+                                {{--                                    <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>--}}
+                                {{--                                    <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>--}}
+                                {{--                                    <a href="javascript:void(0)"><i class="fab fa-vk"></i></a>--}}
+                                {{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -43,7 +44,8 @@
                                     <li><a href="{{ route('pages.show', 'features') }}">Особенности</a></li>
                                     <li><a href="{{ route('prices.index') }}">Цены</a></li>
                                     <li><a href="{{ route('pages.show', 'contact') }}">Контакты</a></li>
-                                    <li><a href="{{ route('blog') }}">Блог</a></li>
+                                    {{--TODO Hided link to blog--}}
+                                    {{--                                    <li><a href="{{ route('blog') }}">Блог</a></li>--}}
                                 </ul>
                             </div>
                         </div>
