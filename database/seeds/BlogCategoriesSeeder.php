@@ -13,12 +13,11 @@ class BlogCategoriesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('blog_categories')
-            ->insert(
-                [
-                    'title' => 'Главная',
-                    'slug' => Str::slug('главная'),
-                ]
-            );
+        $cats = [
+            'title' => 'Главная',
+            'slug' => Str::slug('главная'),
+        ];
+
+        DB::table('blog_categories')->insert($cats);
     }
 }

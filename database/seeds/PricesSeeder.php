@@ -83,10 +83,8 @@ class PricesSeeder extends Seeder
         ];
 
 
-        DB::table('prices')
-            ->insert($prices);
+        DB::table('prices')->insert($prices);
 
-        //DB::table('price_included')
-        //    ->insert($included);
+        //DB::table('price_included')->insert($included);
     }
 }

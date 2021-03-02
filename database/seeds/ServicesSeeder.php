@@ -164,7 +164,6 @@ class ServicesSeeder extends Seeder
         ];
 
 
-        DB::table('services')
-            ->insert($servicesWithDesc);
+        DB::table('services')->insert($servicesWithDesc);
     }
 }

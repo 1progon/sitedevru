@@ -59,7 +59,6 @@ class PortfolioSeeder extends Seeder
 
         ];
 
-        DB::table('portfolio')
-            ->insert($portfolio);
+        DB::table('portfolio')->insert($portfolio);
     }
 }

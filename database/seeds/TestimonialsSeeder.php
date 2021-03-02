@@ -50,7 +50,6 @@ class TestimonialsSeeder extends Seeder
 
         ];
 
-        DB::table('testimonials')
-            ->insert($testimonials);
+        DB::table('testimonials')->insert($testimonials);
     }
 }

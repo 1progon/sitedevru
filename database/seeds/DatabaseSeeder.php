@@ -14,15 +14,15 @@ class DatabaseSeeder extends Seeder
         $this->call(
             [
                 UsersSeeder::class,
+                TestimonialsSeeder::class,
                 BlogCategoriesSeeder::class,
                 BlogPostSeeder::class,
                 PricesSeeder::class,
                 ServicesSeeder::class,
                 PagesSeeder::class,
                 PortfolioSeeder::class,
-                TestimonialsSeeder::class,
                 OurProsSeeder::class,
-
+                TemplatesSeeder::class,
             ]
         );
     }
