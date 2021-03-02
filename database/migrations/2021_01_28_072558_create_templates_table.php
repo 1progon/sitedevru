@@ -34,6 +34,7 @@ class CreateTemplatesTable extends Migration
                 $table->string('img2')->nullable();
 
                 $table->string('url')->nullable();
+                $table->string('url_original_link')->nullable();
             }
         );
     }
