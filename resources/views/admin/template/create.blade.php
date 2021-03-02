@@ -46,6 +46,22 @@
                 </div>
                 @enderror
 
+
+                <div class="form-group">
+                    <label for="url-original-link">URL оригинал сайт где взят шаблон</label>
+                    <input type="text"
+                           name="url_original_link"
+                           id="url-original-link"
+                           class="form-control"
+                           value="{{ old('url_original_link') }}"
+                           aria-describedby="helpId">
+                </div>
+                @error('url_original_link')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
+
                 <div class="form-group">
                     <label for="meta-description">Meta description</label>
                     <input type="text" name="meta_description" id="meta-description" class="form-control"

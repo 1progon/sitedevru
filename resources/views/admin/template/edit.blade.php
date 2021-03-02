@@ -60,6 +60,21 @@
                 </div>
                 @enderror
 
+                <div class="form-group">
+                    <label for="url-original-link">URL оригинала где взят шаблон</label>
+                    <input type="text"
+                           name="url_original_link"
+                           id="url-original-link"
+                           class="form-control"
+                           value="{{ $template->url_original_link ?? old('url_original_link') }}"
+                           aria-describedby="helpId">
+                </div>
+                @error('url_original_link')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
+
 
                 <div class="form-group">
                     @if( $template->img )
