@@ -1,25 +1,13 @@
 <!-- Main-menu -->
 <div class="main-menu d-none d-lg-block">
     <nav>
-        <ul id="navigation">
-            <li><a class="popup" href="{{ route('pages.show', 'about') }}">О нас</a></li>
-            <li><a class="popup" href="{{ route('services.index') }}">Услуги</a></li>
-            <li><a class="popup" href="{{ route('prices.index') }}">Цены</a></li>
-            <li><a class="popup" href="{{ route('templates.index') }}">Шаблоны</a></li>
+        <ul class="navigation">
+            <a class="popup" href="{{ route('pages.show', 'about') }}"><span>О нас</span> </a>
+            <a class="popup" href="{{ route('services.index') }}"><span>Услуги</span></a>
+            <a class="popup" href="{{ route('prices.index') }}"><span>Цены</span></a>
+            <a class="popup" href="{{ route('templates.index') }}"><span>Шаблоны</span></a>
 
-            <li><a class="popup" href="{{ route('blog') }}">Блог</a>
-                {{--                <ul class="submenu">--}}
-                {{--                    <li><a href="">Blog</a></li>--}}
-                {{--                    <li><a href="">Blog Details</a></li>--}}
-                {{--                </ul>--}}
-            </li>
-            {{--            <li><a href="javascript:void(0)">Pages</a>--}}
-            {{--                <ul class="submenu">--}}
-            {{--                    <li><a href="elements.html">Element</a></li>--}}
-            {{--                </ul>--}}
-            {{--            </li>--}}
-
-
+            <a class="popup" href="{{ route('blog') }}">Блог</a>
 
             @auth()
                 <form id="logout-form" action="{{ route('logout') }}"
@@ -43,5 +31,6 @@
                 <li><a class="popup" href="{{ route('register') }}">Регистрация</a></li>
             @endauth
         </ul>
+        <!--</editor-fold>-->
     </nav>
 </div>
