@@ -40,7 +40,7 @@
                         @if( $template->url)
                             <a target="_blank"
                                rel="nofollow noopener"
-                               href="{{ $template->url }}" class="btn btn-success">Открыть пример</a>
+                               href="{{ asset($template->url) }}" class="btn btn-success">Открыть пример</a>
                         @endif
 
                         {{--TODO add link to create order through reg or login page--}}
