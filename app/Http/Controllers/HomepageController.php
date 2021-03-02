@@ -24,7 +24,7 @@ class HomepageController extends Controller
     {
         $prices = Price::where('on_homepage', true)->get();
 
-        $canDo = Service::where('on_homepage', true)->get();
+        $services = Service::where('on_homepage', true)->get();
 
         $portfolios = Portfolio::where('on_homepage', true)->latest()->take(8)->get();
 
@@ -40,7 +40,7 @@ class HomepageController extends Controller
             compact(
                 'testimonials',
                 'portfolios',
-                'canDo',
+                'services',
                 'ourPros',
                 'prices',
                 'blogs'
