@@ -2369,9 +2369,9 @@ header .header-area .main-header .main-menu ul > * {
   margin: 0 15px;
 }
 
-header .header-area .main-header .main-menu ul li {
-  position: relative;
+header .header-area .main-header .main-menu ul a {
   z-index: 1;
+  line-height: 2.2;
 }
 
 header .header-area .main-header .main-menu ul ul.submenu {

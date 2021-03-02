@@ -61,20 +61,10 @@ header {
                     }
 
 
-
-                    & li {
-                        position: relative;
+                    & a {
                         z-index: 1;
-
-
-                        & a {
-                        }
-
-                        & a:hover {
-                        }
-
+                        line-height: 2.2;
                     }
-
 
 
                     & ul.submenu {
