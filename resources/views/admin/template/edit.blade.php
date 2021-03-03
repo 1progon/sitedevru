@@ -61,6 +61,8 @@
                 @enderror
 
                 <div class="form-group">
+                    <a target="_blank" rel="nofollow noopener" href="{{ $template->url_original_link }}">Открыть
+                        оригинал</a>
                     <label for="url-original-link">URL оригинала где взят шаблон</label>
                     <input type="text"
                            name="url_original_link"
