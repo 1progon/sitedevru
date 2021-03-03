@@ -1,21 +1,21 @@
 table {
-
     & tr {
 
         display: flex;
         flex-wrap: wrap;
 
         & th, & td {
-            word-break: break-word;
             flex: 1;
         }
+
+        & th {
+            word-break: normal;
+        }
+
+        & td {
+            word-break: break-word;
+        }
     }
-
-
-
-
-    
-
 
 
 }

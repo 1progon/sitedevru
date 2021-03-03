@@ -6633,8 +6633,15 @@ table tr {
 
 table tr th,
 table tr td {
-  word-break: break-word;
   flex: 1;
+}
+
+table tr th {
+  word-break: normal;
+}
+
+table tr td {
+  word-break: break-word;
 }
 
 .rose-border {
