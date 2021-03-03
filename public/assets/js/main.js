@@ -7,7 +7,7 @@ scrollToUp();
 
 /* Slick Nav - Mobile Menu*/
 function slickMenu() {
-    let menu = $('ul#navigation');
+    let menu = $('ul.navigation');
     if (menu.length) {
         menu.slicknav({
             prependTo: ".mobile_menu",
