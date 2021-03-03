@@ -3,6 +3,7 @@
 testimonials();
 slickMenu();
 scrollToUp();
+fancyboxSettings();
 
 
 /* Slick Nav - Mobile Menu*/
@@ -20,7 +21,7 @@ function slickMenu() {
 
 /* 4. Testimonial Active*/
 function testimonials() {
-    var testimonial = $('.h1-testimonial-active');
+    let testimonial = $('.h1-testimonial-active');
     if (testimonial.length) {
         testimonial.slick({
             dots: false,
@@ -66,7 +67,7 @@ function testimonials() {
 }
 
 
-/* 8. sildeBar scroll */
+/* 8. SideBar scroll up button */
 function scrollToUp() {
     $.scrollUp({
         scrollName: 'scrollUp', // Element ID
@@ -77,6 +78,16 @@ function scrollToUp() {
         animationOutSpeed: 200, // Animation out speed (ms)
         scrollText: '<i class="ti-arrow-up"></i>', // Text for element
         activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+    });
+}
+
+
+// Settings for fancybox plugin
+function fancyboxSettings() {
+    $(document).ready(function () {
+        $('[data-fancybox="gallery"]').fancybox({
+            hideScrollbar: false,
+        });
     });
 }
 

@@ -15,18 +15,6 @@
         src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script defer>
-    $(document).ready(function () {
-        $('[data-fancybox="gallery"]')
-            .fancybox({
-                hideScrollbar: false,
-            });
-    })
-
-
-</script>
-
-
 {{--+++--}}
 {{--main script moved to views/layouts/main-layout.blade.php--}}
 
