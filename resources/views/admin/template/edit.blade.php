@@ -174,9 +174,13 @@
                 <div class="form-group bg-light p-3">
                     <h3>Детали сайта</h3>
                     <div class="form-group">
-                        <label for="cms">CMS</label>
+                        <label for="cms" class="required">CMS</label>
+                        <a href="javascript:void(0)"
+                           class="badge badge-info"
+                           id="auto-cms">Подставить "Без CMS"</a>
                         <input type="text" name="cms" id="cms" class="form-control"
                                value="{{ $template->cms }}"
+                               required
                                aria-describedby="helpId">
                     </div>
                     @error('cms')
@@ -297,5 +301,10 @@
 @endsection
 
 @section('scripts_after')
+    <script>
+        $('#auto-cms').click(function () {
+            $('#cms').val('Без CMS');
+        });
+    </script>
     @include('include.tinymce.tinymce-scripts')
 @endsection
