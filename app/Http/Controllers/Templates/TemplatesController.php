@@ -90,41 +90,7 @@ class TemplatesController extends Controller
     {
         $template = Template::find($template->id);
 
-
-        //TODO Hardcoded dummy data
-        $templateParts = [
-            [
-                'img' => 'https://preview.uideck.com/items/agency/assets/images/feature-icon-1.png',
-                'title' => 'title template',
-                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae sollicitudin sapien. Curabitur ac elit dolor. Nam eget consectetur nisl.'
-            ],
-            [
-                'img' => 'https://preview.uideck.com/items/agency/assets/images/feature-icon-1.png',
-                'title' => 'title template',
-                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae sollicitudin sapien. Curabitur ac elit dolor. Nam eget consectetur nisl.'
-            ],
-            [
-                'img' => 'https://preview.uideck.com/items/agency/assets/images/feature-icon-1.png',
-                'title' => 'title template',
-                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae sollicitudin sapien. Curabitur ac elit dolor. Nam eget consectetur nisl.'
-            ],
-            [
-                'img' => 'https://preview.uideck.com/items/agency/assets/images/feature-icon-1.png',
-                'title' => 'title template',
-                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae sollicitudin sapien. Curabitur ac elit dolor. Nam eget consectetur nisl.'
-            ],
-
-
-        ];
-
-
-        $templateParts = json_decode(json_encode($templateParts), false);
-
-
-        return view(
-            'templates.show',
-            compact('template', 'templateParts')
-        );
+        return view('templates.show', compact('template'));
     }
 
     /**
