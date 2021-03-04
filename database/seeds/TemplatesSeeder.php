@@ -22,7 +22,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон для архитектурного сайта или студии по дизайну',
                 'article' => '',
                 'url' => 'live-templates/architect-4238976274623/',
-                'url_original_link' => 'https://demos.freehtml5.co/architect/premium/index.html'
+                'url_original_link' => 'https://demos.freehtml5.co/architect/premium/index.html',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -32,7 +33,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон лендинг для автомобильного сайта ',
                 'article' => '',
                 'url' => 'live-templates/avalon-932654875345/',
-                'url_original_link' => 'https://html.design/download/avalon-free-car-dealer-html-template/'
+                'url_original_link' => 'https://html.design/download/avalon-free-car-dealer-html-template/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -42,7 +44,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон для туристеческой фирмы или отелей',
                 'article' => '',
                 'url' => 'live-templates/bluesky-2348756342956237/',
-                'url_original_link' => 'https://themewagon.com/themes/free-responsive-bootstrap-4-html5-agency-website-template-bluesky/'
+                'url_original_link' => 'https://themewagon.com/themes/free-responsive-bootstrap-4-html5-agency-website-template-bluesky/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -52,7 +55,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Одностраничный шаблон для сайта портфолио фотографа или дизайнера',
                 'article' => '',
                 'url' => 'live-templates/box-portfolio-73462398756348756/',
-                'url_original_link' => 'https://www.behance.net/gallery/36389511/Box-portfolio-Free-html-template'
+                'url_original_link' => 'https://www.behance.net/gallery/36389511/Box-portfolio-Free-html-template',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -62,7 +66,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон для сайта йоги или фитнеса',
                 'article' => '',
                 'url' => 'live-templates/cardio-3765283456835348765/',
-                'url_original_link' => 'https://tympanus.net/Freebies/Cardio/'
+                'url_original_link' => 'https://tympanus.net/Freebies/Cardio/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -72,7 +77,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Для сайта интерьеров, мебельной компании, мебельного магазина или антиквара',
                 'article' => '',
                 'url' => 'live-templates/chamb-furniture-38634276345923456/',
-                'url_original_link' => 'https://www.free-css.com/free-css-templates/page242/chamb'
+                'url_original_link' => 'https://www.free-css.com/free-css-templates/page242/chamb',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -82,7 +88,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон сайта креативного агентства',
                 'article' => '',
                 'url' => 'live-templates/creative-agency-63492653427532486/',
-                'url_original_link' => 'https://plantillashtmlgratis.com/en/todas-las-plantillas/plantilla/free-html-templates-for-downloading-creative-agency/'
+                'url_original_link' => 'https://plantillashtmlgratis.com/en/todas-las-plantillas/plantilla/free-html-templates-for-downloading-creative-agency/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -92,7 +99,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон для сайта о животных, для клиники животных или другие варианты',
                 'article' => '',
                 'url' => 'live-templates/dpot-dogsite-386583724653756238/',
-                'url_original_link' => 'https://html.design/download/dpot-pet-shop-html-template/'
+                'url_original_link' => 'https://html.design/download/dpot-pet-shop-html-template/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -102,7 +110,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Лендинг может подходить под различные тематики',
                 'article' => '',
                 'url' => 'live-templates/dart-landing-7237856395684365854/',
-                'url_original_link' => 'https://plantillashtmlgratis.com/en/todas-las-plantillas/plantilla/download-free-html-css-template-dart-landing/'
+                'url_original_link' => 'https://plantillashtmlgratis.com/en/todas-las-plantillas/plantilla/download-free-html-css-template-dart-landing/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -112,7 +121,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Одностраничный шаблон лендинг для сайта технологической компании',
                 'article' => '',
                 'url' => 'live-templates/digital-service-382658476324856348/',
-                'url_original_link' => 'https://www.free-css.com/free-css-templates/page256/digital-service'
+                'url_original_link' => 'https://www.free-css.com/free-css-templates/page256/digital-service',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -122,7 +132,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Многостраничный шаблон для сайта магазина',
                 'article' => '',
                 'url' => 'live-templates/ecommerce-wear-375632856328756/',
-                'url_original_link' => 'https://htmlcodex.com/ecommerce-html-template/'
+                'url_original_link' => 'https://htmlcodex.com/ecommerce-html-template/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -132,7 +143,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон для сайта учебного заведения',
                 'article' => '',
                 'url' => 'live-templates/educational-theory-63287658324765/',
-                'url_original_link' => 'https://www.os-templates.com/free-website-templates/educational-theory'
+                'url_original_link' => 'https://www.os-templates.com/free-website-templates/educational-theory',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -142,7 +154,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/eforlad-3872658346534/',
-                'url_original_link' => 'https://www.free-css.com/free-css-templates/page260/eforlad'
+                'url_original_link' => 'https://www.free-css.com/free-css-templates/page260/eforlad',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -152,7 +165,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/fitness-87623586384563825/',
-                'url_original_link' => 'https://freehtml5.co/fitness-free-website-template-using-bootstrap-3/'
+                'url_original_link' => 'https://freehtml5.co/fitness-free-website-template-using-bootstrap-3/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -162,7 +176,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/gogopo-43868237465345/',
-                'url_original_link' => 'https://www.os-templates.com/free-website-templates/gogopo'
+                'url_original_link' => 'https://www.os-templates.com/free-website-templates/gogopo',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -172,7 +187,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Зарядка, спорт, фитнесс. Шаблон сайта для тех, кто хочет держать себя в форме',
                 'article' => '',
                 'url' => 'live-templates/health-7365234658365/',
-                'url_original_link' => 'https://html.design/download/health-fitness-html-template/'
+                'url_original_link' => 'https://html.design/download/health-fitness-html-template/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -182,7 +198,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон для сайта по направлению недвижимость',
                 'article' => '',
                 'url' => 'live-templates/homestate-83265834658365/',
-                'url_original_link' => 'https://freehtml5.co/homestate-free-html5-bootstrap-real-estate-template/'
+                'url_original_link' => 'https://freehtml5.co/homestate-free-html5-bootstrap-real-estate-template/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -192,7 +209,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон подходит для сайтов музыкальной направленности. Подходит для одиночных и групп музыкантов, муз студий и другое',
                 'article' => '',
                 'url' => 'live-templates/melodi-465238534568365/',
-                'url_original_link' => 'https://themeslab.org/html/melodi'
+                'url_original_link' => 'https://themeslab.org/html/melodi',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -202,7 +220,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/soft-business-agency-34534543534/',
-                'url_original_link' => 'https://htmlcodex.com/bootstrap-agency-template'
+                'url_original_link' => 'https://htmlcodex.com/bootstrap-agency-template',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -212,7 +231,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/kalay-523658347658432654398543/',
-                'url_original_link' => 'https://www.tooplate.com/view/2087-kalay'
+                'url_original_link' => 'https://www.tooplate.com/view/2087-kalay',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -222,7 +242,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/life-care-345435435435435/',
-                'url_original_link' => 'https://www.free-css.com/free-css-templates/page245/life-care'
+                'url_original_link' => 'https://www.free-css.com/free-css-templates/page245/life-care',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -232,7 +253,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/moschino-34256348563453453/',
-                'url_original_link' => 'https://www.wowthemes.net/moschino-free-portfolio-html-template/'
+                'url_original_link' => 'https://www.wowthemes.net/moschino-free-portfolio-html-template/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -242,7 +264,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон отлично подойдет для фотографий и фото галереи',
                 'article' => '',
                 'url' => 'live-templates/multi-color-3453454353543543/',
-                'url_original_link' => 'https://www.tooplate.com/view/2086-multi-color'
+                'url_original_link' => 'https://www.tooplate.com/view/2086-multi-color',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -252,7 +275,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/oak-3543543534543543543/',
-                'url_original_link' => 'https://www.free-css.com/free-css-templates/page250/oak'
+                'url_original_link' => 'https://www.free-css.com/free-css-templates/page250/oak',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -262,7 +286,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/restaurant-34534543535435345435/',
-                'url_original_link' => 'https://themewagon.com/themes/free-bootstrap-restaurant-template/'
+                'url_original_link' => 'https://themewagon.com/themes/free-bootstrap-restaurant-template/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -272,7 +297,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/sports-2376935764932756348529/',
-                'url_original_link' => 'https://themewagon.com/themes/multi-page-free-bootstrap-sports-template/'
+                'url_original_link' => 'https://themewagon.com/themes/multi-page-free-bootstrap-sports-template/',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -282,7 +308,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/volim-3254695432058632543/',
-                'url_original_link' => 'https://www.free-css.com/free-css-templates/page259/volim'
+                'url_original_link' => 'https://www.free-css.com/free-css-templates/page259/volim',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -292,7 +319,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/ziggy-20265023563485642752385/',
-                'url_original_link' => 'https://www.tooplate.com/view/2091-ziggy'
+                'url_original_link' => 'https://www.tooplate.com/view/2091-ziggy',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -302,7 +330,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Дизайн шаблона 2011 года',
                 'article' => '',
                 'url' => 'live-templates/power-blog-2353928573593456345/',
-                'url_original_link' => 'https://templatemo.com/tm-299-power'
+                'url_original_link' => 'https://templatemo.com/tm-299-power',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -312,7 +341,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон создан в 2011 году',
                 'article' => '',
                 'url' => 'live-templates/light-gray-34285692563453/',
-                'url_original_link' => 'https://templatemo.com/tm-304-light-gray'
+                'url_original_link' => 'https://templatemo.com/tm-304-light-gray',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -322,7 +352,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Шаблон создан в 2012 году, но даже сегодня очень популярен из-за своей простоты и хорошего дизайна',
                 'article' => '',
                 'url' => 'live-templates/goods-and-gifts-34523523452345/',
-                'url_original_link' => 'https://templatemo.com/tm-362-gift-red'
+                'url_original_link' => 'https://templatemo.com/tm-362-gift-red',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -332,7 +363,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/fantasy-34289563056385634534/',
-                'url_original_link' => 'https://templatemo.com/tm-393-fantasy'
+                'url_original_link' => 'https://templatemo.com/tm-393-fantasy',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -342,7 +374,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/polygon-3248563428563457/',
-                'url_original_link' => 'https://templatemo.com/tm-400-polygon'
+                'url_original_link' => 'https://templatemo.com/tm-400-polygon',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -352,7 +385,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/xenon-modern-35345345345/',
-                'url_original_link' => 'https://templatemo.com/tm-416-xenon'
+                'url_original_link' => 'https://templatemo.com/tm-416-xenon',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -362,7 +396,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/freshness-3223953485620842985458/',
-                'url_original_link' => 'https://templatemo.com/tm-422-freshness'
+                'url_original_link' => 'https://templatemo.com/tm-422-freshness',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -372,7 +407,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/pro-audio-162987654352305/',
-                'url_original_link' => 'https://templatemo.com/tm-429-pro-audio'
+                'url_original_link' => 'https://templatemo.com/tm-429-pro-audio',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -382,7 +418,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/robotic-2572952059257454354/',
-                'url_original_link' => 'https://templatemo.com/tm-430-robotic'
+                'url_original_link' => 'https://templatemo.com/tm-430-robotic',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -392,7 +429,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/ion-2305932975395789342573425/',
-                'url_original_link' => 'https://templatemo.com/tm-431-ion'
+                'url_original_link' => 'https://templatemo.com/tm-431-ion',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -402,7 +440,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/brownie-230532495349574398/',
-                'url_original_link' => 'https://templatemo.com/tm-440-brownie'
+                'url_original_link' => 'https://templatemo.com/tm-440-brownie',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -412,7 +451,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/visual-admin-23582305234957385648/',
-                'url_original_link' => 'https://templatemo.com/tm-455-visual-admin'
+                'url_original_link' => 'https://templatemo.com/tm-455-visual-admin',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -422,7 +462,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/workforce-2347390573495742345/',
-                'url_original_link' => 'https://templatemo.com/tm-461-workforce'
+                'url_original_link' => 'https://templatemo.com/tm-461-workforce',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -432,7 +473,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/motor-38230534925927954245/',
-                'url_original_link' => 'https://templatemo.com/tm-463-motor'
+                'url_original_link' => 'https://templatemo.com/tm-463-motor',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -442,7 +484,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/cafe-house-28534583458347/',
-                'url_original_link' => 'https://templatemo.com/tm-466-cafe-house'
+                'url_original_link' => 'https://templatemo.com/tm-466-cafe-house',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -452,7 +495,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/easy-profile-239580375039857254/',
-                'url_original_link' => 'https://templatemo.com/tm-467-easy-profile'
+                'url_original_link' => 'https://templatemo.com/tm-467-easy-profile',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -462,7 +506,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/impulse-3259305735732495734985/',
-                'url_original_link' => 'https://templatemo.com/tm-469-impulse'
+                'url_original_link' => 'https://templatemo.com/tm-469-impulse',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -472,7 +517,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/zigzag-23058793245792357/',
-                'url_original_link' => 'https://templatemo.com/tm-471-zigzag'
+                'url_original_link' => 'https://templatemo.com/tm-471-zigzag',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -482,7 +528,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/blaster-3249573457348953524/',
-                'url_original_link' => 'https://templatemo.com/tm-472-blaster'
+                'url_original_link' => 'https://templatemo.com/tm-472-blaster',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -492,7 +539,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/eatery-3298574572395734957432/',
-                'url_original_link' => 'https://templatemo.com/tm-515-eatery'
+                'url_original_link' => 'https://templatemo.com/tm-515-eatery',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -502,7 +550,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/sentra-3258975385348573428957/',
-                'url_original_link' => 'https://templatemo.com/tm-518-sentra'
+                'url_original_link' => 'https://templatemo.com/tm-518-sentra',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -512,7 +561,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/the-town-34258937523475834/',
-                'url_original_link' => 'https://templatemo.com/tm-525-the-town'
+                'url_original_link' => 'https://templatemo.com/tm-525-the-town',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -522,7 +572,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/vanilla-3295734857903578439543/',
-                'url_original_link' => 'https://templatemo.com/tm-526-vanilla'
+                'url_original_link' => 'https://templatemo.com/tm-526-vanilla',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -532,7 +583,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/softy-pinko-32985745329457348925/',
-                'url_original_link' => 'https://templatemo.com/tm-535-softy-pinko'
+                'url_original_link' => 'https://templatemo.com/tm-535-softy-pinko',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -542,7 +594,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/art-factory-3298579324573482/',
-                'url_original_link' => 'https://templatemo.com/tm-537-art-factory'
+                'url_original_link' => 'https://templatemo.com/tm-537-art-factory',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -552,7 +605,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/simple-house-3429857342753/',
-                'url_original_link' => 'https://templatemo.com/tm-539-simple-house'
+                'url_original_link' => 'https://templatemo.com/tm-539-simple-house',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -562,7 +616,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/training-studio-349825792345734/',
-                'url_original_link' => 'https://templatemo.com/tm-548-training-studio'
+                'url_original_link' => 'https://templatemo.com/tm-548-training-studio',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -572,7 +627,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/diagoona-324985743985435436/',
-                'url_original_link' => 'https://templatemo.com/tm-550-diagoona'
+                'url_original_link' => 'https://templatemo.com/tm-550-diagoona',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -582,7 +638,8 @@ class TemplatesSeeder extends Seeder
                 'description' => '',
                 'article' => '',
                 'url' => 'live-templates/ocean-vibes-32985732495734285/',
-                'url_original_link' => 'https://templatemo.com/tm-554-ocean-vibes'
+                'url_original_link' => 'https://templatemo.com/tm-554-ocean-vibes',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -592,7 +649,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Современный дизайн, тёмный цвет, видео на заднем плане',
                 'article' => '',
                 'url' => 'live-templates/grad-school-32985732457435/',
-                'url_original_link' => 'https://templatemo.com/tm-557-grad-school'
+                'url_original_link' => 'https://templatemo.com/tm-557-grad-school',
+                'cms' => 'Без CMS',
             ],
             [
                 'created_at' => $date,
@@ -602,7 +660,8 @@ class TemplatesSeeder extends Seeder
                 'description' => 'Представлен в двух цветах, тёмном и светлом',
                 'article' => '',
                 'url' => 'live-templates/coming-soon-349857934574335/',
-                'url_original_link' => 'https://templatemo.com/tm-462-coming-soon'
+                'url_original_link' => 'https://templatemo.com/tm-462-coming-soon',
+                'cms' => 'Без CMS',
             ],
 
 
