@@ -37,7 +37,7 @@ class CreateTemplatesTable extends Migration
                 $table->string('url_original_link')->nullable();
 
 
-                $table->string('cms')->nullable();
+                $table->string('cms');
                 $table->string('framework')->nullable();
                 $table->string('backend')->nullable();
                 $table->string('frontend')->nullable();
