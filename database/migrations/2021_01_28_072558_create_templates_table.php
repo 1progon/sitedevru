@@ -28,6 +28,8 @@ class CreateTemplatesTable extends Migration
                 $table->text('description');
                 $table->text('article')->nullable();
 
+                $table->string('cms')->nullable();
+
                 $table->boolean('on_homepage')->default(0);
 
                 $table->string('img')->nullable();
