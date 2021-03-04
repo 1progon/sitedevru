@@ -3,7 +3,7 @@
 @section('main')
     <div class="card">
         <div class="card-header">Редактировать шаблон id:{{ $template->id }},
-            <a target="_blank" href="{{ route('templates.show', $template) }}">открыть</a>
+            <a target="_blank" href="{{ route('templates.show', $template) }}">открыть ↗️</a>
         </div>
 
         <div class="card-body">
@@ -61,9 +61,9 @@
                 @enderror
 
                 <div class="form-group">
-                    <a target="_blank" rel="nofollow noopener" href="{{ $template->url_original_link }}">Открыть
-                        оригинал</a>
                     <label for="url-original-link">URL оригинала где взят шаблон</label>
+                    <a target="_blank" rel="nofollow noopener" href="{{ $template->url_original_link
+                    }}">↗️ Открыть оригинал ↗️</a>
                     <input type="text"
                            name="url_original_link"
                            id="url-original-link"
