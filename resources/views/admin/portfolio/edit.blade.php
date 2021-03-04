@@ -3,7 +3,7 @@
 @section('main')
     <div class="card">
         <div class="card-header">Редактировать портфолио id:{{ $portfolio->id }},
-            <a target="_blank" href="{{ route('portfolio.show', $portfolio) }}">открыть</a>
+            <a target="_blank" href="{{ route('portfolio.show', $portfolio) }}">открыть ↗️</a>
         </div>
 
         <div class="card-body">
