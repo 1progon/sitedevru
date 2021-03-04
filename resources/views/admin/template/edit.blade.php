@@ -56,7 +56,7 @@
                 </div>
                 @error('url')
                 <div class="alert alert-danger">
-                    {{ $message }}
+                    {{ old('url') }}, {{ $message }}
                 </div>
                 @enderror
 
@@ -73,7 +73,7 @@
                 </div>
                 @error('url_original_link')
                 <div class="alert alert-danger">
-                    {{ $message }}
+                    {{ old('url_original_link') }}, {{ $message }}
                 </div>
                 @enderror
 
