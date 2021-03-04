@@ -186,6 +186,92 @@
                 </div>
                 @enderror
 
+                {{--Site details--}}
+                <div class="form-group bg-light p-3">
+                    <h3>Детали сайта</h3>
+                    <div class="form-group">
+                        <label for="cms">CMS</label>
+                        <input type="text" name="cms" id="cms" class="form-control"
+                               value="{{ old('cms') }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('cms')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="framework">Framework</label>
+                        <input type="text" name="framework" id="framework" class="form-control"
+                               value="{{ old('framework') }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('framework')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="backend">Backend</label>
+                        <input type="text" name="backend" id="backend" class="form-control"
+                               value="{{ old('backend') }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('backend')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="frontend">Frontend</label>
+                        <input type="text" name="frontend" id="frontend" class="form-control"
+                               value="{{ old('frontend') }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('frontend')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="established">Дата создания</label>
+                        <input type="text" name="established" id="established" class="form-control"
+                               value="{{ old('established') }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('established')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="site-type">Тип сайта</label>
+                        <input type="text" name="site_type" id="site-type" class="form-control"
+                               value="{{ old('site_type') }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('site_type')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="additional-info">Доп инфо</label>
+                        <textarea class="form-control" name="additional_info" id="additional-info" cols="30"
+                                  rows="4"></textarea>
+                    </div>
+                    @error('additional_info')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                    @enderror</div>
+
 
                 <div class="form-group">
                     <label for="description" class="required">Описание</label>

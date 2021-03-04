@@ -170,13 +170,104 @@
                 @enderror
 
 
+                {{--Site details--}}
+                <div class="form-group bg-light p-3">
+                    <h3>Детали сайта</h3>
+                    <div class="form-group">
+                        <label for="cms">CMS</label>
+                        <input type="text" name="cms" id="cms" class="form-control"
+                               value="{{ $template->cms }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('cms')
+                    <div class="alert alert-danger">
+                        {{ old('cms') }}, {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="framework">Framework</label>
+                        <input type="text" name="framework" id="framework" class="form-control"
+                               value="{{ $template->framework }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('framework')
+                    <div class="alert alert-danger">
+                        {{ old('framework') }}, {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="backend">Backend</label>
+                        <input type="text" name="backend" id="backend" class="form-control"
+                               value="{{ $template->backend }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('backend')
+                    <div class="alert alert-danger">
+                        {{ old('backend') }}, {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="frontend">Frontend</label>
+                        <input type="text" name="frontend" id="frontend" class="form-control"
+                               value="{{ $template->frontend }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('frontend')
+                    <div class="alert alert-danger">
+                        {{ old('frontend') }}, {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="established">Дата создания</label>
+                        <input type="text" name="established" id="established" class="form-control"
+                               value="{{ $template->established }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('established')
+                    <div class="alert alert-danger">
+                        {{ old('established') }}, {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="site-type">Тип сайта</label>
+                        <input type="text" name="site_type" id="site-type" class="form-control"
+                               value="{{ $template->site_type }}"
+                               aria-describedby="helpId">
+                    </div>
+                    @error('site_type')
+                    <div class="alert alert-danger">
+                        {{ old('site_type') }}, {{ $message }}
+                    </div>
+                    @enderror
+
+                    <div class="form-group">
+                        <label for="additional-info">Доп инфо</label>
+                        <textarea class="form-control"
+                                  name="additional_info"
+                                  id="additional-info"
+                                  cols="30"
+                                  rows="4">{{ $template->additional_info }}</textarea>
+                    </div>
+                    @error('additional_info')
+                    <div class="alert alert-danger">
+                        {{ old('additional_info') }}, {{ $message }}
+                    </div>
+                    @enderror</div>
+
+
                 <div class="form-group">
                     <label for="description" class="required">Описание</label>
                     <textarea class="form-control"
                               name="description"
                               required
                               minlength="3"
-                              id="description" rows="4">{{ $template->description }}</textarea>
+                              id="description"
+                              rows="4">{{ $template->description }}</textarea>
                 </div>
                 @error('description')
                 <div class="alert alert-danger">
