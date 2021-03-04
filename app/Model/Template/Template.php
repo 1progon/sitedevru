@@ -11,14 +11,22 @@ class Template extends Model
     protected $fillable = [
         'title',
         'slug',
-        'description',
-        'article',
         'meta_description',
         'meta_keywords',
+        'description',
+        'article',
         'on_homepage',
         'img',
         'img2',
         'url',
+        'url_original_link',
+        'cms',
+        'framework',
+        'backend',
+        'frontend',
+        'established',
+        'site_type',
+        'additional_info',
     ];
 
     public function getRouteKeyName()
