@@ -36,6 +36,10 @@
                         @endif
                     </div>
 
+                    <div class="about-feature-content">
+                        <p class="description">{!! $template->description !!}</p>
+                    </div>
+
                     <div class="d-flex flex-wrap justify-content-around my-3">
                         @if( $template->url)
                             <a target="_blank"
@@ -50,16 +54,13 @@
                     {{--Image thumbs--}}
                     <div class="about-feature-thumbs my-3">
                         @if( $template->img2)
+                            <h6>Ещё изображения...</h6>
                             <a data-fancybox="gallery"
                                href="{{ asset( 'storage/' . $template->img2) }}">
                                 <img src="{{ asset( 'storage/' . $template->img2) }}"
-                                     width="100" alt="">
+                                     width="80" height="80" alt="">
                             </a>
                         @endif
-                    </div>
-
-                    <div class="about-feature-content">
-                        <p class="description">{!! $template->description !!}</p>
                     </div>
 
 
@@ -67,24 +68,112 @@
             </div>
 
             {{--Right content--}}
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-30">
 
-
-                {{--TODO Hardcoded dummy data--}}
-                @forelse( $templateParts as $part)
-                    <div class="about-feature-items d-sm-flex mt-30">
+                @if( $template->cms)
+                    <div class="about-feature-items d-sm-flex align-items-center">
                         <div class="feature-items-icon">
-                            <img class="img80"
-                                 src="{{ $part->img }}"
+                            <img src="{{ asset('assets/img/icons/cms.svg') }}"
+                                 width="30"
+                                 class="mx-3"
                                  alt="Icon">
                         </div>
                         <div class="feature-items-content media-body">
-                            <h5 class="items-title">{{ $part->title }}</h5>
-                            <p class="text">{{ $part->text }}</p>
+                            <h5 class="items-title">CMS</h5>
+                            <p class="text">{{ $template->cms }}</p>
                         </div>
                     </div>
-                @empty
-                @endforelse
+                @endif
+
+                @if( $template->framework)
+                    <div class="about-feature-items d-sm-flex align-items-center">
+                        <div class="feature-items-icon">
+                            <img src="{{ asset('assets/img/icons/framework.svg') }}"
+                                 width="30"
+                                 class="mx-3"
+                                 alt="Icon">
+                        </div>
+                        <div class="feature-items-content media-body">
+                            <h5 class="items-title">Framework</h5>
+                            <p class="text">{{ $template->framework }}</p>
+                        </div>
+                    </div>
+                @endif
+
+                @if( $template->backend)
+                    <div class="about-feature-items d-sm-flex align-items-center">
+                        <div class="feature-items-icon">
+                            <img src="{{ asset('assets/img/icons/backend.svg') }}"
+                                 width="30"
+                                 class="mx-3"
+                                 alt="Icon">
+                        </div>
+                        <div class="feature-items-content media-body">
+                            <h5 class="items-title">Backend</h5>
+                            <p class="text">{{ $template->backend }}</p>
+                        </div>
+                    </div>
+                @endif
+
+                @if( $template->frontend)
+                    <div class="about-feature-items d-sm-flex align-items-center">
+                        <div class="feature-items-icon">
+                            <img src="{{ asset('assets/img/icons/frontend.svg') }}"
+                                 width="30"
+                                 class="mx-3"
+                                 alt="Icon">
+                        </div>
+                        <div class="feature-items-content media-body">
+                            <h5 class="items-title">Frontend</h5>
+                            <p class="text">{{ $template->frontend }}</p>
+                        </div>
+                    </div>
+                @endif
+
+                @if( $template->established)
+                    <div class="about-feature-items d-sm-flex align-items-center">
+                        <div class="feature-items-icon">
+                            <img src="{{ asset('assets/img/icons/created.svg') }}"
+                                 width="30"
+                                 class="mx-3"
+                                 alt="Icon">
+                        </div>
+                        <div class="feature-items-content media-body">
+                            <h5 class="items-title">Создан</h5>
+                            <p class="text">{{ $template->established }}</p>
+                        </div>
+                    </div>
+                @endif
+
+                @if( $template->site_type)
+                    <div class="about-feature-items d-sm-flex align-items-center">
+                        <div class="feature-items-icon">
+                            <img src="{{ asset('assets/img/icons/site-type.svg') }}"
+                                 width="30"
+                                 class="mx-3"
+                                 alt="Icon">
+                        </div>
+                        <div class="feature-items-content media-body">
+                            <h5 class="items-title">Тип сайта</h5>
+                            <p class="text">{{ $template->site_type }}</p>
+                        </div>
+                    </div>
+                @endif
+
+                @if( $template->additional_info)
+                    <div class="about-feature-items d-sm-flex align-items-center">
+                        <div class="feature-items-icon">
+                            <img src="{{ asset('assets/img/icons/additional-info.svg') }}"
+                                 width="30"
+                                 class="mx-3"
+                                 alt="Icon">
+                        </div>
+                        <div class="feature-items-content media-body">
+                            <h5 class="items-title">Дополнительная информация</h5>
+                            <p class="text">{{ $template->additional_info }}</p>
+                        </div>
+                    </div>
+                @endif
 
 
             </div>
