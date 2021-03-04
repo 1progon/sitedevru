@@ -31,7 +31,6 @@ class CreateTemplateRequest extends FormRequest
     public function rules()
     {
         return [
-            'url' => 'nullable|url',
             'title' => 'required|min:3',
             'slug' => 'required|min:3|unique:templates,slug',
             'description' => 'required|min:3',
