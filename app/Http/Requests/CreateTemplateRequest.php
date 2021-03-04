@@ -32,6 +32,7 @@ class CreateTemplateRequest extends FormRequest
     {
         return [
             'title' => 'required|min:3',
+            'cms' => 'required',
             'slug' => 'required|min:3|unique:templates,slug',
             'url_original_link' => 'nullable|url',
             'description' => 'required|min:3',
