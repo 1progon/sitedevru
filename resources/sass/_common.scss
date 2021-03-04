@@ -95,7 +95,7 @@ a {
 a.popup {
     position: relative;
     top: 0;
-    transition: color, top, .2s;
+    transition: color .2s, top .2s;
 }
 
 
@@ -155,7 +155,8 @@ ul {
 }
 
 li {
-    list-style: none
+    list-style: none;
+    line-height: 30px;
 }
 
 hr {
