@@ -28,8 +28,6 @@ class CreateTemplatesTable extends Migration
                 $table->text('description');
                 $table->text('article')->nullable();
 
-                $table->string('cms')->nullable();
-
                 $table->boolean('on_homepage')->default(0);
 
                 $table->string('img')->nullable();
@@ -37,6 +35,15 @@ class CreateTemplatesTable extends Migration
 
                 $table->string('url')->nullable();
                 $table->string('url_original_link')->nullable();
+
+
+                $table->string('cms')->nullable();
+                $table->string('framework')->nullable();
+                $table->string('backend')->nullable();
+                $table->string('frontend')->nullable();
+                $table->string('established')->nullable();
+                $table->string('site_type')->nullable();
+                $table->text('additional_info')->nullable();
             }
         );
     }
