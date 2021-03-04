@@ -39,6 +39,7 @@ class UpdateTemplateRequest extends FormRequest
         // Validate date
         return [
             'title' => 'required|min:3',
+            'url_original_link' => 'nullable|url',
             'slug' => [
                 'required',
                 'min:3',
