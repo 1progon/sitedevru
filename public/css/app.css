@@ -240,7 +240,7 @@ a {
 a.popup {
   position: relative;
   top: 0;
-  transition: color, top, 0.2s;
+  transition: color 0.2s, top 0.2s;
 }
 
 a:hover {
@@ -302,6 +302,7 @@ ul {
 
 li {
   list-style: none;
+  line-height: 30px;
 }
 
 hr {
@@ -3827,6 +3828,7 @@ header .header-area .header-top .header-info-right .header-social a:hover i {
 .footer-main .footer-area .footer-title ul li {
   margin-bottom: 15px;
   transition: padding 0.2s;
+  line-height: 1.5;
 }
 
 .footer-main .footer-area .footer-title ul li:hover {
