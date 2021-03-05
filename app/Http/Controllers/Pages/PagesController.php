@@ -53,7 +53,7 @@ class PagesController extends Controller
     public function store(CreatePageRequest $request): RedirectResponse
     {
         $page = new Page();
-        $page->fill($request->validated());
+        $page->fill($request->all());
         $page->save();
 
         return redirect()->route('pages.edit', $page)
@@ -89,7 +89,8 @@ class PagesController extends Controller
      */
     public function update(UpdatePageRequest $request, Page $page): RedirectResponse
     {
-        $page->fill($request->validated());
+
+        $page->fill($request->all());
         $page->save();
 
         return redirect()->route('pages.edit', $page)->with('status', 'Updated');
