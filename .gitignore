@@ -14,3 +14,4 @@ yarn-error.log
 debug.log
 /.phpstorm.meta.php
 /_ide_helper.php
+/test.html
