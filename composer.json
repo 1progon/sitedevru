@@ -14,7 +14,8 @@
         "doctrine/dbal": "2.12",
         "fideloper/proxy": "^4.4",
         "laravel/framework": "^6.20",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+      "ext-json": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.8",
