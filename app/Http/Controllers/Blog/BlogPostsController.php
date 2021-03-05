@@ -66,15 +66,41 @@ class BlogPostsController extends Controller
 
 
         //TODO remove test data
-        $comments = (object)
-        [
-            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
-            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
-            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
-            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
-            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
-            (object)['author' => 'Alex B', 'text' => 'lorem1010101010101', 'created_at' => '04-02-2020'],
+        $comments = [
+            [
+                'author' => 'Alex B',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate?',
+                'created_at' => '04-02-2020'
+            ],
+            [
+                'author' => 'Alex B',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate?',
+                'created_at' => '04-02-2020'
+            ],
+            [
+                'author' => 'Alex B',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate?',
+                'created_at' => '04-02-2020'
+            ],
+            [
+                'author' => 'Alex B',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate?',
+                'created_at' => '04-02-2020'
+            ],
+            [
+                'author' => 'Alex B',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate?',
+                'created_at' => '04-02-2020'
+            ],
+            [
+                'author' => 'Alex B',
+                'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptate?',
+                'created_at' => '04-02-2020'
+            ],
         ];
+
+
+        $comments = json_decode(json_encode($comments));
 
 
         //For sidebar template
