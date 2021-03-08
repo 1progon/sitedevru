@@ -80,7 +80,7 @@ class DashboardAccountController extends Controller
         $validated = $request->validate(
             [
                 'old_email' => 'required|email|exists:users,email',
-                'email' => 'required|email|confirmed',
+                'email' => 'required|email|unique:users,email|confirmed',
                 'email_confirmation' => 'required|email',
             ]
         );
@@ -101,6 +101,6 @@ class DashboardAccountController extends Controller
         $user->email = $validated['email'];
         $user->save();
 
-        return redirect()->route('dashboard.user')->with('status', 'Почта изменёна');
+        return redirect()->route('account.edit.email')->with('status', 'Почта изменёна');
     }
 }
