@@ -32,9 +32,9 @@ class OurProsController extends Controller
         if ($search) {
             $proses = Pros::where('title', 'like', '%' . $search . '%')
                 ->orWhere('id', 'like', '%' . $search . '%')
-                ->paginate();
+                ->latest()->paginate();
         } else {
-            $proses = Pros::paginate();
+            $proses = Pros::latest()->paginate();
         }
 
         return view('admin.pros.index', compact('proses', 'search'));

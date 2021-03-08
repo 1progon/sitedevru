@@ -36,9 +36,9 @@ class TemplatesController extends Controller
             $templates = Template::where('title', 'like', '%' . $search . '%')
                 ->orWhere('id', 'like', '%' . $search . '%')
                 ->orWhere('slug', 'like', '%' . $search . '%')
-                ->paginate();
+                ->latest()->paginate();
         } else {
-            $templates = Template::paginate();
+            $templates = Template::latest()->paginate();
         }
 
 

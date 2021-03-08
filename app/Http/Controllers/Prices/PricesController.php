@@ -30,9 +30,9 @@ class PricesController extends Controller
             $prices = Price::where('title', 'like', '%' . $search . '%')
                 ->orWhere('id', 'like', '%' . $search . '%')
                 ->orWhere('slug', 'like', '%' . $search . '%')
-                ->paginate();
+                ->latest()->paginate();
         } else {
-            $prices = Price::paginate();
+            $prices = Price::latest()->paginate();
         }
 
         return view('admin.price.index', compact('prices', 'search'));

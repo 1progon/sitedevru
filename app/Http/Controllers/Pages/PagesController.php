@@ -29,9 +29,9 @@ class PagesController extends Controller
             $pages = Page::where('title', 'like', '%' . $search . '%')
                 ->orWhere('id', 'like', '%' . $search . '%')
                 ->orWhere('slug', 'like', '%' . $search . '%')
-                ->paginate();
+                ->latest()->paginate();
         } else {
-            $pages = Page::paginate();
+            $pages = Page::latest()->paginate();
         }
 
 

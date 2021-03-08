@@ -39,9 +39,9 @@ class PortfolioController extends Controller
             $portfolios = Portfolio::where('title', 'like', '%' . $search . '%')
                 ->orWhere('id', 'like', '%' . $search . '%')
                 ->orWhere('slug', 'like', '%' . $search . '%')
-                ->paginate();
+                ->latest()->paginate();
         } else {
-            $portfolios = Portfolio::paginate();
+            $portfolios = Portfolio::latest()->paginate();
         }
 
 

@@ -33,9 +33,9 @@ class ServicesController extends Controller
             $services = Service::where('title', 'like', '%' . $search . '%')
                 ->orWhere('id', 'like', '%' . $search . '%')
                 ->orWhere('slug', 'like', '%' . $search . '%')
-                ->paginate();
+                ->latest()->paginate();
         } else {
-            $services = Service::paginate();
+            $services = Service::latest()->paginate();
         }
 
         return view('admin.service.index', compact('services', 'search'));
