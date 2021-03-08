@@ -16,6 +16,8 @@
                 @csrf
                 @method('PUT')
 
+                <input type="hidden" name="_old_login" value="{{ $user->login }}">
+
 
                 <div class="form-group">
                     <label class="required"> - Поле обязательно для заполнения!</label>

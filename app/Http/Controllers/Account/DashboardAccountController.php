@@ -7,6 +7,7 @@ use Auth;
 use Hash;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 
 class DashboardAccountController extends Controller
@@ -26,7 +27,13 @@ class DashboardAccountController extends Controller
     {
         $validated = $request->validate(
             [
-                'login' => 'required|alpha',
+                'login' => [
+                    'required',
+                    'alpha',
+                    'min:5',
+                    Rule::unique('users', 'login')
+                        ->ignore($request->_old_login, 'login'),
+                ],
                 'first_name' => 'sometimes|nullable|alpha',
                 'last_name' => 'sometimes|nullable|alpha',
                 'patronymic_name' => 'sometimes|nullable|alpha',
@@ -38,7 +45,7 @@ class DashboardAccountController extends Controller
         $user->fill($validated);
         $user->save();
 
-        return redirect()->route('dashboard.user')->with('status', 'Данные изменёны');
+        return redirect()->route('account.edit.data')->with('status', 'Данные изменёны');
     }
 
     public function editPassword(): View
