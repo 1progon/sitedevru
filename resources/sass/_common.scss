@@ -116,9 +116,12 @@ a:hover,
     text-decoration: none;
 }
 
-a,
-button {
+a, button {
     outline: medium none;
+}
+
+article a {
+    font-weight: 600;
 }
 
 button:focus, input:focus, input:focus, textarea, textarea:focus {
