@@ -172,6 +172,20 @@
                 </div>
                 @enderror
 
+                <div class="form-group">
+                    <label for="article">Статья</label>
+                    <textarea class="form-control tinymce"
+                              name="article"
+                              id="article"
+                              minlength="3"
+                              rows="10">{{ old('article') }}</textarea>
+                </div>
+                @error('article')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
+
 
                 <button type="submit" class="btn btn-primary">Добавить</button>
 

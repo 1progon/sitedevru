@@ -148,6 +148,20 @@
                 </div>
                 @enderror
 
+                <div class="form-group">
+                    <label for="article">Статья</label>
+                    <textarea class="form-control tinymce"
+                              name="article"
+                              id="article"
+                              minlength="3"
+                              rows="10">{{ $service->article }}</textarea>
+                </div>
+                @error('article')
+                <div class="alert alert-danger">
+                    {{ old('article') }}, {{ $message }}
+                </div>
+                @enderror
+
 
                 <button type="submit" class="btn btn-primary">Обновить</button>
 
