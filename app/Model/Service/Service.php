@@ -14,6 +14,7 @@ class Service extends Model
         'meta_description',
         'meta_keywords',
         'description',
+        'article',
         'img',
         'img2',
     ];
