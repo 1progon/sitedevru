@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="section-tittle text-center">
-                    <h2>{{ $template->title }}, id: {{ $template->id }}</h2>
+                    <h2>{{ $template->title }}</h2>
                 </div>
             </div>
         </div>
