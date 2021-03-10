@@ -49,6 +49,8 @@
 
                 <div class="form-group">
                     <label for="url">URL шаблона</label>
+                    <a target="_blank" rel="nofollow noopener"
+                       href="{{ asset($template->url) }}">↗️ Открыть шаблон ↗️</a>
                     <input type="text" name="url"
                            id="url" class="form-control"
                            value="{{ $template->url ?? old('url') }}"
