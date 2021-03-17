@@ -10,6 +10,7 @@
     сделать сайт, создать сайт недорого, создать сайт визитка, создать сайт магазин')">
     <meta name="description" content="@yield('meta_description', '')">
     <meta name="yandex-verification" content="7dab1397044bf980" />
+    <meta name="google-site-verification" content="V9YmmmzJ2v41wSBbQG7x76_QTWj9Y-0d5GEjvP0CUn8" />
 
 
 
