@@ -13,7 +13,7 @@
                     <div class="single-do text-center mb-30">
                         <div class="do-icon mb-4">
                             @if( $service->img )
-                                <img src="{{ asset($service->img) }}"
+                                <img src="{{ asset('storage/' . $service->img) }}"
                                      alt="{{ $service->title }}"
                                      width="50">
                             @else

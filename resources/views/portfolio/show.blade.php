@@ -34,7 +34,7 @@
                             <a data-fancybox="gallery"
                                href="{{ asset( 'storage/' . $portfolio->img) }}">
                                 <img src="{{ asset( 'storage/' . $portfolio->img) }}"
-                                     width="100%" alt="">
+                                     width="100%" alt="картинка 1 для сайта портфолио на заказ {{ $portfolio->title }}">
 
                             </a>
                         @endif
@@ -44,10 +44,19 @@
                             <a data-fancybox="gallery"
                                href="{{ asset( 'storage/' . $portfolio->img2) }}">
                                 <img src="{{ asset( 'storage/' . $portfolio->img2) }}"
-                                     width="100" alt="">
+                                     width="100" alt="картинка 2 для сайта портфолио на заказ {{ $portfolio->title }}">
+                            </a>
+                        @endif
+
+                        @if( $portfolio->img3)
+                            <a data-fancybox="gallery"
+                               href="{{ asset( 'storage/' . $portfolio->img3) }}">
+                                <img src="{{ asset( 'storage/' . $portfolio->img3) }}"
+                                     width="100" alt="картинка 3 для сайта портфолио на заказ {{ $portfolio->title }}">
                             </a>
                         @endif
                     </div>
+
 
                     @if( $portfolio->url)
                         <a target="_blank"
@@ -55,40 +64,21 @@
                            href="{{ $portfolio->url }}" class="btn btn-success">Открыть сайт</a>
                     @endif
 
-                    <div class="about-feature-content">
-                        <p class="description">{!! $portfolio->description !!}</p>
-                    </div>
+
                 </div>
             </div>
 
             {{--Right content--}}
             <div class="col-lg-6">
 
-
-                {{--TODO Hardcoded dummy data--}}
-                @forelse( $portfolioParts as $part)
-                    <div class="about-feature-items d-sm-flex mt-30">
-                        <div class="feature-items-icon">
-                            <img class="img80"
-                                 src="{{ $part->img }}"
-                                 alt="Icon">
-                        </div>
-                        <div class="feature-items-content media-body">
-                            <h5 class="items-title">{{ $part->title }}</h5>
-                            <p class="text">{{ $part->text }}</p>
-                        </div>
-                    </div>
-                @empty
-                @endforelse
-
+                {{--Article--}}
+                <div class="row">
+                    <article>{!! $portfolio->article !!}</article>
+                </div>
 
             </div>
         </div>
 
-        {{--Article--}}
-        <div class="row">
-            <article>{!! $portfolio->article !!}</article>
-        </div>
 
     </div>
 @endsection

@@ -14,10 +14,12 @@
                         <div class="single-choose text-center mb-30">
                             <div class="do-icon mb-4">
                                 @if( $price->img )
-                                    <img src="{{ asset($price->img) }}" alt="price {{ $price->price }}" width="50">
+                                    <img src="{{ asset('storage/' . $price->img) }}"
+                                         alt="price {{ $price->price }}"
+                                         width="50">
                                 @else
                                     <img src="{{ asset('assets/img/icons/price-tag.svg') }}"
-                                         alt="price {{ $price->price }}" width="50">
+                                         alt="цена на услугу по созданию сайтов {{ $price->price }}" width="50">
                                 @endif
 
                             </div>
@@ -25,8 +27,7 @@
                                 <h4>{{ $price->title }}</h4>
                                 <h4>
                                     <span class="price">{{ number_format($price->price, 0, ',', ' ') }}</span> <span
-                                        class="currency">руб
-                                        .</span>
+                                        class="currency">руб.</span>
                                 </h4>
                                 <ul>
                                     @forelse( $price->included as $include)
