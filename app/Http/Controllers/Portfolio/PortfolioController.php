@@ -94,19 +94,8 @@ class PortfolioController extends Controller
      */
     public function show(Portfolio $portfolio)
     {
-        //TODO Hardcoded dummy data
-        //Need min one part, 3-4 optimal
-        $portfolioParts = [
-            [
-                'img' => 'https://preview.uideck.com/items/agency/assets/images/feature-icon-1.png',
-                'title' => 'Some title',
-                'text' => 'Some text'
-            ],
-        ];
-        $portfolioParts = json_decode(json_encode($portfolioParts), false);
 
-
-        return view('portfolio.show', compact('portfolio', 'portfolioParts'));
+        return view('portfolio.show', compact('portfolio'));
     }
 
 
