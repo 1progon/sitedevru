@@ -76,7 +76,7 @@
                     <td>{{ $price->title }}</td>
                     <td>{{ $price->slug }}</td>
                     <td>{{ $price->on_homepage === 1 ? '✅' : '' }}</td>
-                    <td>{{ $price->description }}</td>
+                    <td>{{ Str::limit($price->description, 50) }}</td>
                     <td>{{ $price->price }}</td>
 
 
