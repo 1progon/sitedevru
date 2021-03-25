@@ -100,6 +100,18 @@
                 @enderror
 
                 <div class="form-group">
+                    <label for="url">URL</label>
+                    <input type="text" name="url" id="url" class="form-control"
+                           value="{{ $portfolio->url }}"
+                           aria-describedby="helpId">
+                </div>
+                @error('url')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @enderror
+
+                <div class="form-group">
                     @if( $portfolio->img )
                         <a data-fancybox="gallery" href="{{ asset('storage/' . $portfolio->img) }}">
                             <img src="{{ asset('storage/' . $portfolio->img) }}" alt="image" width="100"
