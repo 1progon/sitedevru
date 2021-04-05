@@ -9,9 +9,11 @@
         </div>
     </div>
     <div class="container-fluid px-1">
-        <div class="row justify-content-around">
+
+        {{--TODO hardcoded styles--}}
+        <div class="row justify-content-around" style="max-width: 90%; margin: 0 auto">
             @forelse( $portfolios as $portfolio)
-                <div class="col-6 col-sm-4 col-lg-3">
+                <div class="col-6 col-sm-4">
                     <a href="{{ route('portfolio.show', $portfolio) }}">
                         <div class="single-visited mb-30">
                             <div class="visited-img">
@@ -26,8 +28,7 @@
                                 @endif
                             </div>
                             <div class="visited-cap">
-                                <h5>{{ $portfolio->title }}</h5>
-                                <p class="" style="font-size: 13px">{{ $portfolio->description }}</p>
+                                <h6>{{ $portfolio->title }}</h6>
                             </div>
                         </div>
                     </a>
