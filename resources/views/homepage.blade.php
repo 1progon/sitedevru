@@ -42,11 +42,9 @@
 
     @include('include.homepage.portfolio')
 
-
-    @include('include.homepage.testimonials')
-
-
-    @include('include.homepage.blogs')
+    {{--TODO Commented blog and testimonials from homepage--}}
+    {{--@include('include.homepage.testimonials')--}}
+    {{--@include('include.homepage.blogs')--}}
 
 
     @include('include.homepage.bottom-red-block')
